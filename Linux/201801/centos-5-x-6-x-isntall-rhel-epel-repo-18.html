@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>在Centos 5.x或6.x上安装RHEL EPEL Repo | TekinTian</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="tekin, java, php, python, 云南网, 网站开发" />
+  
+  <meta name="description" content="安装步骤Centos 5.x wget http://archives.fedoraproject.org/pub/archive/epel/epel-release-latest-5.noarch.rpm wget http://rpms.famillecollet.com/enterprise/remi-release-5.rpm rpm -ivh epel-release-latest-5.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在Centos 5.x或6.x上安装RHEL EPEL Repo">
+<meta property="og:url" content="http://tekin.yunnan.ws/Linux/201801/centos-5-x-6-x-isntall-rhel-epel-repo-18.html">
+<meta property="og:site_name" content="TekinTian">
+<meta property="og:description" content="安装步骤Centos 5.x wget http://archives.fedoraproject.org/pub/archive/epel/epel-release-latest-5.noarch.rpm wget http://rpms.famillecollet.com/enterprise/remi-release-5.rpm rpm -ivh epel-release-latest-5.">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-02T15:25:25.939Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在Centos 5.x或6.x上安装RHEL EPEL Repo">
+<meta name="twitter:description" content="安装步骤Centos 5.x wget http://archives.fedoraproject.org/pub/archive/epel/epel-release-latest-5.noarch.rpm wget http://rpms.famillecollet.com/enterprise/remi-release-5.rpm rpm -ivh epel-release-latest-5.">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Tekin&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Tekin&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        IT Geek Communication blogs
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="HomePage" target="_blank" href="//tekin.yunnan.ws/">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/tekintian">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/tekintian">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//twitter.com/tekintian">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-centos-5-x-6-x-isntall-rhel-epel-repo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      在Centos 5.x或6.x上安装RHEL EPEL Repo
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/Linux/">Linux</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-01-18
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p><strong>安装步骤</strong><br>Centos 5.x</p>
+<p>wget <a href="http://archives.fedoraproject.org/pub/archive/epel/epel-release-latest-5.noarch.rpm" target="_blank" rel="noopener">http://archives.fedoraproject.org/pub/archive/epel/epel-release-latest-5.noarch.rpm</a></p>
+<p>wget <a href="http://rpms.famillecollet.com/enterprise/remi-release-5.rpm" target="_blank" rel="noopener">http://rpms.famillecollet.com/enterprise/remi-release-5.rpm</a></p>
+<p>rpm -ivh epel-release-latest-5.noarch.rpm</p>
+<p>rpm -ivh remi-release-5.rpm</p>
+<p>Centos 6.x</p>
+<p>wget <a href="http://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm" target="_blank" rel="noopener">http://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm</a></p>
+<p>wget <a href="http://rpms.famillecollet.com/enterprise/remi-release-6.rpm" target="_blank" rel="noopener">http://rpms.famillecollet.com/enterprise/remi-release-6.rpm</a></p>
+<p>rpm -ivh epel-release-latest-6.noarch.rpm</p>
+<p>rpm -ivh remi-release-6.rpm</p>
+<p><strong>完成后的设置</strong></p>
+<p>ls -1 /etc/yum.repos.d/epel* /etc/yum.repos.d/remi.repo</p>
+<p>返回</p>
+<p>/etc/yum.repos.d/epel.repo</p>
+<p>/etc/yum.repos.d/epel-testing.repo</p>
+<p>/etc/yum.repos.d/remi.repo</p>
+<p><strong>允许remi repository</strong></p>
+<p>vi /etc/yum.repos.d/remi.repo</p>
+<p>编辑[remi]下的enabled选项从0设为1</p>
+<p>[remi]</p>
+<p>name=Les RPM de remi pour Enterprise Linux 6 - $basearch</p>
+<p>#baseurl=<a href="http://rpms.famillecollet.com/enterprise/6/remi/$basearch/" target="_blank" rel="noopener">http://rpms.famillecollet.com/enterprise/6/remi/$basearch/</a></p>
+<p>mirrorlist=<a href="http://rpms.famillecollet.com/enterprise/6/remi/mirror" target="_blank" rel="noopener">http://rpms.famillecollet.com/enterprise/6/remi/mirror</a></p>
+<p>enabled=1</p>
+<p>gpgcheck=1</p>
+<p>gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-remi</p>
+<p>至此，安装完成。</p>
+<p>安装完运行yum报错：</p>
+<p>Error: Cannot retrieve metalink forrepository: epel. Please verify its path and try again</p>
+<p>解决办法：</p>
+<p>vi /etc/yum.repos.d/epel.repo</p>
+<p>编辑[epel]下的baseurl前的#号去掉，mirrorlist前添加#号。正确配置如下：</p>
+<p>[epel]</p>
+<p>name=Extra Packages for Enterprise Linux 6 - $basearch</p>
+<p>baseurl=<a href="http://download.fedoraproject.org/pub/epel/6/$basearch" target="_blank" rel="noopener">http://download.fedoraproject.org/pub/epel/6/$basearch</a></p>
+<p>#mirrorlist=<a href="https://mirrors.fedoraproject.org/metalink?repo=epel-6&amp;arch=$basearch" target="_blank" rel="noopener">https://mirrors.fedoraproject.org/metalink?repo=epel-6&amp;arch=$basearch</a></p>
+<p>failovermethod=priority</p>
+<p>enabled=1</p>
+<p>gpgcheck=1</p>
+<p>gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6</p>
+<p>再运行</p>
+<p>yum makecache</p>
+<p>英文出自于<a href="http://www.rackspace.com/knowledge_center/article/installing-rhel-epel-repo-on-centos-5x-or-6x" target="_blank" rel="noopener">这里</a>。</p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年02月02日 23:25</p>
+        <p>原始链接： <a class="post-url" href="/Linux/201801/centos-5-x-6-x-isntall-rhel-epel-repo-18.html" title="在Centos 5.x或6.x上安装RHEL EPEL Repo">http://tekin.yunnan.ws/Linux/201801/centos-5-x-6-x-isntall-rhel-epel-repo-18.html</a></p>
+        <footer>
+            <a href="http://tekin.yunnan.ws">
+                <img src="/images/logo.png" alt="TekinTian">
+                TekinTian
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/qr_wechatpay.png" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/qr_wechatpay.png">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/qr_alipay.png">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://tekin.yunnan.ws/Linux/201801/centos-5-x-6-x-isntall-rhel-epel-repo-18.html&title=《在Centos 5.x或6.x上安装RHEL EPEL Repo》 — TekinTian&pic=http://tekin.yunnan.wsimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://tekin.yunnan.ws/Linux/201801/centos-5-x-6-x-isntall-rhel-epel-repo-18.html&title=《在Centos 5.x或6.x上安装RHEL EPEL Repo》 — TekinTian&source=Tekin Tian's Github pages" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://tekin.yunnan.ws/Linux/201801/centos-5-x-6-x-isntall-rhel-epel-repo-18.html" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《在Centos 5.x或6.x上安装RHEL EPEL Repo》 — TekinTian&url=http://tekin.yunnan.ws/Linux/201801/centos-5-x-6-x-isntall-rhel-epel-repo-18.html&via=http://tekin.yunnan.ws" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://tekin.yunnan.ws/Linux/201801/centos-5-x-6-x-isntall-rhel-epel-repo-18.html" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://tekin.yunnan.ws/Linux/201801/centos-5-x-6-x-isntall-rhel-epel-repo-18.html" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/Linux/201801/linux-reboot-start-diy-sh-19.html" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          linux 开机自动启动自定义脚本
+        
+      </span>
+    </a>
+  
+  
+    <a href="/Linux/201801/debian-archive-iso-download-17.html" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">debian 所有的历史发行版本6 7,8, 9 版本 ISO文件下载 Debian Archive ISO Download</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://yunnan.ws/" target="_blank">云南网</a>
+        Theme <a href="//github.com/tekintian" target="_blank">Github</a>
+      &copy; 2018 TekinTian<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://tekin.yunnan.ws",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Docker技术/">Docker技术</a><a class="category-link" href="/categories/JAVA开发/">JAVA开发</a><a class="category-link" href="/categories/JAVA开发/Linux/">Linux</a><a class="category-link" href="/categories/JavaScript/">JavaScript</a><a class="category-link" href="/categories/JavaScript/数据库开发/">数据库开发</a><a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/PHP技术/">PHP技术</a><a class="category-link" href="/categories/Shell编程学习/">Shell编程学习</a><a class="category-link" href="/categories/git/">git</a><a class="category-link" href="/categories/skill/">skill</a><a class="category-link" href="/categories/其他/">其他</a><a class="category-link" href="/categories/数据库开发/">数据库开发</a><a class="category-link" href="/categories/编程开发/">编程开发</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/IP地址验证/" style="font-size: 10px;">IP地址验证</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/archive/" style="font-size: 10px;">archive</a> <a href="/tags/bat/" style="font-size: 10px;">bat</a> <a href="/tags/centos/" style="font-size: 10px;">centos</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/download/" style="font-size: 10px;">download</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/git命令/" style="font-size: 20px;">git命令</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/netstat，tasklist/" style="font-size: 10px;">netstat，tasklist</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a> <a href="/tags/tp5/" style="font-size: 10px;">tp5</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/windows命令/" style="font-size: 10px;">windows命令</a> <a href="/tags/参考文档/" style="font-size: 15px;">参考文档</a> <a href="/tags/命令/" style="font-size: 10px;">命令</a> <a href="/tags/客户端IP/" style="font-size: 10px;">客户端IP</a> <a href="/tags/文件命名/" style="font-size: 10px;">文件命名</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/IP地址验证/" style="font-size: 10px;">IP地址验证</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/archive/" style="font-size: 10px;">archive</a> <a href="/tags/bat/" style="font-size: 10px;">bat</a> <a href="/tags/centos/" style="font-size: 10px;">centos</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/download/" style="font-size: 10px;">download</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/git命令/" style="font-size: 20px;">git命令</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/netstat，tasklist/" style="font-size: 10px;">netstat，tasklist</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a> <a href="/tags/tp5/" style="font-size: 10px;">tp5</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/windows命令/" style="font-size: 10px;">windows命令</a> <a href="/tags/参考文档/" style="font-size: 15px;">参考文档</a> <a href="/tags/命令/" style="font-size: 10px;">命令</a> <a href="/tags/客户端IP/" style="font-size: 10px;">客户端IP</a> <a href="/tags/文件命名/" style="font-size: 10px;">文件命名</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>

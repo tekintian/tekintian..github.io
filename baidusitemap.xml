@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/php-get-ip-address-validate-30.html</loc>
+    <lastmod>2018-02-02T15:43:32.875Z</lastmod>
+    <data>
+        <display>
+        <title>PHP获取IP客户端地址 并验证IP地址正确性</title>
+        <pubTime>2017-05-29T16:22:49.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>客户端IP</tag>
+         
+        <tag>IP地址验证</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP技术" url="http://tekin.yunnan.ws/categories/PHP%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/git/201801/git-doc-01.html</loc>
+    <lastmod>2018-02-02T15:30:07.967Z</lastmod>
+    <data>
+        <display>
+        <title>Git参考文档</title>
+        <pubTime>2017-12-31T16:00:00.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>参考文档</tag>
+         
+        <tag>git命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="git" url="http://tekin.yunnan.ws/categories/git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/Linux/201801/centos-5-x-6-x-isntall-rhel-epel-repo-18.html</loc>
+    <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+    <data>
+        <display>
+        <title>在Centos 5.x或6.x上安装RHEL EPEL Repo</title>
+        <pubTime>2018-01-18T02:07:30.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Linux" url="http://tekin.yunnan.ws/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/Linux/201801/debian-archive-iso-download-17.html</loc>
+    <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+    <data>
+        <display>
+        <title>debian 所有的历史发行版本6 7,8, 9 版本 ISO文件下载 Debian Archive ISO Download</title>
+        <pubTime>2018-01-17T14:04:13.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Linux" url="http://tekin.yunnan.ws/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/%E5%85%B6%E4%BB%96/201801/github-tarball-download-24.html</loc>
+    <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+    <data>
+        <display>
+        <title>github tarball 直接下载项目最新源码方法</title>
+        <pubTime>2018-01-24T06:15:50.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="其他" url="http://tekin.yunnan.ws/categories/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/JAVA%E5%BC%80%E5%8F%91/Linux/201801/windows-linux-multi-tomcat-conf-28.html</loc>
+    <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+    <data>
+        <display>
+        <title>Windows / Linux 多版本tomcat 共存配置方法[配置两个或多个Tomcat启动的方法]</title>
+        <pubTime>2018-01-28T04:52:55.000Z</pubTime>
+        
+        <tag>bat</tag>
+         
+        <tag>linux</tag>
+         
+        <tag>tomcat</tag>
+         
+        <tag>windows</tag>
+         
+         
+           
+             
+              <breadCrumb title="JAVA开发" url="http://tekin.yunnan.ws/categories/JAVA%E5%BC%80%E5%8F%91/"/>
+          
+             
+              <breadCrumb title="Linux" url="http://tekin.yunnan.ws/categories/JAVA%E5%BC%80%E5%8F%91/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/Linux/201801/centos7-nmcli-16.html</loc>
+    <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+    <data>
+        <display>
+        <title>Centos7  使用 nmcli 命令配置网络详解</title>
+        <pubTime>2018-01-16T03:55:03.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Linux" url="http://tekin.yunnan.ws/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/Linux/201801/centos-archive-iso-download-17.html</loc>
+    <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+    <data>
+        <display>
+        <title>Centos历史版本 ISO 下载地址Centos Archive Download</title>
+        <pubTime>2018-01-17T13:13:49.000Z</pubTime>
+        
+        <tag>archive</tag>
+         
+        <tag>centos</tag>
+         
+        <tag>download</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://tekin.yunnan.ws/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/mysql-flow-control-statements-23.html</loc>
+    <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+    <data>
+        <display>
+        <title>mysql 流程控制语句全接触</title>
+        <pubTime>2017-11-23T08:56:10.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="数据库开发" url="http://tekin.yunnan.ws/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/Linux/201801/linux-reboot-start-diy-sh-19.html</loc>
+    <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+    <data>
+        <display>
+        <title>linux 开机自动启动自定义脚本</title>
+        <pubTime>2018-01-18T16:22:42.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Linux" url="http://tekin.yunnan.ws/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/Linux/201801/linu-fdisk-mount-method-11.html</loc>
+    <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+    <data>
+        <display>
+        <title>centos, debian 等linux内核的系统 硬盘分区格式化和硬盘挂载 方法</title>
+        <pubTime>2018-01-11T12:34:40.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Linux" url="http://tekin.yunnan.ws/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/php-redirect-30.html</loc>
+    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+    <data>
+        <display>
+        <title>PHP跳转函数</title>
+        <pubTime>2017-05-29T16:05:51.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="PHP技术" url="http://tekin.yunnan.ws/categories/PHP%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/php-aescrypter-pkcs7-encrypt-30.html</loc>
+    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+    <data>
+        <display>
+        <title>php AesCrypter  pkcs7 加解密</title>
+        <pubTime>2017-05-29T16:15:20.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="PHP技术" url="http://tekin.yunnan.ws/categories/PHP%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/JAVA%E5%BC%80%E5%8F%91/201711/lnglat-java-05.html</loc>
+    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+    <data>
+        <display>
+        <title>根据地图的坐标计算出两点之间的距离 java</title>
+        <pubTime>2017-11-05T15:18:12.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="JAVA开发" url="http://tekin.yunnan.ws/categories/JAVA%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201706/mysql-region-5-24.html</loc>
+    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+    <data>
+        <display>
+        <title>2017最新全国 省市县/区 街道/乡镇 社区/村 5级联动 mysql数据库 71.3万条</title>
+        <pubTime>2017-06-24T15:29:48.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="数据库开发" url="http://tekin.yunnan.ws/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/mysql-rand-convert-decimal-23.html</loc>
+    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+    <data>
+        <display>
+        <title>mysql 产生指定位数的随机浮点数</title>
+        <pubTime>2017-11-23T01:39:14.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="数据库开发" url="http://tekin.yunnan.ws/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201706/php-add-items-to-two-dimensional-array-10.html</loc>
+    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+    <data>
+        <display>
+        <title>php如何向一个二维数组里面添加元素</title>
+        <pubTime>2017-06-10T00:54:12.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="PHP技术" url="http://tekin.yunnan.ws/categories/PHP%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/JavaScript/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/java-js-mysql-lnglat-calculate-01.html</loc>
+    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+    <data>
+        <display>
+        <title>【转】利用java、js或mysql计算高德地图中两坐标之间的距离</title>
+        <pubTime>2017-11-01T03:36:59.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="JavaScript" url="http://tekin.yunnan.ws/categories/JavaScript/"/>
+          
+             
+              <breadCrumb title="数据库开发" url="http://tekin.yunnan.ws/categories/JavaScript/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/php-encrypt-decrypt-30.html</loc>
+    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+    <data>
+        <display>
+        <title>PHP加密解密函数</title>
+        <pubTime>2017-05-29T16:07:25.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="PHP技术" url="http://tekin.yunnan.ws/categories/PHP%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/tips-of-improve-sql-select-speed-08.html</loc>
+    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+    <data>
+        <display>
+        <title>提高sql查询效率的30个技巧</title>
+        <pubTime>2017-11-08T06:54:36.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="数据库开发" url="http://tekin.yunnan.ws/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201710/unphat-29.html</loc>
+    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+    <data>
+        <display>
+        <title>什么是UNPHAT原则</title>
+        <pubTime>2017-10-29T14:23:15.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="编程开发" url="http://tekin.yunnan.ws/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/tp5-diy-filename-29.html</loc>
+    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+    <data>
+        <display>
+        <title>tp5自定义上传文件名和保存路径</title>
+        <pubTime>2017-05-29T10:39:21.000Z</pubTime>
+        
+        <tag>tp5</tag>
+         
+        <tag>文件命名</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP技术" url="http://tekin.yunnan.ws/categories/PHP%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201710/you-are-not-google-29.html</loc>
+    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+    <data>
+        <display>
+        <title>[转载]You Are Not Google</title>
+        <pubTime>2017-10-29T14:04:13.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="编程开发" url="http://tekin.yunnan.ws/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/Docker%E6%8A%80%E6%9C%AF/201706/docker-windows10-share-container-07.html</loc>
+    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+    <data>
+        <display>
+        <title>Docker for Windows10 如何配置共享文件夹</title>
+        <pubTime>2017-06-07T14:55:46.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Docker技术" url="http://tekin.yunnan.ws/categories/Docker%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/JAVA%E5%BC%80%E5%8F%91/201407/htaccess-06.html</loc>
+    <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+    <data>
+        <display>
+        <title>apache服务器.htaccess伪静态规则语法教程大全</title>
+        <pubTime>2014-07-06T01:13:04.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="JAVA开发" url="http://tekin.yunnan.ws/categories/JAVA%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/JavaScript/201705/js-document-ready-window-onload-26.html</loc>
+    <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+    <data>
+        <display>
+        <title>JS 页面加载触发事件 document.ready和window.onload的区别</title>
+        <pubTime>2017-05-26T01:30:27.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="JavaScript" url="http://tekin.yunnan.ws/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/JavaScript/201705/js-event-sha256-digest-26.html</loc>
+    <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+    <data>
+        <display>
+        <title>JS 事件绑定   SHA256加密测试代码演示</title>
+        <pubTime>2017-05-26T02:36:11.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="JavaScript" url="http://tekin.yunnan.ws/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201705/js-is-in-array-23.html</loc>
+    <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+    <data>
+        <display>
+        <title>用js实现in_array的方法</title>
+        <pubTime>2017-05-22T23:57:50.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="编程开发" url="http://tekin.yunnan.ws/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/tp5-with-tp3-2-one-words-function-21.html</loc>
+    <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+    <data>
+        <display>
+        <title>thinkphp5兼容TP3.2版本的单字母操作函数</title>
+        <pubTime>2017-05-21T02:52:14.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="PHP技术" url="http://tekin.yunnan.ws/categories/PHP%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201705/php-console-log-19.html</loc>
+    <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+    <data>
+        <display>
+        <title>php控制台输出调试代码函数</title>
+        <pubTime>2017-05-19T00:59:55.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="编程开发" url="http://tekin.yunnan.ws/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/tp5-mulit-keywords-search-27.html</loc>
+    <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+    <data>
+        <display>
+        <title>tp5 多关键字查找实现方法</title>
+        <pubTime>2017-05-27T02:01:44.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="PHP技术" url="http://tekin.yunnan.ws/categories/PHP%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201407/hhvm-php-mysql-numrows-500-error-11.html</loc>
+    <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+    <data>
+        <display>
+        <title>hhvm  php mysql_numrows 至500错误的解决方法</title>
+        <pubTime>2014-07-11T05:08:26.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="PHP技术" url="http://tekin.yunnan.ws/categories/PHP%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/JavaScript/201705/js-format-size-29.html</loc>
+    <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+    <data>
+        <display>
+        <title>JS 格式化字节单位为 kb, m, g 等为友好大小单位</title>
+        <pubTime>2017-05-29T06:30:09.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="JavaScript" url="http://tekin.yunnan.ws/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/Shell%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/201407/linux-tar-split-backup-web-05.html</loc>
+    <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+    <data>
+        <display>
+        <title>[原创]linux 下使用TAR分卷打包自动增量备份网站和数据库并发送到指定邮箱</title>
+        <pubTime>2014-07-05T04:00:27.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Shell编程学习" url="http://tekin.yunnan.ws/categories/Shell%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/Shell%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/201705/shell-delete-old-file-13.html</loc>
+    <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+    <data>
+        <display>
+        <title>shell脚本删除XX天之前指定类型的备份文件实例</title>
+        <pubTime>2017-05-13T04:04:51.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Shell编程学习" url="http://tekin.yunnan.ws/categories/Shell%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/article/201802/hello-world-02.html</loc>
+    <lastmod>2018-02-02T13:50:24.776Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2018-02-02T14:48:00.230Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/article/201802/skill-pub/windows-skill-02.html</loc>
+    <lastmod>2018-02-02T13:01:48.700Z</lastmod>
+    <data>
+        <display>
+        <title>windows-skill</title>
+        <pubTime>2018-02-02T13:01:48.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/skill/201802/skill-pub/win-cmd-netstat-02.html</loc>
+    <lastmod>2018-02-02T12:54:28.931Z</lastmod>
+    <data>
+        <display>
+        <title>Window 如何通过cmd查看端口被谁占用、相应进程、杀死进程命令详解</title>
+        <pubTime>2018-02-02T11:21:51.000Z</pubTime>
+        
+        <tag>windows命令</tag>
+         
+        <tag>cmd</tag>
+         
+        <tag>netstat，tasklist</tag>
+         
+         
+           
+             
+              <breadCrumb title="skill" url="http://tekin.yunnan.ws/categories/skill/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/git/201801/git-pub/git-doc-01.html</loc>
+    <lastmod>2018-02-01T15:32:01.788Z</lastmod>
+    <data>
+        <display>
+        <title>Git参考文档</title>
+        <pubTime>2017-12-31T16:00:00.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>参考文档</tag>
+         
+        <tag>git命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="git" url="http://tekin.yunnan.ws/categories/git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/git/201802/git-pub/git-bash-02.html</loc>
+    <lastmod>2018-02-01T15:31:13.673Z</lastmod>
+    <data>
+        <display>
+        <title>Git常用命令总结</title>
+        <pubTime>2018-02-02T14:48:00.237Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>git命令</tag>
+         
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="git" url="http://tekin.yunnan.ws/categories/git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+</urlset>

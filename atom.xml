@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>TekinTian</title>
+  
+  <subtitle>Tekin Tian&#39;s Github pages</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://tekin.yunnan.ws/"/>
+  <updated>2018-02-01T15:31:13.673Z</updated>
+  <id>http://tekin.yunnan.ws/</id>
+  
+  <author>
+    <name>TekinTian</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git常用命令总结</title>
+    <link href="http://tekin.yunnan.ws/git/201802/git-pub/git-bash-02.html"/>
+    <id>http://tekin.yunnan.ws/git/201802/git-pub/git-bash-02.html</id>
+    <published>2018-02-02T14:48:00.237Z</published>
+    <updated>2018-02-01T15:31:13.673Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Git常用命令总结&quot;&gt;&lt;a href=&quot;#Git常用命令总结&quot; class=&quot;headerlink&quot; title=&quot;Git常用命令总结&quot;&gt;&lt;/a&gt;Git常用命令总结&lt;/h1&gt;&lt;h2 id=&quot;git-init&quot;&gt;&lt;a href=&quot;#git-init&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="git" scheme="http://tekin.yunnan.ws/categories/git/"/>
+    
+    
+      <category term="git" scheme="http://tekin.yunnan.ws/tags/git/"/>
+    
+      <category term="git命令" scheme="http://tekin.yunnan.ws/tags/git%E5%91%BD%E4%BB%A4/"/>
+    
+      <category term="命令" scheme="http://tekin.yunnan.ws/tags/%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://tekin.yunnan.ws/article/201802/hello-world-02.html"/>
+    <id>http://tekin.yunnan.ws/article/201802/hello-world-02.html</id>
+    <published>2018-02-02T14:48:00.230Z</published>
+    <updated>2018-02-02T13:50:24.776Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>windows-skill</title>
+    <link href="http://tekin.yunnan.ws/article/201802/skill-pub/windows-skill-02.html"/>
+    <id>http://tekin.yunnan.ws/article/201802/skill-pub/windows-skill-02.html</id>
+    <published>2018-02-02T13:01:48.000Z</published>
+    <updated>2018-02-02T13:01:48.700Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Window 如何通过cmd查看端口被谁占用、相应进程、杀死进程命令详解</title>
+    <link href="http://tekin.yunnan.ws/skill/201802/skill-pub/win-cmd-netstat-02.html"/>
+    <id>http://tekin.yunnan.ws/skill/201802/skill-pub/win-cmd-netstat-02.html</id>
+    <published>2018-02-02T11:21:51.000Z</published>
+    <updated>2018-02-02T12:54:28.931Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、-查看所有进程占用的端口&quot;&gt;&lt;a href=&quot;#一、-查看所有进程占用的端口&quot; class=&quot;headerlink&quot; title=&quot;一、 查看所有进程占用的端口&quot;&gt;&lt;/a&gt;一、
+        
+      
+    
+    </summary>
+    
+      <category term="skill" scheme="http://tekin.yunnan.ws/categories/skill/"/>
+    
+    
+      <category term="windows命令" scheme="http://tekin.yunnan.ws/tags/windows%E5%91%BD%E4%BB%A4/"/>
+    
+      <category term="cmd" scheme="http://tekin.yunnan.ws/tags/cmd/"/>
+    
+      <category term="netstat，tasklist" scheme="http://tekin.yunnan.ws/tags/netstat%EF%BC%8Ctasklist/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows / Linux 多版本tomcat 共存配置方法[配置两个或多个Tomcat启动的方法]</title>
+    <link href="http://tekin.yunnan.ws/JAVA%E5%BC%80%E5%8F%91/Linux/201801/windows-linux-multi-tomcat-conf-28.html"/>
+    <id>http://tekin.yunnan.ws/JAVA开发/Linux/201801/windows-linux-multi-tomcat-conf-28.html</id>
+    <published>2018-01-28T04:52:55.000Z</published>
+    <updated>2018-02-02T15:25:25.939Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div&gt; Windows / Linux 多版本tomcat 共存配置方法[配置两个或多个Tomcat启动的方法]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;用解压版的tomcat，不要用安装版的。  tomcat历史版本下载地址
+        
+      
+    
+    </summary>
+    
+      <category term="JAVA开发" scheme="http://tekin.yunnan.ws/categories/JAVA%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="Linux" scheme="http://tekin.yunnan.ws/categories/JAVA%E5%BC%80%E5%8F%91/Linux/"/>
+    
+    
+      <category term="bat" scheme="http://tekin.yunnan.ws/tags/bat/"/>
+    
+      <category term="linux" scheme="http://tekin.yunnan.ws/tags/linux/"/>
+    
+      <category term="tomcat" scheme="http://tekin.yunnan.ws/tags/tomcat/"/>
+    
+      <category term="windows" scheme="http://tekin.yunnan.ws/tags/windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>github tarball 直接下载项目最新源码方法</title>
+    <link href="http://tekin.yunnan.ws/%E5%85%B6%E4%BB%96/201801/github-tarball-download-24.html"/>
+    <id>http://tekin.yunnan.ws/其他/201801/github-tarball-download-24.html</id>
+    <published>2018-01-24T06:15:50.000Z</published>
+    <updated>2018-02-02T15:25:25.939Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;github tarball 直接下载项目最新源码方法github tarball 直接下载项目最新源码方法&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;如下载  &lt;span style=&quot;font-family: &#39;Open Sans&#39;, sans-serif;
+        
+      
+    
+    </summary>
+    
+      <category term="其他" scheme="http://tekin.yunnan.ws/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>linux 开机自动启动自定义脚本</title>
+    <link href="http://tekin.yunnan.ws/Linux/201801/linux-reboot-start-diy-sh-19.html"/>
+    <id>http://tekin.yunnan.ws/Linux/201801/linux-reboot-start-diy-sh-19.html</id>
+    <published>2018-01-18T16:22:42.000Z</published>
+    <updated>2018-02-02T15:25:25.939Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在百度上可以找到好几种Linux开机启动各种服务的方法,在这里我写的是自己喜欢的方式.&lt;/p&gt;
+&lt;p&gt;博主是一个不怎么记事的人,有些配置在系统的目录下,配置了一次后就忘了,再也不想去系统的目录下找各种奇奇怪怪的目录和名字.就比如说这个开机启动,在配置完了后的某一天,想要在加
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://tekin.yunnan.ws/categories/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>在Centos 5.x或6.x上安装RHEL EPEL Repo</title>
+    <link href="http://tekin.yunnan.ws/Linux/201801/centos-5-x-6-x-isntall-rhel-epel-repo-18.html"/>
+    <id>http://tekin.yunnan.ws/Linux/201801/centos-5-x-6-x-isntall-rhel-epel-repo-18.html</id>
+    <published>2018-01-18T02:07:30.000Z</published>
+    <updated>2018-02-02T15:25:25.939Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;安装步骤&lt;/strong&gt;&lt;br&gt;Centos 5.x&lt;/p&gt;
+&lt;p&gt;wget &lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://tekin.yunnan.ws/categories/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>debian 所有的历史发行版本6 7,8, 9 版本 ISO文件下载 Debian Archive ISO Download</title>
+    <link href="http://tekin.yunnan.ws/Linux/201801/debian-archive-iso-download-17.html"/>
+    <id>http://tekin.yunnan.ws/Linux/201801/debian-archive-iso-download-17.html</id>
+    <published>2018-01-17T14:04:13.000Z</published>
+    <updated>2018-02-02T15:25:25.939Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Debian-CDs-DVDs-archive&quot;&gt;&lt;a href=&quot;#Debian-CDs-DVDs-archive&quot; class=&quot;headerlink&quot; title=&quot;Debian CDs/DVDs archive&quot;&gt;&lt;/a&gt;Debian CDs/DVDs
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://tekin.yunnan.ws/categories/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Centos历史版本 ISO 下载地址Centos Archive Download</title>
+    <link href="http://tekin.yunnan.ws/Linux/201801/centos-archive-iso-download-17.html"/>
+    <id>http://tekin.yunnan.ws/Linux/201801/centos-archive-iso-download-17.html</id>
+    <published>2018-01-17T13:13:49.000Z</published>
+    <updated>2018-02-02T15:25:25.939Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Centos历史版本-ISO-下载地址Centos-Archive-Download&quot;&gt;&lt;a href=&quot;#Centos历史版本-ISO-下载地址Centos-Archive-Download&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://tekin.yunnan.ws/categories/Linux/"/>
+    
+    
+      <category term="archive" scheme="http://tekin.yunnan.ws/tags/archive/"/>
+    
+      <category term="centos" scheme="http://tekin.yunnan.ws/tags/centos/"/>
+    
+      <category term="download" scheme="http://tekin.yunnan.ws/tags/download/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Centos7  使用 nmcli 命令配置网络详解</title>
+    <link href="http://tekin.yunnan.ws/Linux/201801/centos7-nmcli-16.html"/>
+    <id>http://tekin.yunnan.ws/Linux/201801/centos7-nmcli-16.html</id>
+    <published>2018-01-16T03:55:03.000Z</published>
+    <updated>2018-02-02T15:25:25.939Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;使用**&lt;/strong&gt;nmcli&lt;strong&gt;&lt;strong&gt;命令配置网络&lt;/strong&gt;&lt;/strong&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://tekin.yunnan.ws/categories/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>centos, debian 等linux内核的系统 硬盘分区格式化和硬盘挂载 方法</title>
+    <link href="http://tekin.yunnan.ws/Linux/201801/linu-fdisk-mount-method-11.html"/>
+    <id>http://tekin.yunnan.ws/Linux/201801/linu-fdisk-mount-method-11.html</id>
+    <published>2018-01-11T12:34:40.000Z</published>
+    <updated>2018-02-02T15:25:25.939Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Linu 硬盘分区挂载方法， 适用于 centos, debian 等linux内核的系统 硬盘分区格式化和硬盘挂载&lt;/p&gt;
+&lt;p&gt;挂载硬盘步骤:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;使用fdisk -l
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://tekin.yunnan.ws/categories/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Git参考文档</title>
+    <link href="http://tekin.yunnan.ws/git/201801/git-doc-01.html"/>
+    <id>http://tekin.yunnan.ws/git/201801/git-doc-01.html</id>
+    <published>2017-12-31T16:00:00.000Z</published>
+    <updated>2018-02-02T15:30:07.967Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;创建附注标签&quot;&gt;&lt;a href=&quot;#创建附注标签&quot; class=&quot;headerlink&quot; title=&quot;创建附注标签&quot;&gt;&lt;/a&gt;创建附注标签&lt;/h1&gt;&lt;p&gt;$ git tag -a v5.6.31 -m  “php
+        
+      
+    
+    </summary>
+    
+      <category term="git" scheme="http://tekin.yunnan.ws/categories/git/"/>
+    
+    
+      <category term="git" scheme="http://tekin.yunnan.ws/tags/git/"/>
+    
+      <category term="参考文档" scheme="http://tekin.yunnan.ws/tags/%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3/"/>
+    
+      <category term="git命令" scheme="http://tekin.yunnan.ws/tags/git%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git参考文档</title>
+    <link href="http://tekin.yunnan.ws/git/201801/git-pub/git-doc-01.html"/>
+    <id>http://tekin.yunnan.ws/git/201801/git-pub/git-doc-01.html</id>
+    <published>2017-12-31T16:00:00.000Z</published>
+    <updated>2018-02-01T15:32:01.788Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;创建附注标签&quot;&gt;&lt;a href=&quot;#创建附注标签&quot; class=&quot;headerlink&quot; title=&quot;创建附注标签&quot;&gt;&lt;/a&gt;创建附注标签&lt;/h1&gt;&lt;p&gt;$ git tag -a v5.6.31 -m  “php
+        
+      
+    
+    </summary>
+    
+      <category term="git" scheme="http://tekin.yunnan.ws/categories/git/"/>
+    
+    
+      <category term="git" scheme="http://tekin.yunnan.ws/tags/git/"/>
+    
+      <category term="参考文档" scheme="http://tekin.yunnan.ws/tags/%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3/"/>
+    
+      <category term="git命令" scheme="http://tekin.yunnan.ws/tags/git%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql 流程控制语句全接触</title>
+    <link href="http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/mysql-flow-control-statements-23.html"/>
+    <id>http://tekin.yunnan.ws/数据库开发/201711/mysql-flow-control-statements-23.html</id>
+    <published>2017-11-23T08:56:10.000Z</published>
+    <updated>2018-02-02T15:25:25.939Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Flow Control Statements&lt;/p&gt;
+&lt;p&gt;MySQL supports the &lt;a href=&quot;https://dev.mysql.com/doc/refman/5.7/en/if.html&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="数据库开发" scheme="http://tekin.yunnan.ws/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mysql 产生指定位数的随机浮点数</title>
+    <link href="http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/mysql-rand-convert-decimal-23.html"/>
+    <id>http://tekin.yunnan.ws/数据库开发/201711/mysql-rand-convert-decimal-23.html</id>
+    <published>2017-11-23T01:39:14.000Z</published>
+    <updated>2018-02-02T15:25:25.929Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;mysql-rand，round，floor，ceiling函数以及获得指定范围随机数-这些都是整数或者是rand-默认位数的随机小数，如何获得指定位数的随机浮点数呢？&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="数据库开发" scheme="http://tekin.yunnan.ws/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>提高sql查询效率的30个技巧</title>
+    <link href="http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/tips-of-improve-sql-select-speed-08.html"/>
+    <id>http://tekin.yunnan.ws/数据库开发/201711/tips-of-improve-sql-select-speed-08.html</id>
+    <published>2017-11-08T06:54:36.000Z</published>
+    <updated>2018-02-02T15:25:25.929Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;1.对查询进行优化，应尽量避免全表扫描，首先应考虑在 where 及 order by 涉及的列上建立索引。&lt;/p&gt;
+&lt;p&gt;2.应尽量避免在 where 子句中对字段进行 null 值判断，否则将导致引擎放弃使用索引而进行全表扫描，如：&lt;br&gt;select id from
+        
+      
+    
+    </summary>
+    
+      <category term="数据库开发" scheme="http://tekin.yunnan.ws/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>根据地图的坐标计算出两点之间的距离 java</title>
+    <link href="http://tekin.yunnan.ws/JAVA%E5%BC%80%E5%8F%91/201711/lnglat-java-05.html"/>
+    <id>http://tekin.yunnan.ws/JAVA开发/201711/lnglat-java-05.html</id>
+    <published>2017-11-05T15:18:12.000Z</published>
+    <updated>2018-02-02T15:25:25.929Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;pre class=&quot;font:sourcecodepro lang:java decode:true  &quot;&gt;public class Distribution&lt;br&gt;{&lt;br&gt;    // 经度&lt;br&gt;    double
+        
+      
+    
+    </summary>
+    
+      <category term="JAVA开发" scheme="http://tekin.yunnan.ws/categories/JAVA%E5%BC%80%E5%8F%91/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>【转】利用java、js或mysql计算高德地图中两坐标之间的距离</title>
+    <link href="http://tekin.yunnan.ws/JavaScript/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/java-js-mysql-lnglat-calculate-01.html"/>
+    <id>http://tekin.yunnan.ws/JavaScript/数据库开发/201711/java-js-mysql-lnglat-calculate-01.html</id>
+    <published>2017-11-01T03:36:59.000Z</published>
+    <updated>2018-02-02T15:25:25.929Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div id=&quot;magicdomid6&quot; class=&quot;ace-line gutter-author-p-1375536 emptyGutter&quot;&gt;&lt;span class=&quot;author-p-1375536 color:rgb(102, 102, 102)
+        
+      
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://tekin.yunnan.ws/categories/JavaScript/"/>
+    
+      <category term="数据库开发" scheme="http://tekin.yunnan.ws/categories/JavaScript/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>什么是UNPHAT原则</title>
+    <link href="http://tekin.yunnan.ws/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201710/unphat-29.html"/>
+    <id>http://tekin.yunnan.ws/编程开发/201710/unphat-29.html</id>
+    <published>2017-10-29T14:23:15.000Z</published>
+    <updated>2018-02-02T15:25:25.929Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;最近在看技术文章时发现最近比较热的一个技术原则 UNPHAT ,
+        
+      
+    
+    </summary>
+    
+      <category term="编程开发" scheme="http://tekin.yunnan.ws/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+    
+    
+  </entry>
+  
+</feed>

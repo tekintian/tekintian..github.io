@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://tekin.yunnan.ws</loc>
+        <changefreq>daily</changefreq>
+        <priority>1</priority>
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/php-get-ip-address-validate-30.html</loc>
+        <lastmod>2018-02-02T15:43:32.875Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/git/201801/git-doc-01.html</loc>
+        <lastmod>2018-02-02T15:30:07.967Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/Linux/201801/centos-5-x-6-x-isntall-rhel-epel-repo-18.html</loc>
+        <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/Linux/201801/centos-archive-iso-download-17.html</loc>
+        <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/Linux/201801/centos7-nmcli-16.html</loc>
+        <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/Linux/201801/debian-archive-iso-download-17.html</loc>
+        <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/%E5%85%B6%E4%BB%96/201801/github-tarball-download-24.html</loc>
+        <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/Linux/201801/linu-fdisk-mount-method-11.html</loc>
+        <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/Linux/201801/linux-reboot-start-diy-sh-19.html</loc>
+        <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/mysql-flow-control-statements-23.html</loc>
+        <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/JAVA%E5%BC%80%E5%8F%91/Linux/201801/windows-linux-multi-tomcat-conf-28.html</loc>
+        <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/Docker%E6%8A%80%E6%9C%AF/201706/docker-windows10-share-container-07.html</loc>
+        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/JavaScript/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/java-js-mysql-lnglat-calculate-01.html</loc>
+        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/JAVA%E5%BC%80%E5%8F%91/201711/lnglat-java-05.html</loc>
+        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201706/mysql-region-5-24.html</loc>
+        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/mysql-rand-convert-decimal-23.html</loc>
+        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/php-aescrypter-pkcs7-encrypt-30.html</loc>
+        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201706/php-add-items-to-two-dimensional-array-10.html</loc>
+        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/php-redirect-30.html</loc>
+        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/php-encrypt-decrypt-30.html</loc>
+        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/tips-of-improve-sql-select-speed-08.html</loc>
+        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201710/unphat-29.html</loc>
+        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/tp5-diy-filename-29.html</loc>
+        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201710/you-are-not-google-29.html</loc>
+        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201407/hhvm-php-mysql-numrows-500-error-11.html</loc>
+        <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/JAVA%E5%BC%80%E5%8F%91/201407/htaccess-06.html</loc>
+        <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/JavaScript/201705/js-document-ready-window-onload-26.html</loc>
+        <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/JavaScript/201705/js-format-size-29.html</loc>
+        <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/JavaScript/201705/js-event-sha256-digest-26.html</loc>
+        <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201705/js-is-in-array-23.html</loc>
+        <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/Shell%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/201407/linux-tar-split-backup-web-05.html</loc>
+        <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201705/php-console-log-19.html</loc>
+        <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/Shell%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/201705/shell-delete-old-file-13.html</loc>
+        <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/tp5-with-tp3-2-one-words-function-21.html</loc>
+        <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/tp5-mulit-keywords-search-27.html</loc>
+        <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/article/201802/hello-world-02.html</loc>
+        <lastmod>2018-02-02T13:50:24.776Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/article/201802/skill-pub/windows-skill-02.html</loc>
+        <lastmod>2018-02-02T13:01:48.700Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/skill/201802/skill-pub/win-cmd-netstat-02.html</loc>
+        <lastmod>2018-02-02T12:54:28.931Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/git/201801/git-pub/git-doc-01.html</loc>
+        <lastmod>2018-02-01T15:32:01.788Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/git/201802/git-pub/git-bash-02.html</loc>
+        <lastmod>2018-02-01T15:31:13.673Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+</urlset>
+<!-- XML Sitemap generated by Hexo SEO Friendly Sitemap Generator -->

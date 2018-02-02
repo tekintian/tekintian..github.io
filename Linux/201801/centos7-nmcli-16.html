@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Centos7  使用 nmcli 命令配置网络详解 | TekinTian</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="tekin, java, php, python, 云南网, 网站开发" />
+  
+  <meta name="description" content="使用**nmcli命令配置网络 ** NetworkManager是管理和监控网络设置的守护进程，设备既就是网络接口，连接是对网络接口的配置，一个网络接口可以有多个连接配置，但同时只有一个连接配置生效。 1 **配置主机名**  CentOS6 之前主机配置文件：/etc/sysconfig/network CentOS7主机名配置文件：/etc/hostname，默认没有这个文件，通过DNS反向">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Centos7  使用 nmcli 命令配置网络详解">
+<meta property="og:url" content="http://tekin.yunnan.ws/Linux/201801/centos7-nmcli-16.html">
+<meta property="og:site_name" content="TekinTian">
+<meta property="og:description" content="使用**nmcli命令配置网络 ** NetworkManager是管理和监控网络设置的守护进程，设备既就是网络接口，连接是对网络接口的配置，一个网络接口可以有多个连接配置，但同时只有一个连接配置生效。 1 **配置主机名**  CentOS6 之前主机配置文件：/etc/sysconfig/network CentOS7主机名配置文件：/etc/hostname，默认没有这个文件，通过DNS反向">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-02T15:25:25.939Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Centos7  使用 nmcli 命令配置网络详解">
+<meta name="twitter:description" content="使用**nmcli命令配置网络 ** NetworkManager是管理和监控网络设置的守护进程，设备既就是网络接口，连接是对网络接口的配置，一个网络接口可以有多个连接配置，但同时只有一个连接配置生效。 1 **配置主机名**  CentOS6 之前主机配置文件：/etc/sysconfig/network CentOS7主机名配置文件：/etc/hostname，默认没有这个文件，通过DNS反向">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Tekin&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Tekin&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        IT Geek Communication blogs
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="HomePage" target="_blank" href="//tekin.yunnan.ws/">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/tekintian">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/tekintian">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//twitter.com/tekintian">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-centos7-nmcli" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      Centos7  使用 nmcli 命令配置网络详解
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/Linux/">Linux</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-01-16
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p><strong>使用**</strong>nmcli<strong><strong>命令配置网络</strong></strong> **</p>
+<p>NetworkManager是管理和监控网络设置的守护进程，设备既就是网络接口，连接是对网络接口的配置，一个网络接口可以有多个连接配置，但同时只有一个连接配置生效。</p>
+<p><strong>1 **</strong>配置主机名<strong>** </strong></p>
+<p>CentOS6 之前主机配置文件：/etc/sysconfig/network</p>
+<p>CentOS7主机名配置文件：/etc/hostname，默认没有这个文件，通过DNS反向解析获取主机名，主机名默认为：localhost.localdomain</p>
+<p>显示主机名信息</p>
+<p>hostname</p>
+<p>hostnamectl status</p>
+<p>创建并修改文件并生效</p>
+<p>hostnamectl set-hostname deskX.example.com</p>
+<p><table width="1305"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<p><td>1</td></p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p><td>[root@centos73 ~]# hostnamectl set-hostname centos7.3.com</td></p>
+<p>[root@centos73 ~]# hostname</p>
+<p>centos7.3.com</p>
+<p>[root@centos73 ~]# cat /etc/hostname</p>
+<p>centos7.3.com<br><br><br><br>可以看到已经修改成功。</p>
+<p>删除文件。回复默认主机名localhost.localdomain</p>
+<p><strong>2 **</strong>常用命令<strong>** </strong></p>
+<p>nmcli connection show 显示所有连接</p>
+<p>nmcli connection show –active    显示所有活动的连接状态</p>
+<p>nmcli connection show “ens33”    显示网络连接配置</p>
+<p>nmcli device status            显示设备状态</p>
+<p>nmcli device show ens33        显示网络接口属性</p>
+<p>nmcli connection add help        查看帮助</p>
+<p>nmcli connection reload        重新加载配置</p>
+<p>nmcli connection down test2        禁用test2的配置，注意一个网卡可以有多个配置。</p>
+<p>nmcli connection up test2        启用test2的配置</p>
+<p>nmcli device disconnect ens33    禁用ens33网卡，物理网卡</p>
+<p>nmcli device connect ens33    启用ens33网卡</p>
+<p>图形工具</p>
+<p>nm-connection-editor</p>
+<p>字符工具</p>
+<p>nmtui</p>
+<p>nmtui-connect</p>
+<p>nmtui-edit</p>
+<p>nmtui-hostname</p>
+<p><strong>3 **</strong>创建新连接配置<strong>** </strong></p>
+<p>（1）创建新连接配置default，IP通过DHCP自动获取</p>
+<p><table width="1305"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<p><td>1</td></p>
+<p>2</p>
+<p><td>[root@centos73 ~]# nmcli connection add con-name default type Ethernet ifname eth0</td></p>
+<p>Connection ‘default’ (d62f98af-86ed-4735-80aa-2d80351765b2) successfully added.<br><br><br><br>删除连接</p>
+<p><table width="1305"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<p><td>1</td></p>
+<p>2</p>
+<p><td>[root@centos73 ~]# nmcli connection delete default</td></p>
+<p>Connection ‘default’ (d62f98af-86ed-4735-80aa-2d80351765b2) successfully deleted.<br><br><br><br>（2）创建新的连接配置test2，指定静态IP，不自动连接</p>
+<p><table width="1305"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<p><td>1</td></p>
+<p>2</p>
+<p><td>[root@centos73 ~]# nmcli connection add con-name test2 ipv4.method manual ifname ens33 autoconnect no type Ethernet ipv4.addresses 172.25.100.100/24 gw4 172.25.100.1</td></p>
+<p>Connection ‘test2’ (98385bf5-8cc3-47e3-a5f2-51e2d736be6d) successfully added.<br><br><br><br>参数说明：</p>
+<p>con-name 指定连接名字，没有特殊要求，</p>
+<p>ipv4.methmod 指定获取IP地址的方式</p>
+<p>ifname 指定网卡设被名，既就是次配置所生效的网卡</p>
+<p>autoconnect 指定是否自动启动</p>
+<p>ipv4.addresses 指定IPv4地址</p>
+<p>gw4指定网关</p>
+<p>&nbsp;</p>
+<p><strong>4**</strong>查看<strong><strong>/etc/sysconfig/network-scripts/</strong></strong>目录<strong>** </strong></p>
+<p>会看到多出一个文件ifcfg-test2。说明添加确实生效了。</p>
+<p>/etc/sysconfig/network-scripts/ifcfg-test2</p>
+<p><table width="1305"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<p><td>1</td></p>
+<p>2</p>
+<p>3</p>
+<p><td>[root@centos73 ~]# ls /etc/sysconfig/network-scripts/ifcfg-*</td></p>
+<p>/etc/sysconfig/network-scripts/ifcfg-ens33 /etc/sysconfig/network-scripts/ifcfg-lo</p>
+<p>/etc/sysconfig/network-scripts/ifcfg-ens34 /etc/sysconfig/network-scripts/ifcfg-test2<br><br><br><br><strong>5 **</strong>启用<strong><strong>test2</strong></strong>连接配置<strong>** </strong></p>
+<p><table width="1305"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<p><td>1</td></p>
+<p>2</p>
+<p>3</p>
+<p><td>[root@centos73 ~]# nmcli connection up test2</td></p>
+<p>Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/7)</p>
+<p>[root@centos73 ~]# systemctl restart network<br><br><br><br>看下是否生效</p>
+<p>[root@centos73 ~]# nmcli device show ens33</p>
+<p>&nbsp;</p>
+<p>GENERAL.DEVICE: ens33</p>
+<p>GENERAL.TYPE: ethernet</p>
+<p>GENERAL.HWADDR: 00:0C:29:3A:00:82</p>
+<p>GENERAL.MTU: 1500</p>
+<p>GENERAL.STATE: 100 (connected)</p>
+<p>GENERAL.CONNECTION: test2</p>
+<p>GENERAL.CON-PATH: /org/freedesktop/NetworkManager/ActiveConnection/7</p>
+<p>WIRED-PROPERTIES.CARRIER: on</p>
+<p>IP4.ADDRESS[1]: 172.25.100.100/24</p>
+<p>IP4.GATEWAY: 172.25.100.1</p>
+<p>IP6.ADDRESS[1]: fe80::5a5b:2cc3:a448:e2e1/64</p>
+<p>IP6.GATEWAY:</p>
+<p>好了，基本的IP地址配置成功</p>
+<p><strong>6 **</strong>修改连接设置<strong>** </strong></p>
+<p>（1）修改test2为自动启动</p>
+<p><table width="1305"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<p><td>1</td></p>
+<p><td>[root@centos73 ~]# nmcli connection modify test2 connection.autoconnect yes</td><br><br><br><br>（2）修改DNS为172.25.1.1</p>
+<p><table width="1305"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<p><td>1</td></p>
+<p><td>[root@centos73 ~]# nmcli connection modify test2 ipv4.dns 172.25.1.1</td><br><br><br><br>（3）添加DNS 114.114.114.114</p>
+<p><table width="1305"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<p><td>1</td></p>
+<p><td>[root@centos73 ~]# nmcli connection modify test2 +ipv4.dns 114.114.114.114</td><br><br><br><br>看下是否成功</p>
+<p>[root@centos73 ~]# cat /etc/sysconfig/network-scripts/ifcfg-test2</p>
+<p>&nbsp;</p>
+<p>TYPE=Ethernet</p>
+<p>[……]</p>
+<p>NAME=test2</p>
+<p>UUID=98385bf5-8cc3-47e3-a5f2-51e2d736be6d</p>
+<p>DEVICE=ens33</p>
+<p>ONBOOT=yes</p>
+<p>DNS1=172.25.1.1</p>
+<p>IPADDR=172.25.100.100</p>
+<p>PREFIX=24</p>
+<p>GATEWAY=172.25.100.1</p>
+<p>DNS2=114.114.114.114</p>
+<p>可以看到均已生效</p>
+<p>（4）删除DNS</p>
+<p><table width="1305"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<p><td>1</td></p>
+<p><td>[root@centos73 ~]# nmcli connection modify test2 -ipv4.dns 114.114.114.114</td><br><br><br><br>（5）修改IP地址</p>
+<p><table width="1305"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<p><td>1</td></p>
+<p><td>[root@centos73 ~]# nmcli connection modify test2 ipv4.addresses 200.100.100.100/24 gw4 200.100.100.1</td><br><br><br><br>（6）还可以添加多个IP</p>
+<p><table width="1305"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<p><td>1</td></p>
+<p><td>[root@centos73 ~]# nmcli connection modify test2 +ipv4.addresses 10.10.10.10/8</td><br><br><br><br><strong>7 nmcli **</strong>命令和<strong><strong>/etc/sysconfig/network-scripts/ifcfg-*</strong></strong>文件的对应关系<strong>** </strong></p>
+<p>ipv4.method manual　　　　　　　 BOOTPROTO=none</p>
+<p>ipv4.method auto　　　　　　　　BOOTPROTO=dhcp</p>
+<p>ipv4.addresses “192.0.2.1/24　　　IPADDR=192.0.2.1</p>
+<p>PREFIX=24</p>
+<p>gw4 192.0.2.254”   　　　　　　　GATEWAY=192.0.2.254</p>
+<p>ipv4.dns 8.8.8.8　　　　　　　　 DNS0=8.8.8.8</p>
+<p>ipv4.dns-search example.com 　　DOMAIN=example.com</p>
+<p>ipv4.ignore-auto-dns true　　　　 PEERDNS=no</p>
+<p>connection.autoconnect yes 　　　ONBOOT=yes</p>
+<p>connection.id eth0 　　　　　　　　NAME=eth0</p>
+<p>connection.interface-name eth0　　 DEVICE=eth0</p>
+<p>802-3-ethernet.mac-address . . . 　　HWADDR= . . .</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>8 Nmcli**</strong>命令详解**</p>
+<h2 id="nmcli-connection-help"><a href="#nmcli-connection-help" class="headerlink" title="# nmcli connection help"></a># nmcli connection help</h2><p>Usage: nmcli connection { COMMAND | help }</p>
+<p>&nbsp;</p>
+<p>COMMAND := { show | up | down | add | modify | clone | edit | delete | monitor | reload | load | import | export }</p>
+<p>&nbsp;</p>
+<p>show [–active] [–order &lt;order spec&gt;]</p>
+<p>show [–active] [id | uuid | path | apath] &lt;ID&gt; …</p>
+<p>&nbsp;</p>
+<p>up [[id | uuid | path] &lt;ID&gt;] [ifname &lt;ifname&gt;] [ap &lt;BSSID&gt;] [passwd-file &lt;file with passwords&gt;]</p>
+<p>&nbsp;</p>
+<p>down [id | uuid | path | apath] &lt;ID&gt; …</p>
+<p>&nbsp;</p>
+<p>add COMMON_OPTIONS TYPE_SPECIFIC_OPTIONS SLAVE_OPTIONS IP_OPTIONS [– ([+|-]&lt;setting&gt;.&lt;property&gt; &lt;value&gt;)+]</p>
+<p>&nbsp;</p>
+<p>modify [–temporary] [id | uuid | path] &lt;ID&gt; ([+|-]&lt;setting&gt;.&lt;property&gt; &lt;value&gt;)+</p>
+<p>&nbsp;</p>
+<p>clone [–temporary] [id | uuid | path ] &lt;ID&gt; &lt;new name&gt;</p>
+<p>&nbsp;</p>
+<p>edit [id | uuid | path] &lt;ID&gt;</p>
+<p>edit [type &lt;new_con_type&gt;] [con-name &lt;new_con_name&gt;]</p>
+<p>&nbsp;</p>
+<p>delete [id | uuid | path] &lt;ID&gt;</p>
+<p>&nbsp;</p>
+<p>monitor [id | uuid | path] &lt;ID&gt; …</p>
+<p>&nbsp;</p>
+<p>reload</p>
+<p>&nbsp;</p>
+<p>load &lt;filename&gt; [ &lt;filename&gt;… ]</p>
+<p>&nbsp;</p>
+<p>import [–temporary] type &lt;type&gt; file &lt;file to import&gt;</p>
+<p>&nbsp;</p>
+<p>export [id | uuid | path] &lt;ID&gt; [&lt;output file&gt;]</p>
+<p>&nbsp;</p>
+<p>nmcli 修改网络连接方式，IP 地址， 网关等方法</p>
+<h1 id="nmcli-connection-edit-enp0s8"><a href="#nmcli-connection-edit-enp0s8" class="headerlink" title="nmcli connection edit enp0s8"></a>nmcli connection edit enp0s8</h1><p>&nbsp;</p>
+<p>===| nmcli 交互式连接编辑器 |===</p>
+<p>&nbsp;</p>
+<p>正在编辑已存的连接“802-3-ethernet”：“enp0s8”</p>
+<p>&nbsp;</p>
+<p>对于可用的命令输入“help”或“?”。</p>
+<p>输入“describe [&lt;设置&gt;.&lt;属性&gt;]”来获得详细的属性描述。</p>
+<p>&nbsp;</p>
+<p>您可编辑下列设置：connection, 802-3-ethernet (ethernet), 802-1x, dcb, ipv4, ipv6, proxy</p>
+<p>nmcli&gt;</p>
+<p>#查看帮助</p>
+<p>nmcli&gt; help</p>
+<hr>
+<p>—[ Main menu ]—</p>
+<p>goto     [&lt;setting&gt; | &lt;prop&gt;]        :: go to a setting or property</p>
+<p>remove   &lt;setting&gt;[.&lt;prop&gt;] | &lt;prop&gt; :: remove setting or reset property value</p>
+<p>set      [&lt;setting&gt;.&lt;prop&gt; &lt;value&gt;]  :: set property value</p>
+<p>describe [&lt;setting&gt;.&lt;prop&gt;]          :: describe property</p>
+<p>print    [all | &lt;setting&gt;[.&lt;prop&gt;]]  :: print the connection</p>
+<p>verify   [all | fix]                 :: verify the connection</p>
+<p>save     [persistent|temporary]      :: save the connection</p>
+<p>activate [&lt;ifname&gt;] [/&lt;ap&gt;|&lt;nsp&gt;]    :: activate the connection</p>
+<p>back                                 :: go one level up (back)</p>
+<p>help/?   [&lt;command&gt;]                 :: print this help</p>
+<p>nmcli    &lt;conf-option&gt; &lt;value&gt;       :: nmcli configuration</p>
+<p>quit                                 :: exit nmcli</p>
+<hr>
+<p>nmcli&gt;</p>
+<p>&nbsp;</p>
+<p>#设置网卡的连接方式 auto / static / manual / dhcp</p>
+<p>set ipv4.method static</p>
+<p>#设置IP地址 192.168.1.9 【 24表示子网掩码为255.255.255.0】</p>
+<p>set. ipv4.address 192.168.1.9/24</p>
+<p>#设置DNS 8.8.8.8 8.8.4.4</p>
+<p>set ipv4.dns 8.8.8.8,8.8.4.4</p>
+<p>#设置网关</p>
+<p>set ipv4.gateway 172.17.0.1</p>
+<p>#保存网络设置</p>
+<p>Save</p>
+<p>#退出nmcli交互式设置界面</p>
+<p>Quit</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>BOOTPROTO=static 静态IP</p>
+<p>BOOTPROTO=dhcp 动态IP</p>
+<p>&nbsp;</p>
+<p>利用好 print 命令 打印配置信息 和 help帮助命令，不知道具体的属性可以随便给一个不存在的属性 比如 xxx ， 回车后就会显示正确的属性提示</p>
+<p>&nbsp;</p>
+<p>nmcli&gt; help</p>
+<hr>
+<p>—[ Main menu ]—</p>
+<p>goto     [&lt;setting&gt; | &lt;prop&gt;]        :: go to a setting or property</p>
+<p>remove   &lt;setting&gt;[.&lt;prop&gt;] | &lt;prop&gt; :: remove setting or reset property value</p>
+<p>set      [&lt;setting&gt;.&lt;prop&gt; &lt;value&gt;]  :: set property value</p>
+<p>describe [&lt;setting&gt;.&lt;prop&gt;]          :: describe property</p>
+<p>print    [all | &lt;setting&gt;[.&lt;prop&gt;]]  :: print the connection</p>
+<p>verify   [all | fix]                 :: verify the connection</p>
+<p>save     [persistent|temporary]      :: save the connection</p>
+<p>activate [&lt;ifname&gt;] [/&lt;ap&gt;|&lt;nsp&gt;]    :: activate the connection</p>
+<p>back                                 :: go one level up (back)</p>
+<p>help/?   [&lt;command&gt;]                 :: print this help</p>
+<p>nmcli    &lt;conf-option&gt; &lt;value&gt;       :: nmcli configuration</p>
+<p>quit                                 :: exit nmcli</p>
+<hr>
+<p>nmcli&gt; set</p>
+<p>错误：未选择设置；有效的为 [connection, 802-3-ethernet (ethernet), 802-1x, dcb, ipv4, ipv6, proxy]</p>
+<p>先使用“goto &lt;设置&gt;”，或“set &lt;设置&gt;.&lt;属性&gt;”</p>
+<p>nmcli&gt; set ethernet.xx</p>
+<p>错误：无效属性：’xx’ 不在 [port, speed, duplex, auto-negotiate, mac-address, cloned-mac-address, generate-mac-address-mask, mac-address-blacklist, mtu, s390-subchannels, s390-nettype, s390-options, wake-on-lan, wake-on-lan-password] 中</p>
+<p>nmcli&gt; set ipv4.xx</p>
+<p>错误：无效属性：’xx’ 不在 [method, dns, dns-search, dns-options, dns-priority, addresses, gateway, routes, route-metric, ignore-auto-routes, ignore-auto-dns, dhcp-hostname, dhcp-send-hostname, never-default, may-fail, dad-timeout, dhcp-timeout, dhcp-client-id, dhcp-fqdn] 中</p>
+<p>&nbsp;</p>
+<p>nmcli&gt; set dcb.xx</p>
+<p>错误：无效属性：’xx’ 不在 [app-fcoe-flags, app-fcoe-priority, app-fcoe-mode, app-iscsi-flags, app-iscsi-priority, app-fip-flags, app-fip-priority, priority-flow-control-flags, priority-flow-control, priority-group-flags, priority-group-id, priority-group-bandwidth, priority-bandwidth, priority-strict-bandwidth, priority-traffic-class] 中</p>
+<p>nmcli&gt; set 802-1x.xx</p>
+<p>错误：无效属性：’xx’ 不在 [eap, identity, anonymous-identity, pac-file, ca-cert, ca-cert-password, ca-cert-password-flags, ca-path, subject-match, altsubject-matches, domain-suffix-match, client-cert, client-cert-password, client-cert-password-flags, phase1-peapver, phase1-peaplabel, phase1-fast-provisioning, phase1-auth-flags, phase2-auth, phase2-autheap, phase2-ca-cert, phase2-ca-cert-password, phase2-ca-cert-password-flags, phase2-ca-path, phase2-subject-match, phase2-altsubject-matches, phase2-domain-suffix-match, phase2-client-cert, phase2-client-cert-password, phase2-client-cert-password-flags, password, password-flags, password-raw, password-raw-flags, private-key, private-key-password, private-key-password-flags, phase2-private-key, phase2-private-key-password, phase2-private-key-password-flags, pin, pin-flags, system-ca-certs, auth-timeout] 中</p>
+<p>nmcli&gt; set proxy.xx</p>
+<p>错误：无效属性：’xx’ 不在 [method, browser-only, pac-url, pac-script] 中</p>
+<p>nmcli&gt;</p>
+<p>&nbsp;</p>
+<p>nmcli connection 里面的 print命令</p>
+<p>以下的所有的配置信息可以通过 nmcli con mod enp0s8 连接配置项  值  来设置</p>
+<p>===============================================================================</p>
+<p>连接配置集详情 (enp0s8)</p>
+<p>===============================================================================</p>
+<p>connection.id:                          enp0s8</p>
+<p>connection.uuid:                        f8c1e3eb-8d0d-32f0-a875-8e3b6326744f</p>
+<p>connection.stable-id:                   –</p>
+<p>connection.interface-name:              –</p>
+<p>connection.type:                        802-3-ethernet</p>
+<p>connection.autoconnect:                 yes</p>
+<p>connection.autoconnect-priority:        -999</p>
+<p>connection.autoconnect-retries:         -1 (默认)</p>
+<p>connection.timestamp:                   1516070244</p>
+<p>connection.read-only:                   no</p>
+<p>connection.permissions:                 –</p>
+<p>connection.zone:                        –</p>
+<p>connection.master:                      –</p>
+<p>connection.slave-type:                  –</p>
+<p>connection.autoconnect-slaves:          -1 (默认)</p>
+<p>connection.secondaries:                 –</p>
+<p>connection.gateway-ping-timeout:        0</p>
+<p>connection.metered:                     未知</p>
+<p>connection.lldp:                        -1 (default)</p>
+<hr>
+<p>802-3-ethernet.port:                    –</p>
+<p>802-3-ethernet.speed:                   0</p>
+<p>802-3-ethernet.duplex:                  –</p>
+<p>802-3-ethernet.auto-negotiate:          no</p>
+<p>802-3-ethernet.mac-address:             08:00:27:D4:51:67</p>
+<p>802-3-ethernet.cloned-mac-address:      –</p>
+<p>802-3-ethernet.generate-mac-address-mask:–</p>
+<p>802-3-ethernet.mac-address-blacklist:   –</p>
+<p>802-3-ethernet.mtu:                     自动</p>
+<p>802-3-ethernet.s390-subchannels:        –</p>
+<p>802-3-ethernet.s390-nettype:            –</p>
+<p>802-3-ethernet.s390-options:            –</p>
+<p>802-3-ethernet.wake-on-lan:             1 (default)</p>
+<p>802-3-ethernet.wake-on-lan-password:    –</p>
+<hr>
+<p>ipv4.method:                            auto</p>
+<p>ipv4.dns:                               –</p>
+<p>ipv4.dns-search:                        –</p>
+<p>ipv4.dns-options:                       （默认）</p>
+<p>ipv4.dns-priority:                      0</p>
+<p>ipv4.addresses:                         172.17.0.20/24</p>
+<p>ipv4.gateway:                           172.17.0.1</p>
+<p>ipv4.routes:                            –</p>
+<p>ipv4.route-metric:                      -1</p>
+<p>ipv4.ignore-auto-routes:                no</p>
+<p>ipv4.ignore-auto-dns:                   no</p>
+<p>ipv4.dhcp-client-id:                    –</p>
+<p>ipv4.dhcp-timeout:                      0</p>
+<p>ipv4.dhcp-send-hostname:                yes</p>
+<p>ipv4.dhcp-hostname:                     –</p>
+<p>ipv4.dhcp-fqdn:                         –</p>
+<p>ipv4.never-default:                     no</p>
+<p>ipv4.may-fail:                          yes</p>
+<p>ipv4.dad-timeout:                       -1 (默认)</p>
+<hr>
+<p>ipv6.method:                            auto</p>
+<p>ipv6.dns:                               –</p>
+<p>ipv6.dns-search:                        –</p>
+<p>ipv6.dns-options:                       （默认）</p>
+<p>ipv6.dns-priority:                      0</p>
+<p>ipv6.addresses:                         –</p>
+<p>ipv6.gateway:                           –</p>
+<p>ipv6.routes:                            –</p>
+<p>ipv6.route-metric:                      -1</p>
+<p>ipv6.ignore-auto-routes:                no</p>
+<p>ipv6.ignore-auto-dns:                   no</p>
+<p>ipv6.never-default:                     no</p>
+<p>ipv6.may-fail:                          yes</p>
+<p>ipv6.ip6-privacy:                       -1 (未知)</p>
+<p>ipv6.addr-gen-mode:                     stable-privacy</p>
+<p>ipv6.dhcp-send-hostname:                yes</p>
+<p>ipv6.dhcp-hostname:                     –</p>
+<p>ipv6.token:                             –</p>
+<hr>
+<p>proxy.method:                           none</p>
+<p>proxy.browser-only:                     no</p>
+<p>proxy.pac-url:                          –</p>
+<p>proxy.pac-script:                       –</p>
+<hr>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>nmcli device help</p>
+<p>Usage: nmcli device { COMMAND | help }</p>
+<p>&nbsp;</p>
+<p>COMMAND := { status | show | set | connect | reapply | modify | disconnect | delete | monitor | wifi | lldp }</p>
+<p>&nbsp;</p>
+<p>status</p>
+<p>&nbsp;</p>
+<p>show [&lt;ifname&gt;]</p>
+<p>&nbsp;</p>
+<p>set [ifname] &lt;ifname&gt; [autoconnect yes|no] [managed yes|no]</p>
+<p>&nbsp;</p>
+<p>connect &lt;ifname&gt;</p>
+<p>&nbsp;</p>
+<p>reapply &lt;ifname&gt;</p>
+<p>&nbsp;</p>
+<p>modify &lt;ifname&gt; ([+|-]&lt;setting&gt;.&lt;property&gt; &lt;value&gt;)+</p>
+<p>&nbsp;</p>
+<p>disconnect &lt;ifname&gt; …</p>
+<p>&nbsp;</p>
+<p>delete &lt;ifname&gt; …</p>
+<p>&nbsp;</p>
+<p>monitor &lt;ifname&gt; …</p>
+<p>&nbsp;</p>
+<p>wifi [list [ifname &lt;ifname&gt;] [bssid &lt;BSSID&gt;]]</p>
+<p>&nbsp;</p>
+<p>wifi connect &lt;(B)SSID&gt; [password &lt;password&gt;] [wep-key-type key|phrase] [ifname &lt;ifname&gt;]</p>
+<p>[bssid &lt;BSSID&gt;] [name &lt;name&gt;] [private yes|no] [hidden yes|no]</p>
+<p>&nbsp;</p>
+<p>wifi hotspot [ifname &lt;ifname&gt;] [con-name &lt;name&gt;] [ssid &lt;SSID&gt;] [band a|bg] [channel &lt;channel&gt;] [password &lt;password&gt;]</p>
+<p>&nbsp;</p>
+<p>wifi rescan [ifname &lt;ifname&gt;] [[ssid &lt;SSID to scan&gt;] …]</p>
+<p>&nbsp;</p>
+<p>lldp [list [ifname &lt;ifname&gt;]]</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>示例查看 modify &lt;ifname&gt; ([+|-]&lt;setting&gt;.&lt;property&gt; &lt;value&gt;)+ 中setting和 property的值都有哪些，可以使用以下方式</p>
+<p>&nbsp;</p>
+<h1 id="nmcli-device-modify-enp0s8-set-xx"><a href="#nmcli-device-modify-enp0s8-set-xx" class="headerlink" title="nmcli device modify enp0s8 set.xx"></a>nmcli device modify enp0s8 set.xx</h1><p>错误：无效或不允许的设置“set”：’set’ 不在 [connection, 802-3-ethernet (ethernet), 802-1x, dcb, ipv4, ipv6, proxy] 中。</p>
+<p>上面的提示可以看到 modify &lt;ifname&gt; ([+|-]&lt;setting&gt;.&lt;property&gt; &lt;value&gt;)+ 中setting 的项目有 connection, 802-3-ethernet (ethernet), 802-1x, dcb, ipv4, ipv6, proxy，</p>
+<p>继续查看property的值都有哪些</p>
+<h1 id="nmcli-device-modify-enp0s8-connection-xxx-00"><a href="#nmcli-device-modify-enp0s8-connection-xxx-00" class="headerlink" title="nmcli device modify enp0s8 connection.xxx 00"></a>nmcli device modify enp0s8 connection.xxx 00</h1><p>错误：无效的属性“xxx”：’xxx’ 不在 [id, uuid, interface-name, type, permissions, autoconnect, autoconnect-priority, autoconnect-retries, timestamp, read-only, zone, master, slave-type, autoconnect-slaves, secondaries, gateway-ping-timeout, metered, lldp, stable-id] 中。</p>
+<p>从上面的提示可以看出connection项目的 property有 id, uuid, interface-name, type, permissions, autoconnect, autoconnect-priority, autoconnect-retries, timestamp, read-only, zone, master, slave-type, autoconnect-slaves, secondaries, gateway-ping-timeout, metered, lldp, stable-id</p>
+<h1 id="nmcli-device-modify-enp0s8-ethernet-xxx-00"><a href="#nmcli-device-modify-enp0s8-ethernet-xxx-00" class="headerlink" title="nmcli device modify enp0s8 ethernet.xxx 00"></a>nmcli device modify enp0s8 ethernet.xxx 00</h1><p>错误：无效的属性“xxx”：’xxx’ 不在 [port, speed, duplex, auto-negotiate, mac-address, cloned-mac-address, generate-mac-address-mask, mac-address-blacklist, mtu, s390-subchannels, s390-nettype, s390-options, wake-on-lan, wake-on-lan-password] 中。</p>
+<p>从上面的提示可以看出ethernet项目的 property有port, speed, duplex, auto-negotiate, mac-address, cloned-mac-address, generate-mac-address-mask, mac-address-blacklist, mtu, s390-subchannels, s390-nettype, s390-options, wake-on-lan, wake-on-lan-password</p>
+<p>&nbsp;</p>
+<p>修改连接名称</p>
+<p>nmcli device modify enp0s8 connection.</p>
+<p>&nbsp;</p>
+<p>#nmcli con</p>
+<p>名称                UUID                                  类型            设备</p>
+<p>Wired connection 1  f8c1e3eb-8d0d-32f0-a875-8e3b6326744f  802-3-ethernet  enp0s8</p>
+<p>&nbsp;</p>
+<p>修改Wired connection 1为 enp0s8</p>
+<p>nmcli con modify ‘Wired connection 1’ connection.id enp0s8</p>
+<p>&nbsp;</p>
+<p><a href="https://asciinema.org/a/eEoTTYXXYGKjGcDTkfAiW0fLe" target="_blank" rel="noopener">https://asciinema.org/a/eEoTTYXXYGKjGcDTkfAiW0fLe</a></p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年02月02日 23:25</p>
+        <p>原始链接： <a class="post-url" href="/Linux/201801/centos7-nmcli-16.html" title="Centos7  使用 nmcli 命令配置网络详解">http://tekin.yunnan.ws/Linux/201801/centos7-nmcli-16.html</a></p>
+        <footer>
+            <a href="http://tekin.yunnan.ws">
+                <img src="/images/logo.png" alt="TekinTian">
+                TekinTian
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/qr_wechatpay.png" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/qr_wechatpay.png">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/qr_alipay.png">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://tekin.yunnan.ws/Linux/201801/centos7-nmcli-16.html&title=《Centos7  使用 nmcli 命令配置网络详解》 — TekinTian&pic=http://tekin.yunnan.wsimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://tekin.yunnan.ws/Linux/201801/centos7-nmcli-16.html&title=《Centos7  使用 nmcli 命令配置网络详解》 — TekinTian&source=Tekin Tian's Github pages" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://tekin.yunnan.ws/Linux/201801/centos7-nmcli-16.html" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Centos7  使用 nmcli 命令配置网络详解》 — TekinTian&url=http://tekin.yunnan.ws/Linux/201801/centos7-nmcli-16.html&via=http://tekin.yunnan.ws" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://tekin.yunnan.ws/Linux/201801/centos7-nmcli-16.html" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://tekin.yunnan.ws/Linux/201801/centos7-nmcli-16.html" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#nmcli-connection-help"><span class="post-toc-text"># nmcli connection help</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#nmcli-connection-edit-enp0s8"><span class="post-toc-text">nmcli connection edit enp0s8</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#nmcli-device-modify-enp0s8-set-xx"><span class="post-toc-text">nmcli device modify enp0s8 set.xx</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#nmcli-device-modify-enp0s8-connection-xxx-00"><span class="post-toc-text">nmcli device modify enp0s8 connection.xxx 00</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#nmcli-device-modify-enp0s8-ethernet-xxx-00"><span class="post-toc-text">nmcli device modify enp0s8 ethernet.xxx 00</span></a>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/Linux/201801/centos-archive-iso-download-17.html" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          Centos历史版本 ISO 下载地址Centos Archive Download
+        
+      </span>
+    </a>
+  
+  
+    <a href="/Linux/201801/linu-fdisk-mount-method-11.html" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">centos, debian 等linux内核的系统 硬盘分区格式化和硬盘挂载 方法</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://yunnan.ws/" target="_blank">云南网</a>
+        Theme <a href="//github.com/tekintian" target="_blank">Github</a>
+      &copy; 2018 TekinTian<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://tekin.yunnan.ws",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Docker技术/">Docker技术</a><a class="category-link" href="/categories/JAVA开发/">JAVA开发</a><a class="category-link" href="/categories/JAVA开发/Linux/">Linux</a><a class="category-link" href="/categories/JavaScript/">JavaScript</a><a class="category-link" href="/categories/JavaScript/数据库开发/">数据库开发</a><a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/PHP技术/">PHP技术</a><a class="category-link" href="/categories/Shell编程学习/">Shell编程学习</a><a class="category-link" href="/categories/git/">git</a><a class="category-link" href="/categories/skill/">skill</a><a class="category-link" href="/categories/其他/">其他</a><a class="category-link" href="/categories/数据库开发/">数据库开发</a><a class="category-link" href="/categories/编程开发/">编程开发</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/IP地址验证/" style="font-size: 10px;">IP地址验证</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/archive/" style="font-size: 10px;">archive</a> <a href="/tags/bat/" style="font-size: 10px;">bat</a> <a href="/tags/centos/" style="font-size: 10px;">centos</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/download/" style="font-size: 10px;">download</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/git命令/" style="font-size: 20px;">git命令</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/netstat，tasklist/" style="font-size: 10px;">netstat，tasklist</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a> <a href="/tags/tp5/" style="font-size: 10px;">tp5</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/windows命令/" style="font-size: 10px;">windows命令</a> <a href="/tags/参考文档/" style="font-size: 15px;">参考文档</a> <a href="/tags/命令/" style="font-size: 10px;">命令</a> <a href="/tags/客户端IP/" style="font-size: 10px;">客户端IP</a> <a href="/tags/文件命名/" style="font-size: 10px;">文件命名</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/IP地址验证/" style="font-size: 10px;">IP地址验证</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/archive/" style="font-size: 10px;">archive</a> <a href="/tags/bat/" style="font-size: 10px;">bat</a> <a href="/tags/centos/" style="font-size: 10px;">centos</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/download/" style="font-size: 10px;">download</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/git命令/" style="font-size: 20px;">git命令</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/netstat，tasklist/" style="font-size: 10px;">netstat，tasklist</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a> <a href="/tags/tp5/" style="font-size: 10px;">tp5</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/windows命令/" style="font-size: 10px;">windows命令</a> <a href="/tags/参考文档/" style="font-size: 15px;">参考文档</a> <a href="/tags/命令/" style="font-size: 10px;">命令</a> <a href="/tags/客户端IP/" style="font-size: 10px;">客户端IP</a> <a href="/tags/文件命名/" style="font-size: 10px;">文件命名</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
