@@ -47,7 +47,7 @@
     </url>
 
     <url>
-        <loc>http://tekin.yunnan.ws/Linux/201801/16-centos7-nmcli.html</loc>
+        <loc>http://tekin.yunnan.ws/%E5%85%B6%E4%BB%96/201801/24-github-tarball-download.html</loc>
         <lastmod>2018-02-02T15:25:25.939Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -55,7 +55,7 @@
     </url>
 
     <url>
-        <loc>http://tekin.yunnan.ws/%E5%85%B6%E4%BB%96/201801/24-github-tarball-download.html</loc>
+        <loc>http://tekin.yunnan.ws/Linux/201801/16-centos7-nmcli.html</loc>
         <lastmod>2018-02-02T15:25:25.939Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -119,23 +119,7 @@
     </url>
 
     <url>
-        <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201706/24-mysql-region-5.html</loc>
-        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/23-mysql-rand-convert-decimal.html</loc>
-        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/30-php-aescrypter-pkcs7-encrypt.html</loc>
         <lastmod>2018-02-02T15:25:25.929Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -151,7 +135,31 @@
     </url>
 
     <url>
+        <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201706/24-mysql-region-5.html</loc>
+        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/30-php-aescrypter-pkcs7-encrypt.html</loc>
+        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/30-php-encrypt-decrypt.html</loc>
+        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/29-tp5-diy-filename.html</loc>
         <lastmod>2018-02-02T15:25:25.929Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -175,7 +183,7 @@
     </url>
 
     <url>
-        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/29-tp5-diy-filename.html</loc>
+        <loc>http://tekin.yunnan.ws/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201710/29-unphat.html</loc>
         <lastmod>2018-02-02T15:25:25.929Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -191,15 +199,15 @@
     </url>
 
     <url>
-        <loc>http://tekin.yunnan.ws/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201710/29-unphat.html</loc>
-        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201407/11-hhvm-php-mysql-numrows-500-error.html</loc>
+        <lastmod>2018-02-02T15:25:25.919Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201407/11-hhvm-php-mysql-numrows-500-error.html</loc>
+        <loc>http://tekin.yunnan.ws/JavaScript/201705/26-js-document-ready-window-onload.html</loc>
         <lastmod>2018-02-02T15:25:25.919Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -224,14 +232,6 @@
 
     <url>
         <loc>http://tekin.yunnan.ws/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201705/23-js-is-in-array.html</loc>
-        <lastmod>2018-02-02T15:25:25.919Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://tekin.yunnan.ws/JavaScript/201705/26-js-document-ready-window-onload.html</loc>
         <lastmod>2018-02-02T15:25:25.919Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

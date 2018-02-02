@@ -52,7 +52,6 @@
     </url>
 
     
-    
   <url>
     <loc>http://tekin.yunnan.ws/Linux/201801/18-centos-5-x-6-x-isntall-rhel-epel-repo.html</loc>
     <lastmod>2018-02-02T15:25:25.939Z</lastmod>
@@ -72,31 +71,12 @@
 
     
   <url>
-    <loc>http://tekin.yunnan.ws/%E5%85%B6%E4%BB%96/201801/24-github-tarball-download.html</loc>
+    <loc>http://tekin.yunnan.ws/Linux/201801/16-centos7-nmcli.html</loc>
     <lastmod>2018-02-02T15:25:25.939Z</lastmod>
     <data>
         <display>
-        <title>github tarball 直接下载项目最新源码方法</title>
-        <pubTime>2018-01-24T06:15:50.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="其他" url="http://tekin.yunnan.ws/categories/%E5%85%B6%E4%BB%96/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>http://tekin.yunnan.ws/Linux/201801/11-linu-fdisk-mount-method.html</loc>
-    <lastmod>2018-02-02T15:25:25.939Z</lastmod>
-    <data>
-        <display>
-        <title>centos, debian 等linux内核的系统 硬盘分区格式化和硬盘挂载 方法</title>
-        <pubTime>2018-01-11T12:34:40.000Z</pubTime>
+        <title>Centos7  使用 nmcli 命令配置网络详解</title>
+        <pubTime>2018-01-16T03:55:03.000Z</pubTime>
         
          
            
@@ -108,13 +88,15 @@
     </url>
 
     
+    
+    
   <url>
-    <loc>http://tekin.yunnan.ws/Linux/201801/19-linux-reboot-start-diy-sh.html</loc>
+    <loc>http://tekin.yunnan.ws/Linux/201801/17-debian-archive-iso-download.html</loc>
     <lastmod>2018-02-02T15:25:25.939Z</lastmod>
     <data>
         <display>
-        <title>linux 开机自动启动自定义脚本</title>
-        <pubTime>2018-01-18T16:22:42.000Z</pubTime>
+        <title>debian 所有的历史发行版本6 7,8, 9 版本 ISO文件下载 Debian Archive ISO Download</title>
+        <pubTime>2018-01-17T14:04:13.000Z</pubTime>
         
          
            
@@ -156,35 +138,17 @@
 
     
   <url>
-    <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/23-mysql-flow-control-statements.html</loc>
+    <loc>http://tekin.yunnan.ws/%E5%85%B6%E4%BB%96/201801/24-github-tarball-download.html</loc>
     <lastmod>2018-02-02T15:25:25.939Z</lastmod>
     <data>
         <display>
-        <title>mysql 流程控制语句全接触</title>
-        <pubTime>2017-11-23T08:56:10.000Z</pubTime>
+        <title>github tarball 直接下载项目最新源码方法</title>
+        <pubTime>2018-01-24T06:15:50.000Z</pubTime>
         
          
            
              
-              <breadCrumb title="数据库开发" url="http://tekin.yunnan.ws/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tekin.yunnan.ws/Linux/201801/16-centos7-nmcli.html</loc>
-    <lastmod>2018-02-02T15:25:25.939Z</lastmod>
-    <data>
-        <display>
-        <title>Centos7  使用 nmcli 命令配置网络详解</title>
-        <pubTime>2018-01-16T03:55:03.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="Linux" url="http://tekin.yunnan.ws/categories/Linux/"/>
+              <breadCrumb title="其他" url="http://tekin.yunnan.ws/categories/%E5%85%B6%E4%BB%96/"/>
           
         </display>
     </data>
@@ -216,12 +180,30 @@
 
     
   <url>
-    <loc>http://tekin.yunnan.ws/Linux/201801/17-debian-archive-iso-download.html</loc>
+    <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/23-mysql-flow-control-statements.html</loc>
     <lastmod>2018-02-02T15:25:25.939Z</lastmod>
     <data>
         <display>
-        <title>debian 所有的历史发行版本6 7,8, 9 版本 ISO文件下载 Debian Archive ISO Download</title>
-        <pubTime>2018-01-17T14:04:13.000Z</pubTime>
+        <title>mysql 流程控制语句全接触</title>
+        <pubTime>2017-11-23T08:56:10.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="数据库开发" url="http://tekin.yunnan.ws/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/Linux/201801/19-linux-reboot-start-diy-sh.html</loc>
+    <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+    <data>
+        <display>
+        <title>linux 开机自动启动自定义脚本</title>
+        <pubTime>2018-01-18T16:22:42.000Z</pubTime>
         
          
            
@@ -234,17 +216,52 @@
 
     
   <url>
-    <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/29-tp5-diy-filename.html</loc>
+    <loc>http://tekin.yunnan.ws/Linux/201801/11-linu-fdisk-mount-method.html</loc>
+    <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+    <data>
+        <display>
+        <title>centos, debian 等linux内核的系统 硬盘分区格式化和硬盘挂载 方法</title>
+        <pubTime>2018-01-11T12:34:40.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Linux" url="http://tekin.yunnan.ws/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/JavaScript/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/01-java-js-mysql-lnglat-calculate.html</loc>
     <lastmod>2018-02-02T15:25:25.929Z</lastmod>
     <data>
         <display>
-        <title>tp5自定义上传文件名和保存路径</title>
-        <pubTime>2017-05-29T10:39:21.000Z</pubTime>
+        <title>【转】利用java、js或mysql计算高德地图中两坐标之间的距离</title>
+        <pubTime>2017-11-01T03:36:59.000Z</pubTime>
         
-        <tag>tp5</tag>
          
-        <tag>文件命名</tag>
-         
+           
+             
+              <breadCrumb title="JavaScript" url="http://tekin.yunnan.ws/categories/JavaScript/"/>
+          
+             
+              <breadCrumb title="数据库开发" url="http://tekin.yunnan.ws/categories/JavaScript/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/30-php-aescrypter-pkcs7-encrypt.html</loc>
+    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+    <data>
+        <display>
+        <title>php AesCrypter  pkcs7 加解密</title>
+        <pubTime>2017-05-29T16:15:20.000Z</pubTime>
+        
          
            
              
@@ -292,6 +309,24 @@
 
     
   <url>
+    <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201706/24-mysql-region-5.html</loc>
+    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+    <data>
+        <display>
+        <title>2017最新全国 省市县/区 街道/乡镇 社区/村 5级联动 mysql数据库 71.3万条</title>
+        <pubTime>2017-06-24T15:29:48.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="数据库开发" url="http://tekin.yunnan.ws/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/30-php-encrypt-decrypt.html</loc>
     <lastmod>2018-02-02T15:25:25.929Z</lastmod>
     <data>
@@ -299,6 +334,46 @@
         <title>PHP加密解密函数</title>
         <pubTime>2017-05-29T16:07:25.000Z</pubTime>
         
+         
+           
+             
+              <breadCrumb title="PHP技术" url="http://tekin.yunnan.ws/categories/PHP%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/JAVA%E5%BC%80%E5%8F%91/201711/05-lnglat-java.html</loc>
+    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+    <data>
+        <display>
+        <title>根据地图的坐标计算出两点之间的距离 java</title>
+        <pubTime>2017-11-05T15:18:12.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="JAVA开发" url="http://tekin.yunnan.ws/categories/JAVA%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/29-tp5-diy-filename.html</loc>
+    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+    <data>
+        <display>
+        <title>tp5自定义上传文件名和保存路径</title>
+        <pubTime>2017-05-29T10:39:21.000Z</pubTime>
+        
+        <tag>tp5</tag>
+         
+        <tag>文件命名</tag>
+         
          
            
              
@@ -346,35 +421,17 @@
 
     
   <url>
-    <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201706/24-mysql-region-5.html</loc>
+    <loc>http://tekin.yunnan.ws/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201710/29-unphat.html</loc>
     <lastmod>2018-02-02T15:25:25.929Z</lastmod>
     <data>
         <display>
-        <title>2017最新全国 省市县/区 街道/乡镇 社区/村 5级联动 mysql数据库 71.3万条</title>
-        <pubTime>2017-06-24T15:29:48.000Z</pubTime>
+        <title>什么是UNPHAT原则</title>
+        <pubTime>2017-10-29T14:23:15.000Z</pubTime>
         
          
            
              
-              <breadCrumb title="数据库开发" url="http://tekin.yunnan.ws/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tekin.yunnan.ws/JAVA%E5%BC%80%E5%8F%91/201711/05-lnglat-java.html</loc>
-    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
-    <data>
-        <display>
-        <title>根据地图的坐标计算出两点之间的距离 java</title>
-        <pubTime>2017-11-05T15:18:12.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="JAVA开发" url="http://tekin.yunnan.ws/categories/JAVA%E5%BC%80%E5%8F%91/"/>
+              <breadCrumb title="编程开发" url="http://tekin.yunnan.ws/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
           
         </display>
     </data>
@@ -400,45 +457,6 @@
 
     
   <url>
-    <loc>http://tekin.yunnan.ws/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201710/29-unphat.html</loc>
-    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
-    <data>
-        <display>
-        <title>什么是UNPHAT原则</title>
-        <pubTime>2017-10-29T14:23:15.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="编程开发" url="http://tekin.yunnan.ws/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tekin.yunnan.ws/JavaScript/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/01-java-js-mysql-lnglat-calculate.html</loc>
-    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
-    <data>
-        <display>
-        <title>【转】利用java、js或mysql计算高德地图中两坐标之间的距离</title>
-        <pubTime>2017-11-01T03:36:59.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="JavaScript" url="http://tekin.yunnan.ws/categories/JavaScript/"/>
-          
-             
-              <breadCrumb title="数据库开发" url="http://tekin.yunnan.ws/categories/JavaScript/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tekin.yunnan.ws/Docker%E6%8A%80%E6%9C%AF/201706/07-docker-windows10-share-container.html</loc>
     <lastmod>2018-02-02T15:25:25.929Z</lastmod>
     <data>
@@ -457,30 +475,12 @@
 
     
   <url>
-    <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/30-php-aescrypter-pkcs7-encrypt.html</loc>
-    <lastmod>2018-02-02T15:25:25.929Z</lastmod>
-    <data>
-        <display>
-        <title>php AesCrypter  pkcs7 加解密</title>
-        <pubTime>2017-05-29T16:15:20.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="PHP技术" url="http://tekin.yunnan.ws/categories/PHP%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tekin.yunnan.ws/Shell%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/201705/13-shell-delete-old-file.html</loc>
+    <loc>http://tekin.yunnan.ws/Shell%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/201407/05-linux-tar-split-backup-web.html</loc>
     <lastmod>2018-02-02T15:25:25.919Z</lastmod>
     <data>
         <display>
-        <title>shell脚本删除XX天之前指定类型的备份文件实例</title>
-        <pubTime>2017-05-13T04:04:51.000Z</pubTime>
+        <title>[原创]linux 下使用TAR分卷打包自动增量备份网站和数据库并发送到指定邮箱</title>
+        <pubTime>2014-07-05T04:00:27.000Z</pubTime>
         
          
            
@@ -493,17 +493,17 @@
 
     
   <url>
-    <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/27-tp5-mulit-keywords-search.html</loc>
+    <loc>http://tekin.yunnan.ws/JAVA%E5%BC%80%E5%8F%91/201407/06-htaccess.html</loc>
     <lastmod>2018-02-02T15:25:25.919Z</lastmod>
     <data>
         <display>
-        <title>tp5 多关键字查找实现方法</title>
-        <pubTime>2017-05-27T02:01:44.000Z</pubTime>
+        <title>apache服务器.htaccess伪静态规则语法教程大全</title>
+        <pubTime>2014-07-06T01:13:04.000Z</pubTime>
         
          
            
              
-              <breadCrumb title="PHP技术" url="http://tekin.yunnan.ws/categories/PHP%E6%8A%80%E6%9C%AF/"/>
+              <breadCrumb title="JAVA开发" url="http://tekin.yunnan.ws/categories/JAVA%E5%BC%80%E5%8F%91/"/>
           
         </display>
     </data>
@@ -529,42 +529,6 @@
 
     
   <url>
-    <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/21-tp5-with-tp3-2-one-words-function.html</loc>
-    <lastmod>2018-02-02T15:25:25.919Z</lastmod>
-    <data>
-        <display>
-        <title>thinkphp5兼容TP3.2版本的单字母操作函数</title>
-        <pubTime>2017-05-21T02:52:14.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="PHP技术" url="http://tekin.yunnan.ws/categories/PHP%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tekin.yunnan.ws/JavaScript/201705/26-js-document-ready-window-onload.html</loc>
-    <lastmod>2018-02-02T15:25:25.919Z</lastmod>
-    <data>
-        <display>
-        <title>JS 页面加载触发事件 document.ready和window.onload的区别</title>
-        <pubTime>2017-05-26T01:30:27.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="JavaScript" url="http://tekin.yunnan.ws/categories/JavaScript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tekin.yunnan.ws/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201705/19-php-console-log.html</loc>
     <lastmod>2018-02-02T15:25:25.919Z</lastmod>
     <data>
@@ -583,12 +547,30 @@
 
     
   <url>
-    <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201407/11-hhvm-php-mysql-numrows-500-error.html</loc>
+    <loc>http://tekin.yunnan.ws/JavaScript/201705/26-js-event-sha256-digest.html</loc>
     <lastmod>2018-02-02T15:25:25.919Z</lastmod>
     <data>
         <display>
-        <title>hhvm  php mysql_numrows 至500错误的解决方法</title>
-        <pubTime>2014-07-11T05:08:26.000Z</pubTime>
+        <title>JS 事件绑定   SHA256加密测试代码演示</title>
+        <pubTime>2017-05-26T02:36:11.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="JavaScript" url="http://tekin.yunnan.ws/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/21-tp5-with-tp3-2-one-words-function.html</loc>
+    <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+    <data>
+        <display>
+        <title>thinkphp5兼容TP3.2版本的单字母操作函数</title>
+        <pubTime>2017-05-21T02:52:14.000Z</pubTime>
         
          
            
@@ -619,17 +601,17 @@
 
     
   <url>
-    <loc>http://tekin.yunnan.ws/JAVA%E5%BC%80%E5%8F%91/201407/06-htaccess.html</loc>
+    <loc>http://tekin.yunnan.ws/JavaScript/201705/26-js-document-ready-window-onload.html</loc>
     <lastmod>2018-02-02T15:25:25.919Z</lastmod>
     <data>
         <display>
-        <title>apache服务器.htaccess伪静态规则语法教程大全</title>
-        <pubTime>2014-07-06T01:13:04.000Z</pubTime>
+        <title>JS 页面加载触发事件 document.ready和window.onload的区别</title>
+        <pubTime>2017-05-26T01:30:27.000Z</pubTime>
         
          
            
              
-              <breadCrumb title="JAVA开发" url="http://tekin.yunnan.ws/categories/JAVA%E5%BC%80%E5%8F%91/"/>
+              <breadCrumb title="JavaScript" url="http://tekin.yunnan.ws/categories/JavaScript/"/>
           
         </display>
     </data>
@@ -637,12 +619,12 @@
 
     
   <url>
-    <loc>http://tekin.yunnan.ws/Shell%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/201407/05-linux-tar-split-backup-web.html</loc>
+    <loc>http://tekin.yunnan.ws/Shell%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/201705/13-shell-delete-old-file.html</loc>
     <lastmod>2018-02-02T15:25:25.919Z</lastmod>
     <data>
         <display>
-        <title>[原创]linux 下使用TAR分卷打包自动增量备份网站和数据库并发送到指定邮箱</title>
-        <pubTime>2014-07-05T04:00:27.000Z</pubTime>
+        <title>shell脚本删除XX天之前指定类型的备份文件实例</title>
+        <pubTime>2017-05-13T04:04:51.000Z</pubTime>
         
          
            
@@ -655,17 +637,35 @@
 
     
   <url>
-    <loc>http://tekin.yunnan.ws/JavaScript/201705/26-js-event-sha256-digest.html</loc>
+    <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201407/11-hhvm-php-mysql-numrows-500-error.html</loc>
     <lastmod>2018-02-02T15:25:25.919Z</lastmod>
     <data>
         <display>
-        <title>JS 事件绑定   SHA256加密测试代码演示</title>
-        <pubTime>2017-05-26T02:36:11.000Z</pubTime>
+        <title>hhvm  php mysql_numrows 至500错误的解决方法</title>
+        <pubTime>2014-07-11T05:08:26.000Z</pubTime>
         
          
            
              
-              <breadCrumb title="JavaScript" url="http://tekin.yunnan.ws/categories/JavaScript/"/>
+              <breadCrumb title="PHP技术" url="http://tekin.yunnan.ws/categories/PHP%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/27-tp5-mulit-keywords-search.html</loc>
+    <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+    <data>
+        <display>
+        <title>tp5 多关键字查找实现方法</title>
+        <pubTime>2017-05-27T02:01:44.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="PHP技术" url="http://tekin.yunnan.ws/categories/PHP%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
