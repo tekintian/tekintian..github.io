@@ -47,28 +47,6 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://tekin.yunnan.ws/article/201802/hello-world-02.html"/>
-    <id>http://tekin.yunnan.ws/article/201802/hello-world-02.html</id>
-    <published>2018-02-02T14:48:00.230Z</published>
-    <updated>2018-02-02T13:50:24.776Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>windows-skill</title>
     <link href="http://tekin.yunnan.ws/article/201802/skill-pub/windows-skill-02.html"/>
     <id>http://tekin.yunnan.ws/article/201802/skill-pub/windows-skill-02.html</id>
@@ -329,10 +307,10 @@
   
   <entry>
     <title>Git参考文档</title>
-    <link href="http://tekin.yunnan.ws/git/201801/git-doc-01.html"/>
-    <id>http://tekin.yunnan.ws/git/201801/git-doc-01.html</id>
+    <link href="http://tekin.yunnan.ws/git/201801/git-pub/git-doc-01.html"/>
+    <id>http://tekin.yunnan.ws/git/201801/git-pub/git-doc-01.html</id>
     <published>2017-12-31T16:00:00.000Z</published>
-    <updated>2018-02-02T15:30:07.967Z</updated>
+    <updated>2018-02-01T15:32:01.788Z</updated>
     
     <summary type="html">
     
@@ -359,10 +337,10 @@
   
   <entry>
     <title>Git参考文档</title>
-    <link href="http://tekin.yunnan.ws/git/201801/git-pub/git-doc-01.html"/>
-    <id>http://tekin.yunnan.ws/git/201801/git-pub/git-doc-01.html</id>
+    <link href="http://tekin.yunnan.ws/git/201801/git-doc-01.html"/>
+    <id>http://tekin.yunnan.ws/git/201801/git-doc-01.html</id>
     <published>2017-12-31T16:00:00.000Z</published>
-    <updated>2018-02-01T15:32:01.788Z</updated>
+    <updated>2018-02-02T15:30:07.967Z</updated>
     
     <summary type="html">
     
@@ -527,6 +505,30 @@
         
         
           &lt;p&gt;最近在看技术文章时发现最近比较热的一个技术原则 UNPHAT ,
+        
+      
+    
+    </summary>
+    
+      <category term="编程开发" scheme="http://tekin.yunnan.ws/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[转载]You Are Not Google</title>
+    <link href="http://tekin.yunnan.ws/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201710/you-are-not-google-29.html"/>
+    <id>http://tekin.yunnan.ws/编程开发/201710/you-are-not-google-29.html</id>
+    <published>2017-10-29T14:04:13.000Z</published>
+    <updated>2018-02-02T15:25:25.929Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Software engineers go crazy for the most ridiculous things. We like to think that we’re hyper-rational, but when we have to choose a
         
       
     

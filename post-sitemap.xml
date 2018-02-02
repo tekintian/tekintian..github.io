@@ -23,22 +23,6 @@
     </url>
 
     <url>
-        <loc>http://tekin.yunnan.ws/Linux/201801/centos-5-x-6-x-isntall-rhel-epel-repo-18.html</loc>
-        <lastmod>2018-02-02T15:25:25.939Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://tekin.yunnan.ws/Linux/201801/centos-archive-iso-download-17.html</loc>
-        <lastmod>2018-02-02T15:25:25.939Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://tekin.yunnan.ws/Linux/201801/centos7-nmcli-16.html</loc>
         <lastmod>2018-02-02T15:25:25.939Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -47,7 +31,23 @@
     </url>
 
     <url>
+        <loc>http://tekin.yunnan.ws/Linux/201801/centos-5-x-6-x-isntall-rhel-epel-repo-18.html</loc>
+        <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://tekin.yunnan.ws/Linux/201801/debian-archive-iso-download-17.html</loc>
+        <lastmod>2018-02-02T15:25:25.939Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/Linux/201801/centos-archive-iso-download-17.html</loc>
         <lastmod>2018-02-02T15:25:25.939Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -71,7 +71,7 @@
     </url>
 
     <url>
-        <loc>http://tekin.yunnan.ws/Linux/201801/linux-reboot-start-diy-sh-19.html</loc>
+        <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/mysql-flow-control-statements-23.html</loc>
         <lastmod>2018-02-02T15:25:25.939Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -79,7 +79,7 @@
     </url>
 
     <url>
-        <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/mysql-flow-control-statements-23.html</loc>
+        <loc>http://tekin.yunnan.ws/Linux/201801/linux-reboot-start-diy-sh-19.html</loc>
         <lastmod>2018-02-02T15:25:25.939Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -111,6 +111,14 @@
     </url>
 
     <url>
+        <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/mysql-rand-convert-decimal-23.html</loc>
+        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://tekin.yunnan.ws/JAVA%E5%BC%80%E5%8F%91/201711/lnglat-java-05.html</loc>
         <lastmod>2018-02-02T15:25:25.929Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -127,31 +135,7 @@
     </url>
 
     <url>
-        <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/mysql-rand-convert-decimal-23.html</loc>
-        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/php-aescrypter-pkcs7-encrypt-30.html</loc>
-        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201706/php-add-items-to-two-dimensional-array-10.html</loc>
-        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/php-redirect-30.html</loc>
         <lastmod>2018-02-02T15:25:25.929Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -167,7 +151,7 @@
     </url>
 
     <url>
-        <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/tips-of-improve-sql-select-speed-08.html</loc>
+        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/php-redirect-30.html</loc>
         <lastmod>2018-02-02T15:25:25.929Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -175,7 +159,15 @@
     </url>
 
     <url>
-        <loc>http://tekin.yunnan.ws/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201710/unphat-29.html</loc>
+        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/php-aescrypter-pkcs7-encrypt-30.html</loc>
+        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/tips-of-improve-sql-select-speed-08.html</loc>
         <lastmod>2018-02-02T15:25:25.929Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -191,7 +183,7 @@
     </url>
 
     <url>
-        <loc>http://tekin.yunnan.ws/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201710/you-are-not-google-29.html</loc>
+        <loc>http://tekin.yunnan.ws/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201710/unphat-29.html</loc>
         <lastmod>2018-02-02T15:25:25.929Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -199,8 +191,8 @@
     </url>
 
     <url>
-        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201407/hhvm-php-mysql-numrows-500-error-11.html</loc>
-        <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+        <loc>http://tekin.yunnan.ws/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201710/you-are-not-google-29.html</loc>
+        <lastmod>2018-02-02T15:25:25.929Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -215,7 +207,7 @@
     </url>
 
     <url>
-        <loc>http://tekin.yunnan.ws/JavaScript/201705/js-document-ready-window-onload-26.html</loc>
+        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201407/hhvm-php-mysql-numrows-500-error-11.html</loc>
         <lastmod>2018-02-02T15:25:25.919Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -224,6 +216,14 @@
 
     <url>
         <loc>http://tekin.yunnan.ws/JavaScript/201705/js-format-size-29.html</loc>
+        <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://tekin.yunnan.ws/JavaScript/201705/js-document-ready-window-onload-26.html</loc>
         <lastmod>2018-02-02T15:25:25.919Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -263,6 +263,14 @@
     </url>
 
     <url>
+        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/tp5-mulit-keywords-search-27.html</loc>
+        <lastmod>2018-02-02T15:25:25.919Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://tekin.yunnan.ws/Shell%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/201705/shell-delete-old-file-13.html</loc>
         <lastmod>2018-02-02T15:25:25.919Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -273,22 +281,6 @@
     <url>
         <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/tp5-with-tp3-2-one-words-function-21.html</loc>
         <lastmod>2018-02-02T15:25:25.919Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://tekin.yunnan.ws/PHP%E6%8A%80%E6%9C%AF/201705/tp5-mulit-keywords-search-27.html</loc>
-        <lastmod>2018-02-02T15:25:25.919Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://tekin.yunnan.ws/article/201802/hello-world-02.html</loc>
-        <lastmod>2018-02-02T13:50:24.776Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
