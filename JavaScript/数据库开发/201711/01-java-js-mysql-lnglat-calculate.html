@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>【转】利用java、js或mysql计算高德地图中两坐标之间的距离 | TekinTian</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="tekin, java, php, python, 云南网, 网站开发" />
+  
+  <meta name="description" content="最近在做与地图相关的应用，使用了高德地图，研究了下高德地图计算两坐标距离的方法，官网上提供的开发包中有相关的方法，但是我的产品中比较特殊，无法直接使用提供的方法，所以就自己封装了相关计算方法，供大家参考，下面话不多说了，来一起看看详细的介绍吧。Java实现首先定义一个用于存储经纬度的类，这里起个名字叫：LngLatpackage amap;import java.text.DecimalForm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【转】利用java、js或mysql计算高德地图中两坐标之间的距离">
+<meta property="og:url" content="http://tekin.yunnan.ws/JavaScript/数据库开发/201711/01-java-js-mysql-lnglat-calculate.html">
+<meta property="og:site_name" content="TekinTian">
+<meta property="og:description" content="最近在做与地图相关的应用，使用了高德地图，研究了下高德地图计算两坐标距离的方法，官网上提供的开发包中有相关的方法，但是我的产品中比较特殊，无法直接使用提供的方法，所以就自己封装了相关计算方法，供大家参考，下面话不多说了，来一起看看详细的介绍吧。Java实现首先定义一个用于存储经纬度的类，这里起个名字叫：LngLatpackage amap;import java.text.DecimalForm">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-02T15:25:25.929Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【转】利用java、js或mysql计算高德地图中两坐标之间的距离">
+<meta name="twitter:description" content="最近在做与地图相关的应用，使用了高德地图，研究了下高德地图计算两坐标距离的方法，官网上提供的开发包中有相关的方法，但是我的产品中比较特殊，无法直接使用提供的方法，所以就自己封装了相关计算方法，供大家参考，下面话不多说了，来一起看看详细的介绍吧。Java实现首先定义一个用于存储经纬度的类，这里起个名字叫：LngLatpackage amap;import java.text.DecimalForm">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Tekin&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Tekin&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        IT Geek Communication blogs
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="HomePage" target="_blank" href="//tekin.yunnan.ws/">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/tekintian">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/tekintian">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//twitter.com/tekintian">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-java-js-mysql-lnglat-calculate" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      【转】利用java、js或mysql计算高德地图中两坐标之间的距离
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/JavaScript/">JavaScript</a>
+                  
+                      <a href="/categories/数据库开发/">数据库开发</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2017-11-01
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <div id="magicdomid6" class="ace-line gutter-author-p-1375536 emptyGutter"><span class="author-p-1375536 color:rgb(102, 102, 102) font-size:14px"> 最近在做与地图相关的应用，使用了高德地图，研究了下高德地图计算两坐标距离的方法，官网上提供的开发包中有相关的方法，但是我的产品中比较特殊，无法直接使用提供的方法，所以就自己封装了相关计算方法，供大家参考，下面话不多说了，来一起看看详细的介绍吧。</span></div><br><div id="magicdomid7" class="ace-line gutter-author-p-1375536 emptyGutter"><span class="author-p-1375536 bold:true color:rgb(255, 0, 0) font-size:14px">Java实现</span></div><br><div id="magicdomid8" class="ace-line gutter-author-p-1375536 emptyGutter"><span class="author-p-1375536 color:rgb(102, 102, 102) font-size:14px">首先定义一个用于存储经纬度的类，这里起个名字叫：LngLat</span></div><br><div id="magicdomid9" class="ace-line longKeep gutter-noauthor"></div><br><div id="magicdomid10" class="ace-line gutter-author-p-1375536 line-list-type-code emptyGutter"><br><pre class="prettyprint lang-java">package amap;<br>import java.text.DecimalFormat;<br>import java.text.DecimalFormatSymbols;<br>import java.util.Locale;<br>/<strong><br><em> 存储经纬度坐标值的类，单位角度
+</em><br><em> @author jianggujin
+</em><br>*/<br>public final class LngLat implements Cloneable<br>{<br>/</strong><br><em> 纬度 (垂直方向)
+</em>/<br>public final double latitude;<br>/<strong><br><em> 经度 (水平方向)
+</em>/<br>public final double longitude;<br>/</strong><br><em> 格式
+</em>/<br>private static DecimalFormat format = new DecimalFormat(“0.000000”, new DecimalFormatSymbols(Locale.US));<br>/<strong><br><em> 使用传入的经纬度构造LatLng 对象，一对经纬度值代表地球上一个地点。
+</em><br><em> @param longitude
+</em>  地点的经度，在-180 与180 之间的double 型数值。<br><em> @param latitude
+</em>  地点的纬度，在-90 与90 之间的double 型数值。<br>*/<br>public LngLat(double longitude, double latitude)<br>{<br>this(longitude, latitude, true);<br>}<br>/</strong><br><em> 使用传入的经纬度构造LatLng 对象，一对经纬度值代表地球上一个地点
+</em><br><em> @param longitude
+</em>  地点的经度，在-180 与180 之间的double 型数值。<br><em>
+</em> @param latitude<br><em>  地点的纬度，在-90 与90 之间的double 型数值。
+</em> @param isCheck<br><em>  是否需要检查经纬度的合理性，建议填写true
+</em>/<br>public LngLat(double longitude, double latitude, boolean isCheck)<br>{<br>if (isCheck)<br>{<br>if ((-180.0D &lt;= longitude) &amp;&amp; (longitude &lt; 180.0D))<br>this.longitude = parse(longitude);<br>else<br>{<br>throw new IllegalArgumentException(“the longitude range [-180, 180].”);<br>// this.longitude = parse(((longitude - 180.0D) % 360.0D + 360.0D) %<br>// 360.0D - 180.0D);<br>}<br>if ((latitude &lt; -90.0D) || (latitude &gt; 90.0D))<br>{<br>throw new IllegalArgumentException(“the latitude range [-90, 90].”);<br>}<br>this.latitude = latitude;<br>// this.latitude = parse(Math.max(-90.0D, Math.min(90.0D, latitude)));<br>}<br>else<br>{<br>this.latitude = latitude;<br>this.longitude = longitude;<br>}<br>}<br>/<strong><br><em> 解析
+</em><br><em> @param d
+</em> @return<br><em>/<br>private static double parse(double d)<br>{<br>return Double.parseDouble(format.format(d));<br>}<br>public LngLat clone()<br>{<br>return new LngLat(this.latitude, this.longitude);<br>}<br>@Override<br>public int hashCode()<br>{<br>final int prime = 31;<br>int result = 1;<br>long temp;<br>temp = Double.doubleToLongBits(latitude);<br>result = prime </em> result + (int) (temp ^ (temp &gt;&gt;&gt; 32));<br>temp = Double.doubleToLongBits(longitude);<br>result = prime * result + (int) (temp ^ (temp &gt;&gt;&gt; 32));<br>return result;<br>}<br>@Override<br>public boolean equals(Object obj)<br>{<br>if (this == obj)<br>return true;<br>if (obj == null)<br>return false;<br>if (getClass() != obj.getClass())<br>return false;<br>LngLat other = (LngLat) obj;<br>if (Double.doubleToLongBits(latitude) != Double.doubleToLongBits(other.latitude))<br>return false;<br>if (Double.doubleToLongBits(longitude) != Double.doubleToLongBits(other.longitude))<br>return false;<br>return true;<br>}<br>public String toString()<br>{<br>return “lat/lng: (“ + this.latitude + “,” + this.longitude + “)”;<br>}<br>}</strong></pre><br>&nbsp;<br><br></div><br><div id="magicdomid139" class="ace-line gutter-author-p-1375536 emptyGutter"><span class="author-p-1375536 color:rgb(102, 102, 102) font-size:14px">计算工具类如下：</span></div><br><div id="magicdomid140" class="ace-line longKeep gutter-noauthor"></div><br>&nbsp;<br><pre class="prettyprint lang-java">package amap;<br>/<br><em> 高德地图工具
+</em><br><em> @author jianggujin
+</em><br><em>/<br>public class AMapUtils<br>{<br>/**
+</em> 根据用户的起点和终点经纬度计算两点间距离，此距离为相对较短的距离，单位米。<br><em>
+</em> @param start<br><em>  起点的坐标
+</em> @param end<br><em>  终点的坐标
+</em> @return<br><em>/<br>public static double calculateLineDistance(LngLat start, LngLat end)<br>{<br>if ((start == null) || (end == null))<br>{<br>throw new IllegalArgumentException(“非法坐标值，不能为null”);<br>}<br>double d1 = 0.01745329251994329D;<br>double d2 = start.longitude;<br>double d3 = start.latitude;<br>double d4 = end.longitude;<br>double d5 = end.latitude;<br>d2 </em>= d1;<br>d3 <em>= d1;<br>d4 </em>= d1;<br>d5 <em>= d1;<br>double d6 = Math.sin(d2);<br>double d7 = Math.sin(d3);<br>double d8 = Math.cos(d2);<br>double d9 = Math.cos(d3);<br>double d10 = Math.sin(d4);<br>double d11 = Math.sin(d5);<br>double d12 = Math.cos(d4);<br>double d13 = Math.cos(d5);<br>double[] arrayOfDouble1 = new double[3];<br>double[] arrayOfDouble2 = new double[3];<br>arrayOfDouble1[0] = (d9 </em> d8);<br>arrayOfDouble1[1] = (d9 <em> d6);<br>arrayOfDouble1[2] = d7;<br>arrayOfDouble2[0] = (d13 </em> d12);<br>arrayOfDouble2[1] = (d13 <em> d10);<br>arrayOfDouble2[2] = d11;<br>double d14 = Math.sqrt((arrayOfDouble1[0] - arrayOfDouble2[0]) </em> (arrayOfDouble1[0] - arrayOfDouble2[0])<br>+ (arrayOfDouble1[1] - arrayOfDouble2[1]) <em> (arrayOfDouble1[1] - arrayOfDouble2[1])<br>+ (arrayOfDouble1[2] - arrayOfDouble2[2]) </em> (arrayOfDouble1[2] - arrayOfDouble2[2]));<br>return (Math.asin(d14 / 2.0D) <em> 12742001.579854401D);<br>}<br>}</em></pre><br>&nbsp;<br><br>&nbsp;<br><div id="magicdomid198" class="ace-line gutter-author-p-1375536 emptyGutter"><span class="author-p-1375536 color:rgb(102, 102, 102) font-size:14px">最后边写一段测试代码测试一下：</span></div><br><div id="magicdomid199" class="ace-line longKeep gutter-noauthor"></div><br><div id="magicdomid200" class="ace-line gutter-author-p-1375536 line-list-type-code emptyGutter"><br><pre class="prettyprint lang-java">package test;<br>import org.junit.Test;<br>import amap.AMapUtils;<br>import amap.LngLat;<br>public class AMapTest<br>{<br>@Test<br>public void Test()<br>{<br>LngLat start = new LngLat(116.368904, 39.923423);<br>LngLat end = new LngLat(116.387271, 39.922501);<br>System.err.println(AMapUtils.calculateLineDistance(start, end));<br>}<br>}</pre><br>&nbsp;<br><br></div><br><div id="magicdomid217" class="ace-line gutter-author-p-1375536 emptyGutter"><span class="author-p-1375536 color:rgb(102, 102, 102) font-size:14px">运行结果为：1569.6213922679392，官网的javascript API示例结果如图：</span></div><br><div id="magicdomid218" class="ace-line gutter-author-p-1375536 emptyGutter"></div><br><div id="magicdomid219" class="ace-line gutter-author-p-1375536 emptyGutter"><span class="author-p-1375536 color:rgb(102, 102, 102) font-size:14px">结果虽然有一点误差，但是这hi在可接受范围内的。</span></div><br><div id="magicdomid220" class="ace-line gutter-author-p-1375536 emptyGutter"><span class="author-p-1375536 bold:true color:rgb(255, 0, 0) font-size:14px">Javascript实现</span></div><br><div id="magicdomid221" class="ace-line gutter-author-p-1375536 emptyGutter"><span class="author-p-1375536 color:rgb(102, 102, 102) font-size:14px">同样的算法，将其转换成JS的写法，完整的代码如下：</span></div><br><div id="magicdomid222" class="ace-line longKeep gutter-noauthor"></div><br><div id="magicdomid223" class="ace-line gutter-author-p-1375536 line-list-type-code emptyGutter"><br><pre class="prettyprint lang-html">&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;meta charset=”utf-8” /&gt;<br>&lt;title&gt;&lt;/title&gt;<br>&lt;script type=”text/javascript” src=”js/ajax.js”&gt;&lt;/script&gt;<br>&lt;script&gt;<br>/**
+ 存储经纬度<br><em> @param {Object} longitude
+</em> @param {Object} latitude<br><em>/<br>function LngLat(longitude, latitude) {<br>this.longitude = longitude;<br>this.latitude = latitude;<br>}<br>function calculateLineDistance(start, end) {<br>var d1 = 0.01745329251994329;<br>var d2 = start.longitude;<br>var d3 = start.latitude;<br>var d4 = end.longitude;<br>var d5 = end.latitude;<br>d2 </em>= d1;<br>d3 <em>= d1;<br>d4 </em>= d1;<br>d5 <em>= d1;<br>var d6 = Math.sin(d2);<br>var d7 = Math.sin(d3);<br>var d8 = Math.cos(d2);<br>var d9 = Math.cos(d3);<br>var d10 = Math.sin(d4);<br>var d11 = Math.sin(d5);<br>var d12 = Math.cos(d4);<br>var d13 = Math.cos(d5);<br>var arrayOfDouble1 = [];<br>var arrayOfDouble2 = [];<br>arrayOfDouble1.push(d9 </em> d8);<br>arrayOfDouble1.push(d9 <em> d6);<br>arrayOfDouble1.push(d7);<br>arrayOfDouble2.push(d13 </em> d12);<br>arrayOfDouble2.push(d13 <em> d10);<br>arrayOfDouble2.push(d11);<br>var d14 = Math.sqrt((arrayOfDouble1[0] - arrayOfDouble2[0]) </em> (arrayOfDouble1[0] - arrayOfDouble2[0]) +<br>(arrayOfDouble1[1] - arrayOfDouble2[1]) <em> (arrayOfDouble1[1] - arrayOfDouble2[1]) +<br>(arrayOfDouble1[2] - arrayOfDouble2[2]) </em> (arrayOfDouble1[2] - arrayOfDouble2[2]));<br>return(Math.asin(d14 / 2.0) <em> 12742001.579854401);<br>}<br>var start = new LngLat(116.368904, 39.923423);<br>var end = new LngLat(116.387271, 39.922501);<br>&lt;/script&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>&lt;script&gt;<br>document.write(calculateLineDistance(start, end));<br>&lt;/script&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</em></pre><br>&nbsp;<br><br></div><br><div id="magicdomid284" class="ace-line gutter-author-p-1375536 line-list-type-code emptyGutter"></div><br><div id="magicdomid285" class="ace-line gutter-author-p-1375536 emptyGutter"><span class="author-p-1375536 bold:true color:rgb(255, 0, 0) font-size:14px">MySQL实现</span></div><br><div id="magicdomid286" class="ace-line longKeep gutter-noauthor"></div><br><div id="magicdomid287" class="ace-line gutter-author-p-1375536 line-list-type-code emptyGutter"><br><pre class="prettyprint">DELIMITER $$<br>CREATE FUNCTION <code>calculateLineDistance</code>(startLng double, startLat double, endLng double, endLat double) RETURNS double<br>BEGIN<br>declare d2 DOUBLE;<br>declare d3 DOUBLE;<br>declare d4 DOUBLE;<br>declare d5 DOUBLE;<br>declare d6 DOUBLE;<br>declare d7 DOUBLE;<br>declare d8 DOUBLE;<br>declare d9 DOUBLE;<br>declare d10 DOUBLE;<br>declare d11 DOUBLE;<br>declare d12 DOUBLE;<br>declare d13 DOUBLE;<br>declare d14 DOUBLE;<br>declare arrayOfDouble10 DOUBLE;<br>declare arrayOfDouble11 DOUBLE;<br>declare arrayOfDouble12 DOUBLe;<br>declare arrayOfDouble20 DOUBLE;<br>declare arrayOfDouble21 DOUBLE;<br>declare arrayOfDouble22 DOUBLE;<br>set d2 = startLng  0.01745329251994329;<br>set d3 = startLat <em> 0.01745329251994329;<br>set d4 = endLng </em> 0.01745329251994329;<br>set d5 = endLat <em> 0.01745329251994329;<br>set d6 = sin(d2);<br>set d7 = sin(d3);<br>set d8 = cos(d2);<br>set d9 = cos(d3);<br>set d10 = sin(d4);<br>set d11 = sin(d5);<br>set d12 = cos(d4);<br>set d13 = cos(d5);<br>set arrayOfDouble10 = (d9 </em> d8);<br>set arrayOfDouble11 = (d9 <em> d6);<br>set arrayOfDouble12 = d7;<br>set arrayOfDouble20 = (d13 </em> d12);<br>set arrayOfDouble21 = (d13 <em> d10);<br>set arrayOfDouble22 = d11;<br>set d14 = sqrt((arrayOfDouble10 - arrayOfDouble20) </em> (arrayOfDouble10 - arrayOfDouble20)<br>+ (arrayOfDouble11 - arrayOfDouble21) <em> (arrayOfDouble11 - arrayOfDouble21)<br>+ (arrayOfDouble12 - arrayOfDouble22) </em> (arrayOfDouble12 - arrayOfDouble22));<br>return (asin(d14 / 2.0) * 12742001.579854401);<br>END $$<br>DELIMITER ;</pre><br>&nbsp;<br><br></div><br><div id="magicdomid333" class="ace-line longKeep gutter-noauthor"></div>
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年02月02日 23:25</p>
+        <p>原始链接： <a class="post-url" href="/JavaScript/数据库开发/201711/01-java-js-mysql-lnglat-calculate.html" title="【转】利用java、js或mysql计算高德地图中两坐标之间的距离">http://tekin.yunnan.ws/JavaScript/数据库开发/201711/01-java-js-mysql-lnglat-calculate.html</a></p>
+        <footer>
+            <a href="http://tekin.yunnan.ws">
+                <img src="/images/logo.png" alt="TekinTian">
+                TekinTian
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/qr_wechatpay.png" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/qr_wechatpay.png">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/qr_alipay.png">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://tekin.yunnan.ws/JavaScript/数据库开发/201711/01-java-js-mysql-lnglat-calculate.html&title=《【转】利用java、js或mysql计算高德地图中两坐标之间的距离》 — TekinTian&pic=http://tekin.yunnan.wsimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://tekin.yunnan.ws/JavaScript/数据库开发/201711/01-java-js-mysql-lnglat-calculate.html&title=《【转】利用java、js或mysql计算高德地图中两坐标之间的距离》 — TekinTian&source=Tekin Tian's Github pages" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://tekin.yunnan.ws/JavaScript/数据库开发/201711/01-java-js-mysql-lnglat-calculate.html" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【转】利用java、js或mysql计算高德地图中两坐标之间的距离》 — TekinTian&url=http://tekin.yunnan.ws/JavaScript/数据库开发/201711/01-java-js-mysql-lnglat-calculate.html&via=http://tekin.yunnan.ws" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://tekin.yunnan.ws/JavaScript/数据库开发/201711/01-java-js-mysql-lnglat-calculate.html" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://tekin.yunnan.ws/JavaScript/数据库开发/201711/01-java-js-mysql-lnglat-calculate.html" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/JAVA开发/201711/05-lnglat-java.html" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          根据地图的坐标计算出两点之间的距离 java
+        
+      </span>
+    </a>
+  
+  
+    <a href="/编程开发/201710/29-unphat.html" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">什么是UNPHAT原则</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://yunnan.ws/" target="_blank">云南网</a>
+        Theme <a href="//github.com/tekintian" target="_blank">Github</a>
+      &copy; 2018 TekinTian<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://tekin.yunnan.ws",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Docker技术/">Docker技术</a><a class="category-link" href="/categories/JAVA开发/">JAVA开发</a><a class="category-link" href="/categories/JAVA开发/Linux/">Linux</a><a class="category-link" href="/categories/JavaScript/">JavaScript</a><a class="category-link" href="/categories/JavaScript/数据库开发/">数据库开发</a><a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/PHP技术/">PHP技术</a><a class="category-link" href="/categories/Shell编程学习/">Shell编程学习</a><a class="category-link" href="/categories/git/">git</a><a class="category-link" href="/categories/skill/">skill</a><a class="category-link" href="/categories/其他/">其他</a><a class="category-link" href="/categories/数据库开发/">数据库开发</a><a class="category-link" href="/categories/编程开发/">编程开发</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/IP地址验证/" style="font-size: 10px;">IP地址验证</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/archive/" style="font-size: 10px;">archive</a> <a href="/tags/bat/" style="font-size: 10px;">bat</a> <a href="/tags/centos/" style="font-size: 10px;">centos</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/download/" style="font-size: 10px;">download</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/git命令/" style="font-size: 20px;">git命令</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/netstat，tasklist/" style="font-size: 10px;">netstat，tasklist</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a> <a href="/tags/tp5/" style="font-size: 10px;">tp5</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/windows命令/" style="font-size: 10px;">windows命令</a> <a href="/tags/参考文档/" style="font-size: 15px;">参考文档</a> <a href="/tags/命令/" style="font-size: 10px;">命令</a> <a href="/tags/客户端IP/" style="font-size: 10px;">客户端IP</a> <a href="/tags/文件命名/" style="font-size: 10px;">文件命名</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/IP地址验证/" style="font-size: 10px;">IP地址验证</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/archive/" style="font-size: 10px;">archive</a> <a href="/tags/bat/" style="font-size: 10px;">bat</a> <a href="/tags/centos/" style="font-size: 10px;">centos</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/download/" style="font-size: 10px;">download</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/git命令/" style="font-size: 20px;">git命令</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/netstat，tasklist/" style="font-size: 10px;">netstat，tasklist</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a> <a href="/tags/tp5/" style="font-size: 10px;">tp5</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/windows命令/" style="font-size: 10px;">windows命令</a> <a href="/tags/参考文档/" style="font-size: 15px;">参考文档</a> <a href="/tags/命令/" style="font-size: 10px;">命令</a> <a href="/tags/客户端IP/" style="font-size: 10px;">客户端IP</a> <a href="/tags/文件命名/" style="font-size: 10px;">文件命名</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>

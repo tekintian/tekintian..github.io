@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>apache服务器.htaccess伪静态规则语法教程大全 | TekinTian</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="tekin, java, php, python, 云南网, 网站开发" />
+  
+  <meta name="description" content="htaccess语法教程apache服务器伪静态规则教程 &amp;nbsp; 教程从绑定域名到子目录开始，教程写法如下： RewriteEngine On RewriteCond %{HTTP_HOST} ^(www.)?xxx.com$ RewriteCond %{REQUEST_URI} !^/blog/ RewriteCond %{REQUEST_FILENAME} !-f RewriteCond">
+<meta property="og:type" content="article">
+<meta property="og:title" content="apache服务器.htaccess伪静态规则语法教程大全">
+<meta property="og:url" content="http://tekin.yunnan.ws/JAVA开发/201407/06-htaccess.html">
+<meta property="og:site_name" content="TekinTian">
+<meta property="og:description" content="htaccess语法教程apache服务器伪静态规则教程 &amp;nbsp; 教程从绑定域名到子目录开始，教程写法如下： RewriteEngine On RewriteCond %{HTTP_HOST} ^(www.)?xxx.com$ RewriteCond %{REQUEST_URI} !^/blog/ RewriteCond %{REQUEST_FILENAME} !-f RewriteCond">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-02T15:25:25.919Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="apache服务器.htaccess伪静态规则语法教程大全">
+<meta name="twitter:description" content="htaccess语法教程apache服务器伪静态规则教程 &amp;nbsp; 教程从绑定域名到子目录开始，教程写法如下： RewriteEngine On RewriteCond %{HTTP_HOST} ^(www.)?xxx.com$ RewriteCond %{REQUEST_URI} !^/blog/ RewriteCond %{REQUEST_FILENAME} !-f RewriteCond">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Tekin&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Tekin&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        IT Geek Communication blogs
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="HomePage" target="_blank" href="//tekin.yunnan.ws/">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/tekintian">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/tekintian">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//twitter.com/tekintian">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-htaccess" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      apache服务器.htaccess伪静态规则语法教程大全
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/JAVA开发/">JAVA开发</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2014-07-06
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p><strong>htaccess语法教程apache服务器伪静态规则教程</strong></p>
+<p>&nbsp;</p>
+<p>教程从绑定域名到子目录开始，教程写法如下：</p>
+<p><pre class="lang:default decode:true">RewriteEngine On</pre></p>
+<p>RewriteCond %{HTTP_HOST} ^(www.)?xxx.com$</p>
+<p>RewriteCond %{REQUEST_URI} !^/blog/</p>
+<p>RewriteCond %{REQUEST_FILENAME} !-f</p>
+<p>RewriteCond %{REQUEST_FILENAME} !-d</p>
+<p>RewriteRule ^(.*)$ /blog/$1<br>&nbsp;</p>
+<p>#没有输入文件名的默认到到首页</p>
+<p><pre class="lang:default decode:true">RewriteCond %{HTTP_HOST}  ^(www.)?xxx.com$</pre></p>
+<p>RewriteRule ^(/)?$  blog/index.php[L]<br>&nbsp;</p>
+<p>下面我开始解说一下上面的意思：</p>
+<p>【RewriteEngine  On】表示重写引擎开，关闭off，作用就是方便的开启或关闭以下的语句，这样就不需要一条一条的注释语句了。</p>
+<p>【RewriteCond %{HTTP_HOST}  ^(www.)?xxx.com$】</p>
+<p>这是重写条件，前面%{HTTP_HOST}表示当前访问的网址，只是指前缀部分，格式是www.xxx.com不包括“<a href="http://”和“/”，^表示字符串开始，$表示字符串结尾，\.表示转义的.，如果不转义也行，推荐转义，防止有些服务器不支持，?表示前面括号www\.出现0次或1次，这句规则的意思就是如果访问的网址是xxx.com或者www.xxx.com就执行以下的语句，不符合就跳过。" target="_blank" rel="noopener">http://”和“/”，^表示字符串开始，$表示字符串结尾，\.表示转义的.，如果不转义也行，推荐转义，防止有些服务器不支持，?表示前面括号www\.出现0次或1次，这句规则的意思就是如果访问的网址是xxx.com或者www.xxx.com就执行以下的语句，不符合就跳过。</a></p>
+<p>RewriteCond %{REQUEST_URI}  !^/blog/</p>
+<p>也是重写条件，%{REQUEST_URI}表示访问的相对地址，就是相对根目录的地址，就是域名/后面的成分，格式上包括最前面的“/”，!表示非，这句语句表示访问的地址不以/blog/开头，只是开头^，没有结尾$</p>
+<p>RewriteCond  %{REQUEST_FILENAME}  !-f</p>
+<p>RewriteCond %{REQUEST_FILENAME}  !-d</p>
+<p>这两句语句的意思是请求的文件或路径是不存在的，如果文件或路径存在将返回已经存在的文件或路径</p>
+<p>&nbsp;</p>
+<p>【RewriteRule^(.<em>)$  /blog/$1】重写规则，最重要的部分，意思是当上面的RewriteCond条件都满足的时候，将会执行此重写规则，^(.</em>)$是一个正则表达的匹配，匹配的是当前请求的URL，^(.<em>)$意思是匹配当前URL任意字符，.表示任意单个字符，</em>表示匹配0次或N次（N&gt;0），后面/blog/$1是重写成分，意思是将前面匹配的字符重写成/blog/$1，这个$1表示反向匹配，引用的是前面第一个圆括号的成分，即^(.<em>)$中的.</em>，其实这儿将会出现一个问题，后面讨论。</p>
+<p>&nbsp;</p>
+<p>【RewriteCond %{HTTP_HOST}  ^(www.)?xxx.com$】</p>
+<p>【RewriteRule ^(/)?$  blog/index.php  [L]】</p>
+<p>这两句的意思是指请求的host地址是www.xxx.com是，如果地址的结尾只有0个或者1个“/”时，将会重写到子目录下的主页，我猜想这主要因为重写后的地址是不能自动寻找主页的，需要自己指定。</p>
+<p>现在说说出现的问题，RewriteRule^(.<em>)$  /blog/$1前部分^(.</em>)$将会匹配当前请求的url，例如：请求网址是<a href="http://www.xxx.com/a.html，到底是匹配整个http://www.xxx.com/a.html，还是只匹配/a.html即反斜杠后面的成分，还是只匹配a.html。" target="_blank" rel="noopener">http://www.xxx.com/a.html，到底是匹配整个http://www.xxx.com/a.html，还是只匹配/a.html即反斜杠后面的成分，还是只匹配a.html。</a></p>
+<p>答案是：根据RewriteBase规则规定，如果rewritebase为/，将会匹配a.html，不带前面的反斜杠，所以上条语句应该写成RewriteRule^(.*)$  blog/$1（不带/），不过实际应用上带上前面的反斜杠，也可以用，可能带不带都行。现在问题出来了，如果不设置rewritebase为/，将会匹配整个网址<a href="http://www.xxx.com/a.html，显然这是错误的，所以应该添加这条：" target="_blank" rel="noopener">http://www.xxx.com/a.html，显然这是错误的，所以应该添加这条：</a></p>
+<p>RewiteBase/</p>
+<p>还有一个问题是，不能保证每个人输入的网址都是小写的，如果输入大写的呢，linux系统是区分大小写的，所以应该在RewriteCond后添加[NC]忽略大小写的。</p>
+<p>&nbsp;</p>
+<p>至此，完整的语句应该是：</p>
+<p><pre class="lang:default decode:true">####start####</pre></p>
+<p>RewriteEngineOn</p>
+<p>RewiteBase/</p>
+<p>RewriteCond %{HTTP_HOST} ^(www.)?xxx.com$ [NC]</p>
+<p>RewriteCond %{REQUEST_URI}  !^/blog/</p>
+<p>RewriteCond %{REQUEST_FILENAME} !-f</p>
+<p>RewriteCond %{REQUEST_FILENAME} !-d</p>
+<p>RewriteRule ^(.*)$  blog/$1</p>
+<p>#没有输入文件名的默认到到首页</p>
+<p>RewriteCond %{HTTP_HOST}  ^(www.)?xxx.com$ <a href="http://cialisfrance24.com/" target="_blank" rel="noopener">homepage</a> [NC]</p>
+<p>RewriteRule ^(/)?$  blog/index.php [L]</p>
+<p>####end####<br>&nbsp;</p>
+<p>&nbsp;</p>
+<p>如果后面还继续有语句的，就不应该加上最后的[L]，因为这是表示最后一条语句的意思</p>
+<p>防盗链的语句，同样需要添加RewiteBase/，如下：</p>
+<p><pre class="lang:default decode:true ">RewriteEngine on</pre></p>
+<p>RewiteBase /</p>
+<p>RewriteCond %{HTTP_REFERER} !^$ [NC]</p>
+<p>RewriteCond %{HTTP_REFERER} !xxx.info [NC]</p>
+<p>RewriteRule .(jpg|gif|png|bmp|swf|jpeg)$ /error/daolian.gif [R,NC,L]<br>&nbsp;</p>
+<p>如果后面还继续有语句的，就不应该加上最后的[L]，/error/daolian.gif为别人盗链时显示的图片。</p>
+<p>&nbsp;</p>
+<p>下面附上简单的语法规则和flags：</p>
+<p>【RewriteCond语法：】</p>
+<p>RewriteCondTestStringCondPattern[flags]</p>
+<p>rewritecond的其他用法：</p>
+<p>‘-d’(目录)</p>
+<p>将TestString视为一个路径名并测试它是否为一个存在的目录。</p>
+<p>‘-f’(常规文件)</p>
+<p>将TestString视为一个路径名并测试它是否为一个存在的常规文件。</p>
+<p>‘-s’(非空的常规文件)</p>
+<p>将TestString视为一个路径名并测试它是否为一个存在的、尺寸大于0的常规文件。</p>
+<p>‘-l’(符号连接)</p>
+<p>将TestString视为一个路径名并测试它是否为一个存在的符号连接。</p>
+<p>‘-x’(可执行)</p>
+<p>将TestString视为一个路径名并测试它是否为一个存在的、具有可执行权限的文件。该权限由操作系统检测。</p>
+<p>‘-F’(对子请求存在的文件)</p>
+<p>检查TestString是否为一个有效的文件，而且可以在服务器当前的访问控制配置下被访问。它使用一个内部子请求来做检查，由于会降低服务器的性能，所以请谨慎使用！</p>
+<p>‘-U’(对子请求存在的URL)</p>
+<p>检查TestString是否为一个有效的URL，而且可以在服务器当前的访问控制配置下被访问。它使用一个内部子请求来做检查，由于会降低服务器的性能，所以请谨慎使用！</p>
+<p>&nbsp;</p>
+<p>【RewriteRule语法：】</p>
+<p>RewriteRule Pattern Substitution [flags]</p>
+<p>&nbsp;</p>
+<p>【flags】：</p>
+<p>‘chain|C’(链接下一规则)</p>
+<p>此标记使当前规则与下一个规则相链接。它产生这样的效果：如果一个规则被匹配，则继续处理其后继规则，也就是这个标记不起作用；如果该规则不被匹配，则其后继规则将被跳过。比如，在一个目录级规则中执行一个外部重定向时，你可能需要删除”.www”(此处不应该出现”.www”)。</p>
+<p>‘cookie|CO=NAME:VAL:domain[:lifetime[:path]]’(设置cookie)</p>
+<p>在客户端设置一个cookie。cookie的名称是NAME，值是VAL。domain是该cookie的域，比如’.apache.org’，可选的lifetime是cookie的有效期(分钟)，可选的path是cookie的路径。</p>
+<p>‘env|E=VAR:VAL’(设置环境变量)</p>
+<p>此标记将环境变量VAR的值为VAL，VAL可以包含可扩展的正则表达式反向引用($N和%N)。此标记可以多次使用以设置多个变量。这些变量可以在其后许多情况下被间接引用，通常是在XSSI(&lt;!–#echovar=”VAR”–&gt;)或CGI($ENV{‘VAR’})中，也可以在后继的RewriteCond指令的CondPattern参数中通过%{ENV:VAR}引用。使用它可以记住从URL中剥离的信息。</p>
+<p>&nbsp;</p>
+<p>‘forbidden|F’(强制禁止URL)</p>
+<p>强制禁止当前URL，也就是立即反馈一个HTTP响应码403(被禁止的)。使用这个标记，可以链接若干个RewriteConds来有条件地阻塞某些URL。</p>
+<p>&nbsp;</p>
+<p>‘gone|G’(强制废弃URL)</p>
+<p>强制当前URL为已废弃，也就是立即反馈一个HTTP响应码410(已废弃的)。使用这个标记，可以标明页面已经被废弃而不存在了。</p>
+<p>&nbsp;</p>
+<p>‘handler|H=Content-handler’(强制指定内容处理器)</p>
+<p>强自制定目标文件的内容处理器为Content-handler。例如，用来模拟mod_alias模块的ScriptAlias指令，以强制映射文件夹内的所有文件都由”cgi-script”处理器处理。</p>
+<p>&nbsp;</p>
+<p>‘last|L’(结尾规则)</p>
+<p>立即停止重写操作，并不再应用其他重写规则。它对应于Perl中的last命令或C语言中的break命令。这个标记用于阻止当前已被重写的URL被后继规则再次重写。例如，使用它可以重写根路径的URL(‘/’)为实际存在的URL(比如：’/e/www/’)。</p>
+<p>&nbsp;</p>
+<p>‘next|N’(从头再来)</p>
+<p>重新执行重写操作(从第一个规则重新开始)。此时再次进行处理的URL已经不是原始的URL了，而是经最后一个重写规则处理过的URL。它对应于Perl中的next命令或C语言中的continue命令。此标记可以重新开始重写操作(立即回到循环的开头)。但是要小心，不要制造死循环！</p>
+<p>&nbsp;</p>
+<p>‘nocase|NC’(忽略大小写)</p>
+<p>它使Pattern忽略大小写，也就是在Pattern与当前URL匹配时，’A-Z’和’a-z’没有区别。</p>
+<p>&nbsp;</p>
+<p>‘noescape|NE’(在输出中不对URI进行转义)</p>
+<p>此标记阻止mod_rewrite对重写结果应用常规的URI转义规则。一般情况下，特殊字符(‘%’,‘$’,‘;’等)会被转义为等值的十六进制编码(‘%′,‘$′,‘;’等)。此标记可以阻止这样的转义，以允许百分号等符号出现在输出中，比如：</p>
+<p>RewriteRule/foo/(.*)/bar?arg=P1\=$1[R,NE]</p>
+<p>可以使’/foo/zed转向到一个安全的请求’/bar?arg=P1=zed’。</p>
+<p>&nbsp;</p>
+<p>‘nosubreq|NS’(不对内部子请求进行处理)</p>
+<p>在当前请求是一个内部子请求时，此标记强制重写引擎跳过该重写规则。比如，在mod_include试图搜索目录默认文件(index.xxx)时，Apache会在内部产生子请求。对于子请求，重写规则不一定有用，而且如果整个规则集都起作用，它甚至可能会引发错误。所以，可以用这个标记来排除某些规则。</p>
+<p>使用原则：如果你为URL添加了CGI脚本前缀，以强制它们由CGI脚本处理，但对子请求处理的出错率(或者资源开销)很高，在这种情况下，可以使用这个标记。</p>
+<p>&nbsp;</p>
+<p>‘proxy|P’(强制为代理)</p>
+<p>此标记使替换成分被内部地强制作为代理请求发送，并立即中断重写处理，然后把处理移交给mod_proxy模块。你必须确保此替换串是一个能够被mod_proxy处理的有效URI(比如以<a href="http://hostname开头)，否则将得到一个代理模块返回的错误。使用这个标记，可以把某些远程成分映射到本地服务器域名空间，从而增强了ProxyPass指令的功能。" target="_blank" rel="noopener">http://hostname开头)，否则将得到一个代理模块返回的错误。使用这个标记，可以把某些远程成分映射到本地服务器域名空间，从而增强了ProxyPass指令的功能。</a></p>
+<p>注意：要使用这个功能，必须已经启用了mod_proxy模块。</p>
+<p>&nbsp;</p>
+<p>‘passthrough|PT’(移交给下一个处理器)</p>
+<p>此标记强制重写引擎将内部request_rec结构中的uri字段设置为filename字段的值，这个小小的修改使得RewriteRule指令的输出能够被(从URI转换到文件名的)Alias,ScriptAlias,Redirect等指令进行后续处理[原文：Thisflagisjustahacktoenablepost-processingoftheoutputofRewriteRuledirectives,usingAlias,ScriptAlias,Redirect,andotherdirectivesfromvariousURI-to-filenametranslators.]。</p>
+<p>&nbsp;</p>
+<p>举一个能说明其含义的例子：如果要将/abc重写为/def，然后再使用mod_alias将/def转换为/ghi，可以这样：</p>
+<p>RewriteRule ^/abc(.*) /def$1 [PT]</p>
+<p>Alias /def/ghi</p>
+<p>如果省略了PT标记，虽然将uri=/abc/…重写为filename=/def/…的部分运作正常，但是后续的mod_alias在试图将URI转换到文件名时会遭遇失效。</p>
+<p>注意：如果需要混合使用多个将URI转换到文件名的模块时，就必须使用这个标记。。此处混合使用mod_alias和mod_rewrite就是个典型的例子。</p>
+<p>‘qsappend|QSA’(追加查询字符串)</p>
+<p>此标记强制重写引擎在已有的替换字符串中追加一个查询字符串，而不是简单的替换。如果需要通过重写规则在请求串中增加信息，就可以使用这个标记。</p>
+<p>&nbsp;</p>
+<p>‘redirect|R[=code]‘(强制重定向)</p>
+<p>若Substitution以<a href="http://thishost[:thisport]/(使新的URL成为一个URI)开头，可以强制性执行一个外部重定向。如果没有指定code，则产生一个HTTP响应码302(临时性移动)。如果需要使用在300-400范围内的其他响应代码，只需在此指定即可(或使用下列符号名称之一：temp(默认),permanent,seeother)。使用它可以把规范化的URL反馈给客户端，如将”/~”重写为”/u/”，或始终对/u/user加上斜杠，等等。" target="_blank" rel="noopener">http://thishost[:thisport]/(使新的URL成为一个URI)开头，可以强制性执行一个外部重定向。如果没有指定code，则产生一个HTTP响应码302(临时性移动)。如果需要使用在300-400范围内的其他响应代码，只需在此指定即可(或使用下列符号名称之一：temp(默认),permanent,seeother)。使用它可以把规范化的URL反馈给客户端，如将”/~”重写为”/u/”，或始终对/u/user加上斜杠，等等。</a></p>
+<p>&nbsp;</p>
+<p><strong>注意</strong>：在使用这个标记时，必须确保该替换字段是一个有效的URL。否则，它会指向一个无效的位置！并且要记住，此标记本身只是对URL加上<a href="http://thishost[:thisport]/前缀，重写操作仍然会继续进行。通常，你还会希望停止重写操作而立即重定向，那么就还需要使用’L&#39;标记。" target="_blank" rel="noopener">http://thishost[:thisport]/前缀，重写操作仍然会继续进行。通常，你还会希望停止重写操作而立即重定向，那么就还需要使用’L&#39;标记。</a></p>
+<p>&nbsp;</p>
+<p>‘skip|S=num’(跳过后继规则)</p>
+<p>此标记强制重写引擎跳过当前匹配规则之后的num个规则。它可以模拟if-then-else结构：最后一个规则是then从句，而被跳过的skip=N个规则是else从句。注意：它和’chain|C’标记是不同的！</p>
+<p>&nbsp;</p>
+<p>‘type|T=MIME-type’(强制MIME类型)</p>
+<p>强制目标文件的MIME类型为MIME-type，可以用来基于某些特定条件强制设置内容类型。比如，下面的指令可以让.php文件在以.phps扩展名调用的情况下由mod_php按照PHP源代码的MIME类型(application/x-httpd-php-source)显示：</p>
+<p>RewriteRule ^(.+.php)s$ $1[T=application/x-httpd-php-source]</p>
+<p>&nbsp;</p>
+<h2 id="htaccess-实现-301-重定向"><a href="#htaccess-实现-301-重定向" class="headerlink" title=".htaccess 实现 301 重定向"></a>.htaccess 实现 301 重定向</h2><p>出于 SEO、PR 值传递、网址转换的目的，在网站初建和网站迁移时我们都需要使用 301 重定向，通常包括域名对域名，目录对目录和一个独立网址对另一个独立网址的重定向。在虚拟主机上作 301 重定向，最常用的方法有2种：</p>
+<p><strong>1.直接编辑 .htaccess。</strong></p>
+<p><strong>2.用 cPanel 设定。</strong></p>
+<p>实质二者都是修改文件 .htaccess，只是前者手工编辑，后者是由 cPanel 完成。用 cPanel 操作相当简单，登陆你的 cPanel–&gt;Domain–&gt;Redirects，选择相应的选项即可完成设置，这里暂不讨论。下面讲一下直接编辑 .htaccess 的方法。</p>
+<p><strong>注意：在设置 301 重定向之前务必备份相应目录下的.htaccess文件。</strong></p>
+<p><strong>1.重定向domain.com到www.domain.com</strong></p>
+<p>这种重定向旨在使域名唯一，是网站SEO必须要做的，后面重定向www.domain.com到domain.com也是出于同样的原因，只是形式不同。打开.htaccess文件，加入以下规则。(下面的规则是针对主域名的，子域名要修改)</p>
+<blockquote>
+<p>RewriteEngine On</p>
+<p>RewriteCond  %{HTTP_HOST}  !^www.domain.com$  [NC]</p>
+<p>RewriteRule  ^(.<em>)$  <a href="http://www.domain.com/$1" target="_blank" rel="noopener">http://www.domain.com/$1</a>  [L,R=301]<br><em>*2.重定向www.domain.com到domain.com</em></em><br>RewriteEngine  On</p>
+<p>RewriteCond  %{HTTP_HOST}  !^domain.com$ [NC]</p>
+<p>RewriteRule  ^(.<em>)$  <a href="http://domain.com/$1" target="_blank" rel="noopener">http://domain.com/$1</a>  [L,R=301]<br><em>*3.重定向olddomain.com到www.newdomain.com</em></em><br>RewriteEngine On</p>
+<p>RewriteCond %{HTTP_HOST} !olddomain.com$ [NC]</p>
+<p>RewriteRule ^(.<em>)$ <a href="http://www.newdomain.com/$1" target="_blank" rel="noopener">http://www.newdomain.com/$1</a> [L,R=301]<br><em>*4.重定向olddomain.com to newdomain.com</em></em><br>RewriteEngine On</p>
+<p>RewriteBase  /</p>
+<p>RewriteCond  %{HTTP_HOST}  !olddomain.com$ [NC]</p>
+<p>RewriteRule  ^(.<em>)$  <a href="http://newdomain.com/$1" target="_blank" rel="noopener">http://newdomain.com/$1</a>  [L,R=301]<br><em>*5.重定向domain.com/file/file.php 到 otherdomain.com/otherfile/other.php</em></em><br>RewriteCond  %{HTTP_HOST}  ^www.domain.com$</p>
+<p>RewriteRule  ^file/file.php$  <a href="http://www.otherdomain.com/otherfile/other.php" target="_blank" rel="noopener">http://www.otherdomain.com/otherfile/other.php</a>  [R=301,L]</p>
+</blockquote>
+<h1 id="htaccess实现目录绑定二级域名-域名功能"><a href="#htaccess实现目录绑定二级域名-域名功能" class="headerlink" title=".htaccess实现目录绑定二级域名/域名功能"></a>.htaccess实现目录绑定二级域名/域名功能</h1><p>　　独立IP LINUX空间，空间支持伪静态功能。由于网站根目录下安装的是DEDECMS，bbs目录下安装的是论坛，home目录下安装是ucenterHome,虚拟主机只支持根目录绑定域名，如何让网站支持二级域名呢?下面我教你利用.htaccess实现一个网站空间可以用多个二级域名指向多个二级目录，建立多个网站。以独立IP虚拟主机为例：</p>
+<p>　　一、将域名做一个泛解析*.xxxx.com 解析到你的空间IP，独立IP虚拟主机支持泛解析，不需要绑定域名就可以访问网站。</p>
+<p>　　二、建立bbs 、home 目录，将CMS上传到根目录，将论坛上传到bbs目录，将ucenterHome上传到home目录。</p>
+<p>　　三、打开记事本将以下代码复制进去，保存为.htaccess文件，上传到根目录下。</p>
+<p>　　.htaccess文件内容如下：(以xxx.cn域名为例)</p>
+<p><pre class="lang:default decode:true  ">RewriteEngine on</pre></p>
+<p>　　DirectoryIndex index.php index.html index.htm</p>
+<p>　　#让www.xxx.cn 访问根目录CMS</p>
+<p>　　RewriteCond %{HTTP_HOST} ^www.xxx.cn$</p>
+<p>　　RewriteCond %{REQUEST_URI} !^/</p>
+<p>　　RewriteCond %{REQUEST_FILENAME} !-f</p>
+<p>　　RewriteCond %{REQUEST_FILENAME} !-d</p>
+<p>　　RewriteRule ^(.*)$ /$1</p>
+<p>　　RewriteCond %{HTTP_HOST} ^www.xxx.cn$</p>
+<p>　　RewriteRule ^(/)?$ /index.php [L]</p>
+<p>　　#让home.xrnic.cn 访问home目录UcenterHome</p>
+<p>　　RewriteCond %{HTTP_HOST} ^home.xxx.cn$</p>
+<p>　　RewriteCond %{REQUEST_URI} !^/home/</p>
+<p>　　RewriteCond %{REQUEST_FILENAME} !-f</p>
+<p>　　RewriteCond %{REQUEST_FILENAME} !-d</p>
+<p>　　RewriteRule ^(.*)$ /home/$1</p>
+<p>　　RewriteCond %{HTTP_HOST} ^home.xxx.cn$</p>
+<p>　　RewriteRule ^(/)?$ home/index.php [L]</p>
+<p>　　#让bbs.xxx.cn 访问bbs目录论坛</p>
+<p>　　RewriteCond %{HTTP_HOST} ^bbs.xxx.cn$</p>
+<p>　　RewriteCond %{REQUEST_URI} !^/wap/</p>
+<p>　　RewriteCond %{REQUEST_FILENAME} !-f</p>
+<p>　　RewriteCond %{REQUEST_FILENAME} !-d</p>
+<p>　　RewriteRule ^(.*)$ /bbs/$1</p>
+<p>　　RewriteCond %{HTTP_HOST} ^bbs.xxx.cn$</p>
+<p>　　RewriteRule ^(/)?$ bbs/index.php [L]<br>&nbsp;</p>
+<p>　　按照以上方法可以一个空间建立N个网站，当然也可以把其他顶级域名指向子目录，实现一个空间建立多个网站的功能。</p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年02月02日 23:25</p>
+        <p>原始链接： <a class="post-url" href="/JAVA开发/201407/06-htaccess.html" title="apache服务器.htaccess伪静态规则语法教程大全">http://tekin.yunnan.ws/JAVA开发/201407/06-htaccess.html</a></p>
+        <footer>
+            <a href="http://tekin.yunnan.ws">
+                <img src="/images/logo.png" alt="TekinTian">
+                TekinTian
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/qr_wechatpay.png" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/qr_wechatpay.png">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/qr_alipay.png">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://tekin.yunnan.ws/JAVA开发/201407/06-htaccess.html&title=《apache服务器.htaccess伪静态规则语法教程大全》 — TekinTian&pic=http://tekin.yunnan.wsimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://tekin.yunnan.ws/JAVA开发/201407/06-htaccess.html&title=《apache服务器.htaccess伪静态规则语法教程大全》 — TekinTian&source=Tekin Tian's Github pages" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://tekin.yunnan.ws/JAVA开发/201407/06-htaccess.html" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《apache服务器.htaccess伪静态规则语法教程大全》 — TekinTian&url=http://tekin.yunnan.ws/JAVA开发/201407/06-htaccess.html&via=http://tekin.yunnan.ws" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://tekin.yunnan.ws/JAVA开发/201407/06-htaccess.html" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://tekin.yunnan.ws/JAVA开发/201407/06-htaccess.html" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#htaccess-实现-301-重定向"><span class="post-toc-text">.htaccess 实现 301 重定向</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#htaccess实现目录绑定二级域名-域名功能"><span class="post-toc-text">.htaccess实现目录绑定二级域名/域名功能</span></a>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/PHP技术/201407/11-hhvm-php-mysql-numrows-500-error.html" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          hhvm  php mysql_numrows 至500错误的解决方法
+        
+      </span>
+    </a>
+  
+  
+    <a href="/Shell编程学习/201407/05-linux-tar-split-backup-web.html" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">[原创]linux 下使用TAR分卷打包自动增量备份网站和数据库并发送到指定邮箱</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://yunnan.ws/" target="_blank">云南网</a>
+        Theme <a href="//github.com/tekintian" target="_blank">Github</a>
+      &copy; 2018 TekinTian<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://tekin.yunnan.ws",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Docker技术/">Docker技术</a><a class="category-link" href="/categories/JAVA开发/">JAVA开发</a><a class="category-link" href="/categories/JAVA开发/Linux/">Linux</a><a class="category-link" href="/categories/JavaScript/">JavaScript</a><a class="category-link" href="/categories/JavaScript/数据库开发/">数据库开发</a><a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/PHP技术/">PHP技术</a><a class="category-link" href="/categories/Shell编程学习/">Shell编程学习</a><a class="category-link" href="/categories/git/">git</a><a class="category-link" href="/categories/skill/">skill</a><a class="category-link" href="/categories/其他/">其他</a><a class="category-link" href="/categories/数据库开发/">数据库开发</a><a class="category-link" href="/categories/编程开发/">编程开发</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/IP地址验证/" style="font-size: 10px;">IP地址验证</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/archive/" style="font-size: 10px;">archive</a> <a href="/tags/bat/" style="font-size: 10px;">bat</a> <a href="/tags/centos/" style="font-size: 10px;">centos</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/download/" style="font-size: 10px;">download</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/git命令/" style="font-size: 20px;">git命令</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/netstat，tasklist/" style="font-size: 10px;">netstat，tasklist</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a> <a href="/tags/tp5/" style="font-size: 10px;">tp5</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/windows命令/" style="font-size: 10px;">windows命令</a> <a href="/tags/参考文档/" style="font-size: 15px;">参考文档</a> <a href="/tags/命令/" style="font-size: 10px;">命令</a> <a href="/tags/客户端IP/" style="font-size: 10px;">客户端IP</a> <a href="/tags/文件命名/" style="font-size: 10px;">文件命名</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/IP地址验证/" style="font-size: 10px;">IP地址验证</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/archive/" style="font-size: 10px;">archive</a> <a href="/tags/bat/" style="font-size: 10px;">bat</a> <a href="/tags/centos/" style="font-size: 10px;">centos</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/download/" style="font-size: 10px;">download</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/git命令/" style="font-size: 20px;">git命令</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/netstat，tasklist/" style="font-size: 10px;">netstat，tasklist</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a> <a href="/tags/tp5/" style="font-size: 10px;">tp5</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/windows命令/" style="font-size: 10px;">windows命令</a> <a href="/tags/参考文档/" style="font-size: 15px;">参考文档</a> <a href="/tags/命令/" style="font-size: 10px;">命令</a> <a href="/tags/客户端IP/" style="font-size: 10px;">客户端IP</a> <a href="/tags/文件命名/" style="font-size: 10px;">文件命名</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>

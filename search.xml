@@ -4,7 +4,7 @@
     
     <entry>
       <title><![CDATA[Git常用命令总结]]></title>
-      <url>/git/201802/git-pub/git-bash-02.html</url>
+      <url>/git/201802/02-git-pub/git-bash.html</url>
       <content type="html"><![CDATA[<h1 id="Git常用命令总结"><a href="#Git常用命令总结" class="headerlink" title="Git常用命令总结"></a>Git常用命令总结</h1><h2 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h2><pre><code>在本地新建一个repo,进入一个项目目录,执行git init,会初始化一个repo,并在当前文件夹下创建一个.git文件夹.
 </code></pre><h2 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h2><pre><code>获取一个url对应的远程Git repo, 创建一个local copy.
 一般的格式是git clone [url].
@@ -177,7 +177,7 @@ git会将变化记录到HEAD对应的reflog文件中,其路径为.git/logs/HEAD,
     
     <entry>
       <title><![CDATA[windows-skill]]></title>
-      <url>/article/201802/skill-pub/windows-skill-02.html</url>
+      <url>/article/201802/02-skill-pub/windows-skill.html</url>
       <content type="html"></content>
       
         
@@ -185,7 +185,7 @@ git会将变化记录到HEAD对应的reflog文件中,其路径为.git/logs/HEAD,
     
     <entry>
       <title><![CDATA[Window 如何通过cmd查看端口被谁占用、相应进程、杀死进程命令详解]]></title>
-      <url>/skill/201802/skill-pub/win-cmd-netstat-02.html</url>
+      <url>/skill/201802/02-skill-pub/win-cmd-netstat.html</url>
       <content type="html"><![CDATA[<h2 id="一、-查看所有进程占用的端口"><a href="#一、-查看所有进程占用的端口" class="headerlink" title="一、 查看所有进程占用的端口"></a>一、 查看所有进程占用的端口</h2><p>在开始-运行-cmd,输入：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat –ano</span><br></pre></td></tr></table></figure></p>
 <p>可以查看所有进程</p>
 <h2 id="二、查看占用指定端口的程序"><a href="#二、查看占用指定端口的程序" class="headerlink" title="二、查看占用指定端口的程序"></a>二、查看占用指定端口的程序</h2><p>当你在用tomcat发布程序时，经常会遇到端口被占用的情况，我们想知道是哪个程序或进程占用了端口，可以用该命令 netstat –ano|findstr “指定端口号” 二、查看占用指定端口的程序 当你在用tomcat发布程序时，经常会遇到端口被占用的情况，我们想知道是哪个程序或进程占用了端口，可以用该命令 netstat –ano|findstr “指定端口号” 二、查看占用指定端口的程序 </p>
@@ -225,7 +225,7 @@ git会将变化记录到HEAD对应的reflog文件中,其路径为.git/logs/HEAD,
     
     <entry>
       <title><![CDATA[Windows / Linux 多版本tomcat 共存配置方法[配置两个或多个Tomcat启动的方法]]]></title>
-      <url>/JAVA%E5%BC%80%E5%8F%91/Linux/201801/windows-linux-multi-tomcat-conf-28.html</url>
+      <url>/JAVA%E5%BC%80%E5%8F%91/Linux/201801/28-windows-linux-multi-tomcat-conf.html</url>
       <content type="html"><![CDATA[<div> Windows / Linux 多版本tomcat 共存配置方法[配置两个或多个Tomcat启动的方法]</div><br><div></div><br><div></div><br><div>用解压版的tomcat，不要用安装版的。  tomcat历史版本下载地址 <a href="https://archive.apache.org/dist/tomcat/" target="_blank" rel="noopener">https://archive.apache.org/dist/tomcat/</a><br><br># 下载路径：/dist/tomcat/tomcat-9/v9.0.4/bin 绿色替换为你自己想要下载的版本号<br><br></div><br><div></div><br><div>修改conf\server.xml，</div><br><div></div><br><div>1、修改http访问端口</div><br><div>conf下的server.xml文件的服务访问端口，默认是8080可以改成其它的，如7000</div><br><div></div><br><div>&lt;!– &lt;Connector port=”8080” protocol=”HTTP/1.1”  maxThreads=”150” connectionTimeout=”20000”  redirectPort=”8443” /&gt; –&gt;</div><br><div>&lt;Connector port=”8060” protocol=”HTTP/1.1”  maxThreads=”150” connectionTimeout=”20000”  redirectPort=”8443” /&gt;</div><br><div></div><br><div></div><br><div>2、修改shutdown端口</div><br><div>默认8005</div><br><div></div><br><div>&lt;!– &lt;Server port=”8065” shutdown=”SHUTDOWN”&gt; –&gt;</div><br><div>&lt;Server port=”6005” shutdown=”SHUTDOWN”&gt;</div><br><div></div><br><div></div><br><div>3、修改jvm启动默认端口，默认端口为8009   改成其他端口</div><br><div></div><br><div> &lt;!– &lt;Connector port=”8009” protocol=”AJP/1.3” redirectPort=”8443” /&gt; –&gt;</div><br><div>    &lt;Connector port=”6009” protocol=”AJP/1.3” redirectPort=”8443” /&gt;</div><br><div></div><br><div></div><br><div>## Windows tomcat 设置方法：</div><br><div></div><br><div>设置各个tomcat所使用的jdk版本</div><br><div>在bin 目录的startup.bat， shutdown.bat 文件增加</div><br><div></div><br><div>如：tomcat-6.0版本设置使用jdk6</div><br><div></div><br><div>打开startup.bat , shutdown.bat 在第7行的后面， rem Guess CATALINA_HOME if not defined的上方增加如下代码</div><br><div></div><br><div>set JAVA_HOME=D:\Program Files\Java\jdk1.6.0_45</div><br><div>set JRE_HOME=D:\Program Files\Java\jre6</div><br><div></div><br><div></div><br><div>## linux tomcat 设置方法：</div><br><div>同windows的设置方法，修改文件为startup.sh， shutdown.sh</div><br><div></div><br><div></div><br><div>.sh为linux下的执行脚本</div><br><div>.bat 为windows下的批处理脚本</div><br><div></div><br><div></div><br><div>其他版本的<a href="http://dev.yunnan.ws/" title="http://dev.yunnan.ws" target="_blank" rel="noopener">tomcat</a>设置方法一致，</div><br><div></div><br><div># 端口推荐的方式为版本号和默认端口结合的方式，这样方便记忆和配置：</div><br><div></div><br><div>http访问端口  80+2位tomcat版本号  如： tomcat6.0  建议修改为 8060    默认：8080</div><br><div></div><br><div>shutdown端口  2位tomcat版本号+05  如： tomcat6.0  建议修改为6005    默认：8005</div><br><div></div><br><div>jvm启动默认端口  2位tomcat版本号+09   如： tomcat6.0  建议修改为6009   默认：8009</div><br><div></div><br><div></div><br><div>tekin</div><br><div></div><br><div>启动tomcat: 执行 \bin\startup.bat</div><br><div></div><br><div>关闭tomcat: 执行 \bin\shutdown.bat</div><br><div></div><br><div></div><br><div>## linux tomcat 启动方法：</div><br><div></div><br><div>启动tomcat: 执行 bin/startup.sh</div><br><div></div><br><div>关闭tomcat: 执行 bin/shutdown.sh</div><br><div></div><br><div>tekin 原创，转载请保留出处</div><br><div></div>]]></content>
       
         <categories>
@@ -253,7 +253,7 @@ git会将变化记录到HEAD对应的reflog文件中,其路径为.git/logs/HEAD,
     
     <entry>
       <title><![CDATA[github tarball 直接下载项目最新源码方法]]></title>
-      <url>/%E5%85%B6%E4%BB%96/201801/github-tarball-download-24.html</url>
+      <url>/%E5%85%B6%E4%BB%96/201801/24-github-tarball-download.html</url>
       <content type="html"><![CDATA[<p>github tarball 直接下载项目最新源码方法github tarball 直接下载项目最新源码方法</p>
 <p>&nbsp;</p>
 <p>如下载  <span style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-style: normal; font-weight: 400;">hosts_ads_block 项目的 </span><span style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-style: normal; font-weight: 400;">master 分支：</span></p>
@@ -271,7 +271,7 @@ git会将变化记录到HEAD对应的reflog文件中,其路径为.git/logs/HEAD,
     
     <entry>
       <title><![CDATA[linux 开机自动启动自定义脚本]]></title>
-      <url>/Linux/201801/linux-reboot-start-diy-sh-19.html</url>
+      <url>/Linux/201801/19-linux-reboot-start-diy-sh.html</url>
       <content type="html"><![CDATA[<p>在百度上可以找到好几种Linux开机启动各种服务的方法,在这里我写的是自己喜欢的方式.</p>
 <p>博主是一个不怎么记事的人,有些配置在系统的目录下,配置了一次后就忘了,再也不想去系统的目录下找各种奇奇怪怪的目录和名字.就比如说这个开机启动,在配置完了后的某一天,想要在加一个启动的服务,然而那时已经忘了以前是在哪个目录下配置的了,一个大写的懵逼,所以就自己新建一个脚本放在自己能找到的目录,只用在系统的目录下配置一次,以后就在自己新建的脚本里面写启动服务的命令就好了</p>
 <p><strong>1. 自己新建一个脚本,如centnet-service.sh</strong></p>
@@ -342,7 +342,7 @@ git会将变化记录到HEAD对应的reflog文件中,其路径为.git/logs/HEAD,
     
     <entry>
       <title><![CDATA[在Centos 5.x或6.x上安装RHEL EPEL Repo]]></title>
-      <url>/Linux/201801/centos-5-x-6-x-isntall-rhel-epel-repo-18.html</url>
+      <url>/Linux/201801/18-centos-5-x-6-x-isntall-rhel-epel-repo.html</url>
       <content type="html"><![CDATA[<p><strong>安装步骤</strong><br>Centos 5.x</p>
 <p>wget <a href="http://archives.fedoraproject.org/pub/archive/epel/epel-release-latest-5.noarch.rpm" target="_blank" rel="noopener">http://archives.fedoraproject.org/pub/archive/epel/epel-release-latest-5.noarch.rpm</a></p>
 <p>wget <a href="http://rpms.famillecollet.com/enterprise/remi-release-5.rpm" target="_blank" rel="noopener">http://rpms.famillecollet.com/enterprise/remi-release-5.rpm</a></p>
@@ -399,7 +399,7 @@ git会将变化记录到HEAD对应的reflog文件中,其路径为.git/logs/HEAD,
     
     <entry>
       <title><![CDATA[debian 所有的历史发行版本6 7,8, 9 版本 ISO文件下载 Debian Archive ISO Download]]></title>
-      <url>/Linux/201801/debian-archive-iso-download-17.html</url>
+      <url>/Linux/201801/17-debian-archive-iso-download.html</url>
       <content type="html"><![CDATA[<h1 id="Debian-CDs-DVDs-archive"><a href="#Debian-CDs-DVDs-archive" class="headerlink" title="Debian CDs/DVDs archive"></a>Debian CDs/DVDs archive</h1><p>&nbsp;</p>
 <p>Deibain8 cd下载地址</p>
 <p><a href="https://cdimage.debian.org/cdimage/archive/8.10.0/amd64/iso-cd/" target="_blank" rel="noopener">http://cdimage.debian.org/mirror/cdimage/archive/8.10.0/amd64/iso-cd/ </a></p>
@@ -418,7 +418,7 @@ git会将变化记录到HEAD对应的reflog文件中,其路径为.git/logs/HEAD,
     
     <entry>
       <title><![CDATA[Centos历史版本 ISO 下载地址Centos Archive Download]]></title>
-      <url>/Linux/201801/centos-archive-iso-download-17.html</url>
+      <url>/Linux/201801/17-centos-archive-iso-download.html</url>
       <content type="html"><![CDATA[<h1 id="Centos历史版本-ISO-下载地址Centos-Archive-Download"><a href="#Centos历史版本-ISO-下载地址Centos-Archive-Download" class="headerlink" title="Centos历史版本 ISO 下载地址Centos Archive Download"></a>Centos历史版本 ISO 下载地址Centos Archive Download</h1><p>ISO文件的下载路径为</p>
 <h1 id="centos-vault-6-8-isos-x86-64"><a href="#centos-vault-6-8-isos-x86-64" class="headerlink" title="/centos-vault/6.8/isos/x86_64/"></a>/centos-vault/6.8/isos/x86_64/</h1><p>如： <a href="http://archive.kernel.org/centos-vault/6.8/isos/x86_64/CentOS-6.8-x86_64-netinstall.iso" target="_blank" rel="noopener">http://archive.kernel.org/centos-vault/6.8/isos/x86_64/CentOS-6.8-x86_64-netinstall.iso</a></p>
 <p><a href="http://archive.kernel.org/centos-vault/2.1/" target="_blank" rel="noopener">Centos 2.1/</a> 19-Aug-2009 01:36 –<br><a href="http://archive.kernel.org/centos-vault/3.1/" target="_blank" rel="noopener">Centos 3.1/</a> 31-Jul-2005 16:05 –<br><a href="http://archive.kernel.org/centos-vault/3.3/" target="_blank" rel="noopener">Centos 3.3/</a> 17-Mar-2005 11:17 –<br><a href="http://archive.kernel.org/centos-vault/3.4/" target="_blank" rel="noopener">Centos 3.4/</a> 01-Mar-2005 01:38 –<br><a href="http://archive.kernel.org/centos-vault/3.5/" target="_blank" rel="noopener">Centos 3.5/</a> 28-Jul-2005 16:14 –<br><a href="http://archive.kernel.org/centos-vault/3.6/" target="_blank" rel="noopener">Centos 3.6/</a> 04-Apr-2006 16:59 –<br><a href="http://archive.kernel.org/centos-vault/3.7/" target="_blank" rel="noopener">Centos 3.7/</a> 06-May-2006 01:20 –<br><a href="http://archive.kernel.org/centos-vault/3.8/" target="_blank" rel="noopener">Centos 3.8/</a> 20-Apr-2012 10:55 –<br><a href="http://archive.kernel.org/centos-vault/3.9/" target="_blank" rel="noopener">Centos 3.9/</a> 20-Apr-2012 10:49 –<br><a href="http://archive.kernel.org/centos-vault/4.0/" target="_blank" rel="noopener">Centos 4.0/</a> 23-Jun-2005 12:09 –<br><a href="http://archive.kernel.org/centos-vault/4.0beta/" target="_blank" rel="noopener">Centos 4.0beta/</a> 15-Sep-2005 23:40 –<br><a href="http://archive.kernel.org/centos-vault/4.1/" target="_blank" rel="noopener">Centos 4.1/</a> 19-Oct-2005 12:09 –<br><a href="http://archive.kernel.org/centos-vault/4.2/" target="_blank" rel="noopener">Centos 4.2/</a> 04-Nov-2006 12:35 –<br><a href="http://archive.kernel.org/centos-vault/4.2beta/" target="_blank" rel="noopener">Centos 4.2beta/</a> 23-Oct-2005 11:17 –<br><a href="http://archive.kernel.org/centos-vault/4.3/" target="_blank" rel="noopener">Centos 4.3/</a> 27-Aug-2006 12:04 –<br><a href="http://archive.kernel.org/centos-vault/4.4/" target="_blank" rel="noopener">Centos 4.4/</a> 01-Nov-2006 19:32 –<br><a href="http://archive.kernel.org/centos-vault/4.5/" target="_blank" rel="noopener">Centos 4.5/</a> 08-Dec-2007 09:23 –<br><a href="http://archive.kernel.org/centos-vault/4.6/" target="_blank" rel="noopener">Centos 4.6/</a> 18-Sep-2008 14:35 –<br><a href="http://archive.kernel.org/centos-vault/4.7/" target="_blank" rel="noopener">Centos 4.7/</a> 14-Feb-2010 12:50 –<br><a href="http://archive.kernel.org/centos-vault/4.8/" target="_blank" rel="noopener">Centos 4.8/</a> 20-Apr-2012 21:13 –<br><a href="http://archive.kernel.org/centos-vault/4.9/" target="_blank" rel="noopener">Centos 4.9/</a> 20-Apr-2012 21:13 –<br><a href="http://archive.kernel.org/centos-vault/5.0/" target="_blank" rel="noopener">Centos 5.0/</a> 11-Apr-2007 17:53 –<br><a href="http://archive.kernel.org/centos-vault/5.1/" target="_blank" rel="noopener">Centos 5.1/</a> 27-Nov-2007 10:38 –<br><a href="http://archive.kernel.org/centos-vault/5.10/" target="_blank" rel="noopener">Centos 5.10/</a> 07-Oct-2014 13:31 –<br><a href="http://archive.kernel.org/centos-vault/5.11/" target="_blank" rel="noopener">Centos 5.11/</a> 27-Sep-2014 12:52 –<br><a href="http://archive.kernel.org/centos-vault/5.2/" target="_blank" rel="noopener">Centos 5.2/</a> 18-Jun-2008 23:34 –<br><a href="http://archive.kernel.org/centos-vault/5.3/" target="_blank" rel="noopener">Centos 5.3/</a> 14-Feb-2010 02:30 –<br><a href="http://archive.kernel.org/centos-vault/5.4/" target="_blank" rel="noopener">Centos 5.4/</a> 25-Jun-2010 14:38 –<br><a href="http://archive.kernel.org/centos-vault/5.5/" target="_blank" rel="noopener">Centos 5.5/</a> 14-May-2010 21:04 –<br><a href="http://archive.kernel.org/centos-vault/5.6/" target="_blank" rel="noopener">Centos 5.6/</a> 12-Aug-2011 19:51 –<br><a href="http://archive.kernel.org/centos-vault/5.7/" target="_blank" rel="noopener">Centos 5.7/</a> 13-Sep-2011 00:58 –<br><a href="http://archive.kernel.org/centos-vault/5.8/" target="_blank" rel="noopener">Centos 5.8/</a> 27-Feb-2012 19:57 –<br><a href="http://archive.kernel.org/centos-vault/5.9/" target="_blank" rel="noopener">Centos 5.9/</a> 12-Jan-2013 01:11 –<br><a href="http://archive.kernel.org/centos-vault/6.0/" target="_blank" rel="noopener">Centos 6.0/</a> 19-Dec-2011 18:49 –<br><a href="http://archive.kernel.org/centos-vault/6.1/" target="_blank" rel="noopener">Centos 6.1/</a> 08-Dec-2011 10:04 –<br><a href="http://archive.kernel.org/centos-vault/6.2/" target="_blank" rel="noopener">Centos 6.2/</a> 19-Dec-2011 13:25 –<br><a href="http://archive.kernel.org/centos-vault/6.3/" target="_blank" rel="noopener">Centos 6.3/</a> 09-Jul-2012 20:10 –<br><a href="http://archive.kernel.org/centos-vault/6.4/" target="_blank" rel="noopener">Centos 6.4/</a> 20-Jun-2013 14:50 –<br><a href="http://archive.kernel.org/centos-vault/6.5/" target="_blank" rel="noopener">Centos 6.5/</a> 21-Dec-2013 14:05 –<br><a href="http://archive.kernel.org/centos-vault/6.6/" target="_blank" rel="noopener">Centos 6.6/</a> 31-Jul-2015 15:17 –<br><a href="http://archive.kernel.org/centos-vault/6.7/" target="_blank" rel="noopener">Centos 6.7/</a> 21-Jan-2016 13:22 –<br><a href="http://archive.kernel.org/centos-vault/6.8/" target="_blank" rel="noopener">Centos 6.8/</a> 24-May-2016 17:36 –<br><a href="http://archive.kernel.org/centos-vault/6.9/" target="_blank" rel="noopener">Centos 6.9/</a> 17-Oct-2017 16:00 –<br><a href="http://archive.kernel.org/centos-vault/7.0.1406/" target="_blank" rel="noopener">Centos 7.0.1406/</a> 07-Apr-2015 14:36 –<br><a href="http://archive.kernel.org/centos-vault/7.1.1503/" target="_blank" rel="noopener">Centos 7.1.1503/</a> 13-Nov-2015 13:01 –<br><a href="http://archive.kernel.org/centos-vault/7.2.1511/" target="_blank" rel="noopener">Centos 7.2.1511/</a> 18-May-2016 16:48 –<br><a href="http://archive.kernel.org/centos-vault/7.3.1611/" target="_blank" rel="noopener">Centos 7.3.1611/</a> 20-Feb-2017 22:21 –<br><a href="http://archive.kernel.org/centos-vault/7.4.1708/" target="_blank" rel="noopener">Centos 7.4.1708/</a> 29-Sep-2017 12:44 –</p>
@@ -445,7 +445,7 @@ git会将变化记录到HEAD对应的reflog文件中,其路径为.git/logs/HEAD,
     
     <entry>
       <title><![CDATA[Centos7  使用 nmcli 命令配置网络详解]]></title>
-      <url>/Linux/201801/centos7-nmcli-16.html</url>
+      <url>/Linux/201801/16-centos7-nmcli.html</url>
       <content type="html"><![CDATA[<p><strong>使用**</strong>nmcli<strong><strong>命令配置网络</strong></strong> **</p>
 <p>NetworkManager是管理和监控网络设置的守护进程，设备既就是网络接口，连接是对网络接口的配置，一个网络接口可以有多个连接配置，但同时只有一个连接配置生效。</p>
 <p><strong>1 **</strong>配置主机名<strong>** </strong></p>
@@ -885,7 +885,7 @@ git会将变化记录到HEAD对应的reflog文件中,其路径为.git/logs/HEAD,
     
     <entry>
       <title><![CDATA[centos, debian 等linux内核的系统 硬盘分区格式化和硬盘挂载 方法]]></title>
-      <url>/Linux/201801/linu-fdisk-mount-method-11.html</url>
+      <url>/Linux/201801/11-linu-fdisk-mount-method.html</url>
       <content type="html"><![CDATA[<p>Linu 硬盘分区挂载方法， 适用于 centos, debian 等linux内核的系统 硬盘分区格式化和硬盘挂载</p>
 <p>挂载硬盘步骤:</p>
 <ol>
@@ -913,7 +913,7 @@ git会将变化记录到HEAD对应的reflog文件中,其路径为.git/logs/HEAD,
     
     <entry>
       <title><![CDATA[Git参考文档]]></title>
-      <url>/git/201801/git-pub/git-doc-01.html</url>
+      <url>/git/201801/01-git-doc.html</url>
       <content type="html"><![CDATA[<h1 id="创建附注标签"><a href="#创建附注标签" class="headerlink" title="创建附注标签"></a>创建附注标签</h1><p>$ git tag -a v5.6.31 -m  “php 5.6.31”</p>
 <p>推送本地的TAG到远程<br>git push -v origin refs/tags/v5.6.31</p>
 <p>查看、添加、提交、删除、找回，重置修改文件</p>
@@ -1096,7 +1096,7 @@ git会将变化记录到HEAD对应的reflog文件中,其路径为.git/logs/HEAD,
     
     <entry>
       <title><![CDATA[Git参考文档]]></title>
-      <url>/git/201801/git-doc-01.html</url>
+      <url>/git/201801/01-git-pub/git-doc.html</url>
       <content type="html"><![CDATA[<h1 id="创建附注标签"><a href="#创建附注标签" class="headerlink" title="创建附注标签"></a>创建附注标签</h1><p>$ git tag -a v5.6.31 -m  “php 5.6.31”</p>
 <p>推送本地的TAG到远程<br>git push -v origin refs/tags/v5.6.31</p>
 <p>查看、添加、提交、删除、找回，重置修改文件</p>
@@ -1279,7 +1279,7 @@ git会将变化记录到HEAD对应的reflog文件中,其路径为.git/logs/HEAD,
     
     <entry>
       <title><![CDATA[mysql 流程控制语句全接触]]></title>
-      <url>/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/mysql-flow-control-statements-23.html</url>
+      <url>/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/23-mysql-flow-control-statements.html</url>
       <content type="html"><![CDATA[<p>&nbsp;</p>
 <p>Flow Control Statements</p>
 <p>MySQL supports the <a href="https://dev.mysql.com/doc/refman/5.7/en/if.html" target="_blank" rel="noopener">IF</a>, <a href="https://dev.mysql.com/doc/refman/5.7/en/case.html" target="_blank" rel="noopener">CASE</a>, <a href="https://dev.mysql.com/doc/refman/5.7/en/iterate.html" target="_blank" rel="noopener">ITERATE</a>, <a href="https://dev.mysql.com/doc/refman/5.7/en/leave.html" target="_blank" rel="noopener">LEAVE</a> <a href="https://dev.mysql.com/doc/refman/5.7/en/loop.html" target="_blank" rel="noopener">LOOP</a>, <a href="https://dev.mysql.com/doc/refman/5.7/en/while.html" target="_blank" rel="noopener">WHILE</a>, and <a href="https://dev.mysql.com/doc/refman/5.7/en/repeat.html" target="_blank" rel="noopener">REPEAT</a> constructs for flow control within stored programs. It also supports <a href="https://dev.mysql.com/doc/refman/5.7/en/return.html" target="_blank" rel="noopener">RETURN</a> within stored functions.</p>
@@ -1477,7 +1477,7 @@ git会将变化记录到HEAD对应的reflog文件中,其路径为.git/logs/HEAD,
     
     <entry>
       <title><![CDATA[mysql 产生指定位数的随机浮点数]]></title>
-      <url>/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/mysql-rand-convert-decimal-23.html</url>
+      <url>/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/23-mysql-rand-convert-decimal.html</url>
       <content type="html"><![CDATA[<h1 id="mysql-rand，round，floor，ceiling函数以及获得指定范围随机数-这些都是整数或者是rand-默认位数的随机小数，如何获得指定位数的随机浮点数呢？"><a href="#mysql-rand，round，floor，ceiling函数以及获得指定范围随机数-这些都是整数或者是rand-默认位数的随机小数，如何获得指定位数的随机浮点数呢？" class="headerlink" title="mysql rand，round，floor，ceiling函数以及获得指定范围随机数 这些都是整数或者是rand()默认位数的随机小数，如何获得指定位数的随机浮点数呢？"></a>mysql rand，round，floor，ceiling函数以及获得指定范围随机数 这些都是整数或者是rand()默认位数的随机小数，如何获得指定位数的随机浮点数呢？</h1><h1 id="一下是mysql中几种获取指定位数随机数的方法："><a href="#一下是mysql中几种获取指定位数随机数的方法：" class="headerlink" title="一下是mysql中几种获取指定位数随机数的方法："></a>一下是mysql中几种获取指定位数随机数的方法：</h1><h2 id="1-直接使用-round-x-n-的形式获取指定位数的随机浮点数："><a href="#1-直接使用-round-x-n-的形式获取指定位数的随机浮点数：" class="headerlink" title="1. 直接使用 round(x,n) 的形式获取指定位数的随机浮点数："></a>1. 直接使用 round(x,n) 的形式获取指定位数的随机浮点数：</h2><p><span class="s1">例一： </span></p>
 <pre class="brush: sql;">select round(10.23678,2);
 +-------------------+
@@ -1567,7 +1567,7 @@ git会将变化记录到HEAD对应的reflog文件中,其路径为.git/logs/HEAD,
     
     <entry>
       <title><![CDATA[提高sql查询效率的30个技巧]]></title>
-      <url>/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/tips-of-improve-sql-select-speed-08.html</url>
+      <url>/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/08-tips-of-improve-sql-select-speed.html</url>
       <content type="html"><![CDATA[<p>1.对查询进行优化，应尽量避免全表扫描，首先应考虑在 where 及 order by 涉及的列上建立索引。</p>
 <p>2.应尽量避免在 where 子句中对字段进行 null 值判断，否则将导致引擎放弃使用索引而进行全表扫描，如：<br>select id from t where num is null<br>可以在num上设置默认值0，确保表中num列没有null值，然后这样查询：<br>select id from t where num=0</p>
 <p>3.应尽量避免在 where 子句中使用!=或&lt;&gt;操作符，否则将引擎放弃使用索引而进行全表扫描。</p>
@@ -1611,7 +1611,7 @@ git会将变化记录到HEAD对应的reflog文件中,其路径为.git/logs/HEAD,
     
     <entry>
       <title><![CDATA[根据地图的坐标计算出两点之间的距离 java]]></title>
-      <url>/JAVA%E5%BC%80%E5%8F%91/201711/lnglat-java-05.html</url>
+      <url>/JAVA%E5%BC%80%E5%8F%91/201711/05-lnglat-java.html</url>
       <content type="html"><![CDATA[<p>&nbsp;</p>
 <p><pre class="font:sourcecodepro lang:java decode:true  ">public class Distribution<br>{<br>    // 经度<br>    double longitude;<br>    // 维度<br>    double dimensionality;<br>    public double getLongitude()<br>    {<br>        return longitude;<br>    }<br>    public void setLongitude(double longitude)<br>    {<br>        this.longitude = longitude;<br>    }<br>    public double getDimensionality()<br>    {<br>        return dimensionality;<br>    }<br>    public void setDimensionality(double dimensionality)<br>    {<br>        this.dimensionality = dimensionality;<br>    }<br>    /*</pre></p>
 <pre><code> * 计算两点之间距离
@@ -1652,7 +1652,7 @@ public double getDistance(Distribution start, Distribution end)
     
     <entry>
       <title><![CDATA[【转】利用java、js或mysql计算高德地图中两坐标之间的距离]]></title>
-      <url>/JavaScript/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/java-js-mysql-lnglat-calculate-01.html</url>
+      <url>/JavaScript/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201711/01-java-js-mysql-lnglat-calculate.html</url>
       <content type="html"><![CDATA[<div id="magicdomid6" class="ace-line gutter-author-p-1375536 emptyGutter"><span class="author-p-1375536 color:rgb(102, 102, 102) font-size:14px"> 最近在做与地图相关的应用，使用了高德地图，研究了下高德地图计算两坐标距离的方法，官网上提供的开发包中有相关的方法，但是我的产品中比较特殊，无法直接使用提供的方法，所以就自己封装了相关计算方法，供大家参考，下面话不多说了，来一起看看详细的介绍吧。</span></div><br><div id="magicdomid7" class="ace-line gutter-author-p-1375536 emptyGutter"><span class="author-p-1375536 bold:true color:rgb(255, 0, 0) font-size:14px">Java实现</span></div><br><div id="magicdomid8" class="ace-line gutter-author-p-1375536 emptyGutter"><span class="author-p-1375536 color:rgb(102, 102, 102) font-size:14px">首先定义一个用于存储经纬度的类，这里起个名字叫：LngLat</span></div><br><div id="magicdomid9" class="ace-line longKeep gutter-noauthor"></div><br><div id="magicdomid10" class="ace-line gutter-author-p-1375536 line-list-type-code emptyGutter"><br><pre class="prettyprint lang-java">package amap;<br>import java.text.DecimalFormat;<br>import java.text.DecimalFormatSymbols;<br>import java.util.Locale;<br>/<strong><br><em> 存储经纬度坐标值的类，单位角度
 </em><br><em> @author jianggujin
 </em><br>*/<br>public final class LngLat implements Cloneable<br>{<br>/</strong><br><em> 纬度 (垂直方向)
@@ -1691,7 +1691,7 @@ public double getDistance(Distribution start, Distribution end)
     
     <entry>
       <title><![CDATA[什么是UNPHAT原则]]></title>
-      <url>/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201710/unphat-29.html</url>
+      <url>/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201710/29-unphat.html</url>
       <content type="html"><![CDATA[<p>最近在看技术文章时发现最近比较热的一个技术原则 UNPHAT , 所谓的UNPHAT原则即是下面的这个6条的字母组合：</p>
 <ol>
 <li>在彻底了解（Understand）你的问题之前，不要急着去寻找解决方案。你的目标应该是在问题领域内“解决”问题，而不是在方案领域内解决问题。</li>
@@ -1714,7 +1714,7 @@ public double getDistance(Distribution start, Distribution end)
     
     <entry>
       <title><![CDATA[[转载]You Are Not Google]]></title>
-      <url>/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201710/you-are-not-google-29.html</url>
+      <url>/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201710/29-you-are-not-google.html</url>
       <content type="html"><![CDATA[<p>Software engineers go crazy for the most ridiculous things. We like to think that we’re hyper-rational, but when we have to choose a technology, we end up in a kind of frenzy — bouncing from one person’s Hacker News comment to another’s blog post until, in a stupor, we float helplessly toward the brightest light and lay prone in front of it, oblivious to what we were looking for in the first place.</p>
 <p>This is not how rational people make decisions, but it <em>is</em> how software engineers decide to use MapReduce.</p>
 <p>As Joe Hellerstein sideranted to <a href="https://archive.org/details/ucberkeley_webcast_NSKvCVFmk2E" target="_blank" rel="noopener">his undergrad databases class</a> (54 min in):</p>
@@ -1781,7 +1781,7 @@ public double getDistance(Distribution start, Distribution end)
     
     <entry>
       <title><![CDATA[2017最新全国 省市县/区 街道/乡镇 社区/村 5级联动 mysql数据库 71.3万条]]></title>
-      <url>/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201706/mysql-region-5-24.html</url>
+      <url>/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/201706/24-mysql-region-5.html</url>
       <content type="html"><![CDATA[<p>2017最新全国 省市县/区 街道/乡镇 社区/村 5级联动 mysql数据库 71.3万条</p>
 <p>&nbsp;</p>
 <p>注释: 全国省市区/县 乡镇/街道 村/社区 5级联动数据库</p>
@@ -1819,7 +1819,7 @@ public double getDistance(Distribution start, Distribution end)
     
     <entry>
       <title><![CDATA[php如何向一个二维数组里面添加元素]]></title>
-      <url>/PHP%E6%8A%80%E6%9C%AF/201706/php-add-items-to-two-dimensional-array-10.html</url>
+      <url>/PHP%E6%8A%80%E6%9C%AF/201706/10-php-add-items-to-two-dimensional-array.html</url>
       <content type="html"><![CDATA[<p>php如何向一个二维数组里面添加元素</p>
 <p>$array=array([0]=&gt;array(id=&gt;1,name=&gt;’my name’),[1]=&gt;array([id]=&gt;1,[name]=&gt;’my name’), ……)</p>
 <p>如：向$array二维数组里面添加一个元素 test</p>
@@ -1841,7 +1841,7 @@ public double getDistance(Distribution start, Distribution end)
     
     <entry>
       <title><![CDATA[Docker for Windows10 如何配置共享文件夹]]></title>
-      <url>/Docker%E6%8A%80%E6%9C%AF/201706/docker-windows10-share-container-07.html</url>
+      <url>/Docker%E6%8A%80%E6%9C%AF/201706/07-docker-windows10-share-container.html</url>
       <content type="html"><![CDATA[<p>Docker for Windows10 如何配置共享文件夹到容器中</p>
 <p>第一步: 想在docker的设置中设置共享的drivers[PS: 设置共享前需要先设置windows的用户密码 ]<br><img src="http://r.photo.store.qq.com/psb?/8c300a2f-20cd-4ff4-b8d1-6be36152f829/nY98K1nze2vty*GbZxUC05qfXCcj8pjxCNdysuvyXIA!/o/dIMBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=QAMaAkADGgIDEDU!&amp;su=1181985025&amp;tm=1496844000&amp;sce=0-12-12&amp;rf=2-9" alt="图片"></p>
 <p>第二步: Apply保存设置, docker会自动重启,重启后即设置成功,</p>
@@ -1860,7 +1860,7 @@ public double getDistance(Distribution start, Distribution end)
     
     <entry>
       <title><![CDATA[PHP获取IP客户端地址 并验证IP地址正确性]]></title>
-      <url>/PHP%E6%8A%80%E6%9C%AF/201705/php-get-ip-address-validate-30.html</url>
+      <url>/PHP%E6%8A%80%E6%9C%AF/201705/30-php-get-ip-address-validate.html</url>
       <content type="html"><![CDATA[<p>&nbsp;</p>
 <p>&nbsp;</p>
 <p><pre class="EnlighterJSRAW" data-enlighter-language="php">/**</pre></p>
@@ -1892,7 +1892,7 @@ public double getDistance(Distribution start, Distribution end)
     
     <entry>
       <title><![CDATA[php AesCrypter  pkcs7 加解密]]></title>
-      <url>/PHP%E6%8A%80%E6%9C%AF/201705/php-aescrypter-pkcs7-encrypt-30.html</url>
+      <url>/PHP%E6%8A%80%E6%9C%AF/201705/30-php-aescrypter-pkcs7-encrypt.html</url>
       <content type="html"><![CDATA[<p>PHP aes加解密类</p>
 <p><pre class="EnlighterJSRAW" data-enlighter-language="php"><br>class AesCrypter {</pre></p>
 <pre><code>private $key = &apos;php1234567890&apos;;
@@ -1960,7 +1960,7 @@ public function pkcs7unPadding($data) {
     
     <entry>
       <title><![CDATA[PHP加密解密函数]]></title>
-      <url>/PHP%E6%8A%80%E6%9C%AF/201705/php-encrypt-decrypt-30.html</url>
+      <url>/PHP%E6%8A%80%E6%9C%AF/201705/30-php-encrypt-decrypt.html</url>
       <content type="html"><![CDATA[<p>PHP加密解密函数</p>
 <p>&nbsp;</p>
 <p><pre class="EnlighterJSRAW" data-enlighter-language="php">/**</pre></p>
@@ -1997,7 +1997,7 @@ public function pkcs7unPadding($data) {
     
     <entry>
       <title><![CDATA[PHP跳转函数]]></title>
-      <url>/PHP%E6%8A%80%E6%9C%AF/201705/php-redirect-30.html</url>
+      <url>/PHP%E6%8A%80%E6%9C%AF/201705/30-php-redirect.html</url>
       <content type="html"><![CDATA[<p>&nbsp;</p>
 <p>&nbsp;</p>
 <p><pre class="EnlighterJSRAW" data-enlighter-language="php">/**</pre></p>
@@ -2026,7 +2026,7 @@ public function pkcs7unPadding($data) {
     
     <entry>
       <title><![CDATA[tp5自定义上传文件名和保存路径]]></title>
-      <url>/PHP%E6%8A%80%E6%9C%AF/201705/tp5-diy-filename-29.html</url>
+      <url>/PHP%E6%8A%80%E6%9C%AF/201705/29-tp5-diy-filename.html</url>
       <content type="html"><![CDATA[<p>tp5自定义上传文件名和保存路径</p>
 <p>在上传文件后调用file类的 mov方法的时候就可以自定义上传文件的类型</p>
 <p>&nbsp;</p>
@@ -2095,7 +2095,7 @@ return false;
     
     <entry>
       <title><![CDATA[JS 格式化字节单位为 kb, m, g 等为友好大小单位]]></title>
-      <url>/JavaScript/201705/js-format-size-29.html</url>
+      <url>/JavaScript/201705/29-js-format-size.html</url>
       <content type="html"><![CDATA[<p>经常用到的JS单位转换函数:</p>
 <p><pre class="EnlighterJSRAW" data-enlighter-language="js">function format_size(bytes) {<br>       if (bytes === 0) return ‘0 B’;<br>        var k = 1024;<br>        sizes = [‘B’,’KB’, ‘MB’, ‘GB’, ‘TB’, ‘PB’, ‘EB’, ‘ZB’, ‘YB’];<br>        i = Math.floor(Math.log(bytes) / Math.log(k));<br>    return (bytes / Math.pow(k, i)).toPrecision(2) + ‘ ‘ + sizes[i];<br>       //toPrecision(3) 后面保留一位小数，如1.0GB                                                       //return (bytes / Math.pow(k, i)).toPrecision(3) + ‘ ‘ + sizes[i];<br>       //bytes / Math.pow(1024, Math.floor(Math.log(bytes) / Math.log(1024)))<br>    }</pre><br>&nbsp;</p>
 ]]></content>
@@ -2111,7 +2111,7 @@ return false;
     
     <entry>
       <title><![CDATA[tp5 多关键字查找实现方法]]></title>
-      <url>/PHP%E6%8A%80%E6%9C%AF/201705/tp5-mulit-keywords-search-27.html</url>
+      <url>/PHP%E6%8A%80%E6%9C%AF/201705/27-tp5-mulit-keywords-search.html</url>
       <content type="html"><![CDATA[<p>多个关键词用空格分开，</p>
 <p>控制器</p>
 <p><pre class="EnlighterJSRAW" data-enlighter-language="php"><br>$keyword = \think\Request::instance()-&gt;post(‘keyword’);<br>$json = array();<br>foreach (explode(‘ ‘, $keyword) as $keyword) {<br>$result = $model-&gt;searchKeyword($keyword);<br>foreach ($result as $item) {<br>if (!in_array($item, $json)) {<br>array_push($json, $item);<br>}<br>}<br>}</pre><br>&nbsp;</p>
@@ -2141,7 +2141,7 @@ public function searchKeyword($keyword)
     
     <entry>
       <title><![CDATA[JS 事件绑定   SHA256加密测试代码演示]]></title>
-      <url>/JavaScript/201705/js-event-sha256-digest-26.html</url>
+      <url>/JavaScript/201705/26-js-event-sha256-digest.html</url>
       <content type="html"><![CDATA[<p>JS 事件绑定   SHA256加密测试代码演示</p>
 <p>核心JS代码，完整的请下载附件查看</p>
 <p>&nbsp;</p>
@@ -2177,7 +2177,7 @@ oPass.addEventListener(&apos;input&apos;,function(o){
     
     <entry>
       <title><![CDATA[JS 页面加载触发事件 document.ready和window.onload的区别]]></title>
-      <url>/JavaScript/201705/js-document-ready-window-onload-26.html</url>
+      <url>/JavaScript/201705/26-js-document-ready-window-onload.html</url>
       <content type="html"><![CDATA[<p>document.ready和onload的区别——JavaScript文档加载完成事件<br>页面加载完成有两种事件：</p>
 <p>一是ready，表示文档结构已经加载完成（不包含图片等非文字媒体文件）；</p>
 <p>二是onload，指示页面包含图片等文件在内的所有元素都加载完成。</p>
@@ -2216,7 +2216,7 @@ oPass.addEventListener(&apos;input&apos;,function(o){
     
     <entry>
       <title><![CDATA[用js实现in_array的方法]]></title>
-      <url>/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201705/js-is-in-array-23.html</url>
+      <url>/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201705/23-js-is-in-array.html</url>
       <content type="html"><![CDATA[<p>js没有in_array函数，但是我们可以自己给js写一个in_array函数</p>
 <p>&nbsp;</p>
 <p>在js中我们不能像php中那样直接要判断一个值或字符串在数组中利用in_array来实现，因为js没有in_array函数，但是我们可以自定来给js写一个in_array函数，下面我收集了几个。</p>
@@ -2242,7 +2242,7 @@ oPass.addEventListener(&apos;input&apos;,function(o){
     
     <entry>
       <title><![CDATA[thinkphp5兼容TP3.2版本的单字母操作函数]]></title>
-      <url>/PHP%E6%8A%80%E6%9C%AF/201705/tp5-with-tp3-2-one-words-function-21.html</url>
+      <url>/PHP%E6%8A%80%E6%9C%AF/201705/21-tp5-with-tp3-2-one-words-function.html</url>
       <content type="html"><![CDATA[<p>thinkphp5兼容TP3.2版本的单字母操作函数</p>
 <p>&nbsp;</p>
 <p><pre class="EnlighterJSRAW" data-enlighter-language="php">if (!function_exists(‘M’)) {<br>    /**</pre></p>
@@ -2377,7 +2377,7 @@ function F($name,$value=&apos;&apos;,$path=&apos;&apos;) {
     
     <entry>
       <title><![CDATA[php控制台输出调试代码函数]]></title>
-      <url>/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201705/php-console-log-19.html</url>
+      <url>/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/201705/19-php-console-log.html</url>
       <content type="html"><![CDATA[<p>&nbsp;</p>
 <p><pre class="EnlighterJSRAW" data-enlighter-language="php">/**</pre></p>
 <ul>
@@ -2403,7 +2403,7 @@ function F($name,$value=&apos;&apos;,$path=&apos;&apos;) {
     
     <entry>
       <title><![CDATA[shell脚本删除XX天之前指定类型的备份文件实例]]></title>
-      <url>/Shell%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/201705/shell-delete-old-file-13.html</url>
+      <url>/Shell%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/201705/13-shell-delete-old-file.html</url>
       <content type="html"><![CDATA[<p>打开SSH</p>
 <p>#vi  delete_old_file.sh</p>
 <p><span style="color: #339966;">#!/bin/bash </span></p>
@@ -2439,7 +2439,7 @@ function F($name,$value=&apos;&apos;,$path=&apos;&apos;) {
     
     <entry>
       <title><![CDATA[hhvm  php mysql_numrows 至500错误的解决方法]]></title>
-      <url>/PHP%E6%8A%80%E6%9C%AF/201407/hhvm-php-mysql-numrows-500-error-11.html</url>
+      <url>/PHP%E6%8A%80%E6%9C%AF/201407/11-hhvm-php-mysql-numrows-500-error.html</url>
       <content type="html"><![CDATA[<p>最近安装了<a href="http://blog.chuangxin.biz" target="_blank" rel="noopener">HHVM</a>运行PHP程序，发现hhvm 竟然不支持<strong>mysql_numrows</strong>(）函数，解决方法很简单，直接把 <strong>mysql_numrows</strong>(）函数替换为count() 函数即可正常运行HHVM</p>
 <p>&nbsp;</p>
 <p>案例：</p>
@@ -2459,7 +2459,7 @@ function F($name,$value=&apos;&apos;,$path=&apos;&apos;) {
     
     <entry>
       <title><![CDATA[apache服务器.htaccess伪静态规则语法教程大全]]></title>
-      <url>/JAVA%E5%BC%80%E5%8F%91/201407/htaccess-06.html</url>
+      <url>/JAVA%E5%BC%80%E5%8F%91/201407/06-htaccess.html</url>
       <content type="html"><![CDATA[<p><strong>htaccess语法教程apache服务器伪静态规则教程</strong></p>
 <p>&nbsp;</p>
 <p>教程从绑定域名到子目录开始，教程写法如下：</p>
@@ -2664,7 +2664,7 @@ function F($name,$value=&apos;&apos;,$path=&apos;&apos;) {
     
     <entry>
       <title><![CDATA[[原创]linux 下使用TAR分卷打包自动增量备份网站和数据库并发送到指定邮箱]]></title>
-      <url>/Shell%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/201407/linux-tar-split-backup-web-05.html</url>
+      <url>/Shell%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/201407/05-linux-tar-split-backup-web.html</url>
       <content type="html"><![CDATA[<p>[原创]linux 下使用TAR分卷打包自动增量备份网站和数据库并发送到指定邮箱</p>
 <p>&nbsp;</p>
 <p><pre class="theme:eclipse font:tahoma lang:sh decode:true ">#!/bin/bash</pre></p>

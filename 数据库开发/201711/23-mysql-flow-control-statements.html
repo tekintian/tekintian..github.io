@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>mysql 流程控制语句全接触 | TekinTian</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="tekin, java, php, python, 云南网, 网站开发" />
+  
+  <meta name="description" content="&amp;nbsp; Flow Control Statements MySQL supports the IF, CASE, ITERATE, LEAVE LOOP, WHILE, and REPEAT constructs for flow control within stored programs. It also supports RETURN within stored functions.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql 流程控制语句全接触">
+<meta property="og:url" content="http://tekin.yunnan.ws/数据库开发/201711/23-mysql-flow-control-statements.html">
+<meta property="og:site_name" content="TekinTian">
+<meta property="og:description" content="&amp;nbsp; Flow Control Statements MySQL supports the IF, CASE, ITERATE, LEAVE LOOP, WHILE, and REPEAT constructs for flow control within stored programs. It also supports RETURN within stored functions.">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-02T15:25:25.939Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mysql 流程控制语句全接触">
+<meta name="twitter:description" content="&amp;nbsp; Flow Control Statements MySQL supports the IF, CASE, ITERATE, LEAVE LOOP, WHILE, and REPEAT constructs for flow control within stored programs. It also supports RETURN within stored functions.">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Tekin&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Tekin&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        IT Geek Communication blogs
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="HomePage" target="_blank" href="//tekin.yunnan.ws/">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/tekintian">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/tekintian">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//twitter.com/tekintian">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-mysql-flow-control-statements" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      mysql 流程控制语句全接触
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/数据库开发/">数据库开发</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2017-11-23
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p>&nbsp;</p>
+<p>Flow Control Statements</p>
+<p>MySQL supports the <a href="https://dev.mysql.com/doc/refman/5.7/en/if.html" target="_blank" rel="noopener">IF</a>, <a href="https://dev.mysql.com/doc/refman/5.7/en/case.html" target="_blank" rel="noopener">CASE</a>, <a href="https://dev.mysql.com/doc/refman/5.7/en/iterate.html" target="_blank" rel="noopener">ITERATE</a>, <a href="https://dev.mysql.com/doc/refman/5.7/en/leave.html" target="_blank" rel="noopener">LEAVE</a> <a href="https://dev.mysql.com/doc/refman/5.7/en/loop.html" target="_blank" rel="noopener">LOOP</a>, <a href="https://dev.mysql.com/doc/refman/5.7/en/while.html" target="_blank" rel="noopener">WHILE</a>, and <a href="https://dev.mysql.com/doc/refman/5.7/en/repeat.html" target="_blank" rel="noopener">REPEAT</a> constructs for flow control within stored programs. It also supports <a href="https://dev.mysql.com/doc/refman/5.7/en/return.html" target="_blank" rel="noopener">RETURN</a> within stored functions.</p>
+<p>Many of these constructs contain other statements, as indicated by the grammar specifications in the following sections. Such constructs may be nested. For example, an <a href="https://dev.mysql.com/doc/refman/5.7/en/if.html" target="_blank" rel="noopener">IF</a> statement might contain a <a href="https://dev.mysql.com/doc/refman/5.7/en/while.html" target="_blank" rel="noopener">WHILE</a> loop, which itself contains a <a href="https://dev.mysql.com/doc/refman/5.7/en/case.html" target="_blank" rel="noopener">CASE</a> statement.</p>
+<p>MySQL does not support FOR loops.</p>
+<p>&nbsp;</p>
+<h4 id="CASE-Syntax"><a href="#CASE-Syntax" class="headerlink" title="CASE Syntax"></a>CASE Syntax</h4><p><pre class="lang:plsql decode:true">CASE case_value</pre></p>
+<p>WHEN when_value THEN statement_list</p>
+<p>[WHEN when_value THEN statement_list] …</p>
+<p>[ELSE statement_list]</p>
+<p>END CASE<br>Or:</p>
+<p><pre class="lang:plsql decode:true ">CASE</pre></p>
+<p>WHEN search_condition THEN statement_list</p>
+<p>[WHEN search_condition THEN statement_list] …</p>
+<p>[ELSE statement_list]</p>
+<p>END CASE<br>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Example:</p>
+<p><pre class="lang:default decode:true ">DELIMITER |</pre></p>
+<p>CREATE PROCEDURE p()</p>
+<p>BEGIN</p>
+<p>DECLARE v INT DEFAULT 1;</p>
+<p>CASE v</p>
+<p>WHEN 2 THEN SELECT v;</p>
+<p>WHEN 3 THEN SELECT 0;</p>
+<p>ELSE</p>
+<p>BEGIN</p>
+<p>END;</p>
+<p>END CASE;</p>
+<p>END;</p>
+<p>|<br>&nbsp;</p>
+<h4 id="IF-Syntax"><a href="#IF-Syntax" class="headerlink" title="IF Syntax"></a>IF Syntax</h4><p><pre class="lang:default decode:true">IF search_condition THEN statement_list</pre></p>
+<p>[ELSEIF search_condition THEN statement_list] …</p>
+<p>[ELSE statement_list]</p>
+<p>END IF<br>Example:</p>
+<p>&nbsp;</p>
+<p><pre class="lang:default decode:true ">DELIMITER //</pre></p>
+<p>CREATE FUNCTION SimpleCompare(n INT, m INT)</p>
+<p>RETURNS VARCHAR(20)</p>
+<p>BEGIN</p>
+<p>DECLARE s VARCHAR(20);</p>
+<p>IF n &gt; m THEN SET s = ‘&gt;’;</p>
+<p>ELSEIF n = m THEN SET s = ‘=’;</p>
+<p>ELSE SET s = ‘&lt;’;</p>
+<p>END IF;</p>
+<p>SET s = CONCAT(n, ‘ ‘, s, ‘ ‘, m);</p>
+<p>RETURN s;</p>
+<p>END //</p>
+<p>DELIMITER ;<br>&nbsp;</p>
+<p><pre class="lang:default decode:true ">DELIMITER //</pre></p>
+<p>CREATE FUNCTION VerboseCompare (n INT, m INT)</p>
+<p>RETURNS VARCHAR(50)</p>
+<p>BEGIN</p>
+<p>DECLARE s VARCHAR(50);</p>
+<p>IF n = m THEN SET s = ‘equals’;</p>
+<p>ELSE</p>
+<p>IF n &gt; m THEN SET s = ‘greater’;</p>
+<p>ELSE SET s = ‘less’;</p>
+<p>END IF;</p>
+<p>SET s = CONCAT(‘is ‘, s, ‘ than’);</p>
+<p>END IF;</p>
+<p>SET s = CONCAT(n, ‘ ‘, s, ‘ ‘, m, ‘.’);</p>
+<p>RETURN s;</p>
+<p>END //</p>
+<p>DELIMITER ;<br>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h4 id="LOOP-Syntax"><a href="#LOOP-Syntax" class="headerlink" title="LOOP Syntax"></a>LOOP Syntax</h4><p><pre class="lang:default decode:true ">[begin_label:] LOOP</pre></p>
+<p>statement_list</p>
+<p>END LOOP [end_label]<br>&nbsp;</p>
+<p><pre class="lang:default decode:true ">CREATE PROCEDURE doiterate(p1 INT)</pre></p>
+<p>BEGIN</p>
+<p>label1: LOOP</p>
+<p>SET p1 = p1 + 1;</p>
+<p>IF p1 &lt; 10 THEN</p>
+<p>ITERATE label1;</p>
+<p>END IF;</p>
+<p>LEAVE label1;</p>
+<p>END LOOP label1;</p>
+<p>SET @x = p1;</p>
+<p>END;</p>
+<p><br>&nbsp;</p>
+<p>&nbsp;</p>
+<h4 id="REPEAT-Syntax"><a href="#REPEAT-Syntax" class="headerlink" title="REPEAT Syntax"></a>REPEAT Syntax</h4><p><pre class="lang:default decode:true ">[begin_label:] REPEAT</pre></p>
+<p>statement_list</p>
+<p>UNTIL search_condition</p>
+<p>END REPEAT [end_label]</p>
+<p><br>&nbsp;</p>
+<p>Example:</p>
+<p><pre class="lang:default decode:true ">mysql&gt; delimiter //</pre></p>
+<p>mysql&gt; CREATE PROCEDURE dorepeat(p1 INT)</p>
+<p>-&gt; BEGIN</p>
+<p>-&gt;   SET @x = 0;</p>
+<p>-&gt;   REPEAT</p>
+<p>-&gt;     SET @x = @x + 1;</p>
+<p>-&gt;   UNTIL @x &gt; p1 END REPEAT;</p>
+<p>-&gt; END</p>
+<p>-&gt; //</p>
+<p>Query OK, 0 rows affected (0.00 sec)</p>
+<p>mysql&gt; CALL dorepeat(1000)//</p>
+<p>Query OK, 0 rows affected (0.00 sec)</p>
+<p>mysql&gt; SELECT @x//</p>
+<p>+——+</p>
+<p>| @x   |</p>
+<p>+——+</p>
+<p>| 1001 |</p>
+<p>+——+</p>
+<p>1 row in set (0.00 sec)<br>&nbsp;</p>
+<p>&nbsp;</p>
+<h4 id="RETURN-Syntax"><a href="#RETURN-Syntax" class="headerlink" title="RETURN Syntax"></a>RETURN Syntax</h4><p>RETURN <em>expr</em></p>
+<p>The <a href="https://dev.mysql.com/doc/refman/5.7/en/return.html" target="_blank" rel="noopener">RETURN</a> statement terminates execution of a stored function and returns the value <strong><em>expr</em></strong> to the function caller. There must be at least one <a href="https://dev.mysql.com/doc/refman/5.7/en/return.html" target="_blank" rel="noopener">RETURN</a> statement in a stored function. There may be more than one if the function has multiple exit points.</p>
+<p>This statement is not used in stored procedures, triggers, or events. The <a href="https://dev.mysql.com/doc/refman/5.7/en/leave.html" target="_blank" rel="noopener">LEAVE</a> statement can be used to exit a stored program of those types.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h4 id="WHILE-Syntax"><a href="#WHILE-Syntax" class="headerlink" title="WHILE Syntax"></a>WHILE Syntax</h4><p><pre class="lang:default decode:true ">[begin_label:] WHILE search_condition DO</pre></p>
+<p>statement_list</p>
+<p>END WHILE [end_label]<br>&nbsp;</p>
+<p>&nbsp;</p>
+<p>The statement list within a <a href="https://dev.mysql.com/doc/refman/5.7/en/while.html" target="_blank" rel="noopener">WHILE</a> statement is repeated as long as the <strong>_search<em>condition</em></strong> expression is true. <strong>_statement<em>list</em></strong>consists of one or more SQL statements, each terminated by a semicolon (;) statement delimiter.</p>
+<p>A <a href="https://dev.mysql.com/doc/refman/5.7/en/while.html" target="_blank" rel="noopener">WHILE</a> statement can be labeled. For the rules regarding label use, see <a href="https://dev.mysql.com/doc/refman/5.7/en/statement-labels.html" target="_blank" rel="noopener">Section 13.6.2, “Statement Label Syntax”</a>.</p>
+<p>Example:</p>
+<p><pre class="lang:default decode:true ">CREATE PROCEDURE dowhile()</pre></p>
+<p>BEGIN</p>
+<p>DECLARE v1 INT DEFAULT 5;</p>
+<p>WHILE v1 &gt; 0 DO</p>
+<p>…</p>
+<p>SET v1 = v1 - 1;</p>
+<p>END WHILE;</p>
+<p>END;<br>&nbsp;</p>
+<h4 id="LEAVE-Syntax"><a href="#LEAVE-Syntax" class="headerlink" title="LEAVE Syntax"></a>LEAVE Syntax</h4><p>LEAVE <em>label</em></p>
+<p>This statement is used to exit the flow control construct that has the given label. If the label is for the outermost stored program block, <a href="https://dev.mysql.com/doc/refman/5.7/en/leave.html" target="_blank" rel="noopener">LEAVE</a> exits the program.</p>
+<p><a href="https://dev.mysql.com/doc/refman/5.7/en/leave.html" target="_blank" rel="noopener">LEAVE</a> can be used within <a href="https://dev.mysql.com/doc/refman/5.7/en/begin-end.html" target="_blank" rel="noopener">BEGIN … END</a> or loop constructs (<a href="https://dev.mysql.com/doc/refman/5.7/en/loop.html" target="_blank" rel="noopener">LOOP</a>, <a href="https://dev.mysql.com/doc/refman/5.7/en/repeat.html" target="_blank" rel="noopener">REPEAT</a>, <a href="https://dev.mysql.com/doc/refman/5.7/en/while.html" target="_blank" rel="noopener">WHILE</a>).</p>
+<p>For an example, see <a href="https://dev.mysql.com/doc/refman/5.7/en/loop.html" target="_blank" rel="noopener">Section 13.6.5.5, “LOOP Syntax”</a>.</p>
+<p>&nbsp;</p>
+<h4 id="ITERATE-Syntax"><a href="#ITERATE-Syntax" class="headerlink" title="ITERATE Syntax"></a>ITERATE Syntax</h4><p>ITERATE <em>label</em></p>
+<p>&nbsp;</p>
+<p><a href="https://dev.mysql.com/doc/refman/5.7/en/iterate.html" target="_blank" rel="noopener">ITERATE</a> can appear only within <a href="https://dev.mysql.com/doc/refman/5.7/en/loop.html" target="_blank" rel="noopener">LOOP</a>, <a href="https://dev.mysql.com/doc/refman/5.7/en/repeat.html" target="_blank" rel="noopener">REPEAT</a>, and <a href="https://dev.mysql.com/doc/refman/5.7/en/while.html" target="_blank" rel="noopener">WHILE</a> statements. <a href="https://dev.mysql.com/doc/refman/5.7/en/iterate.html" target="_blank" rel="noopener">ITERATE</a> means “start the loop again.”</p>
+<p>For an example, see <a href="https://dev.mysql.com/doc/refman/5.7/en/loop.html" target="_blank" rel="noopener">Section 13.6.5.5, “LOOP Syntax”</a>.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3 id="Statement-Label-Syntax"><a href="#Statement-Label-Syntax" class="headerlink" title="Statement Label Syntax"></a>Statement Label Syntax</h3><p><pre class="lang:default decode:true ">[begin_label:] BEGIN</pre></p>
+<p>[statement_list]</p>
+<p>END [end_label]</p>
+<p>[begin_label:] LOOP</p>
+<p>statement_list</p>
+<p>END LOOP [end_label]</p>
+<p>[begin_label:] REPEAT</p>
+<p>statement_list</p>
+<p>UNTIL search_condition</p>
+<p>END REPEAT [end_label]</p>
+<p>[begin_label:] WHILE search_condition DO</p>
+<p>statement_list</p>
+<p>END WHILE [end_label]</p>
+<p><br>&nbsp;</p>
+<p>Labels are permitted for <a href="https://dev.mysql.com/doc/refman/5.7/en/begin-end.html" target="_blank" rel="noopener">BEGIN … END</a> blocks and for the <a href="https://dev.mysql.com/doc/refman/5.7/en/loop.html" target="_blank" rel="noopener">LOOP</a>, <a href="https://dev.mysql.com/doc/refman/5.7/en/repeat.html" target="_blank" rel="noopener">REPEAT</a>, and <a href="https://dev.mysql.com/doc/refman/5.7/en/while.html" target="_blank" rel="noopener">WHILE</a> statements. Label use for those statements follows these rules:</p>
+<ul>
+<li><strong>_begin<em>label</em></strong>must be followed by a colon.</li>
+<li><strong>_begin<em>label</em></strong>can be given without <strong>_end<em>label</em></strong>. If <strong>_end<em>label</em></strong> is present, it must be the same as <strong>_begin<em>label</em></strong>.</li>
+<li><strong>_end<em>label</em></strong>cannot be given without <strong>_begin<em>label</em></strong>.</li>
+<li>Labels at the same nesting level must be distinct.</li>
+<li>Labels can be up to 16 characters long.<br>To refer to a label within the labeled construct, use an <a href="https://dev.mysql.com/doc/refman/5.7/en/iterate.html" target="_blank" rel="noopener">ITERATE</a> or <a href="https://dev.mysql.com/doc/refman/5.7/en/leave.html" target="_blank" rel="noopener">LEAVE</a> statement. The following example uses those statements to continue iterating or terminate the loop:<br><pre class="lang:default decode:true ">CREATE PROCEDURE doiterate(p1 INT)</pre></li>
+</ul>
+<p>BEGIN</p>
+<p>label1: LOOP</p>
+<p>SET p1 = p1 + 1;</p>
+<p>IF p1 &lt; 10 THEN ITERATE label1; END IF;</p>
+<p>LEAVE label1;</p>
+<p>END LOOP label1;</p>
+<p>END;</p>
+<p><br>&nbsp;</p>
+<p>&nbsp;</p>
+<p>More info on mysql:</p>
+<p><a href="https://dev.mysql.com/doc/refman/5.7/en/case.html" target="_blank" rel="noopener">13.6.5.1 CASE Syntax</a></p>
+<p><a href="https://dev.mysql.com/doc/refman/5.7/en/if.html" target="_blank" rel="noopener">13.6.5.2 IF Syntax</a></p>
+<p><a href="https://dev.mysql.com/doc/refman/5.7/en/iterate.html" target="_blank" rel="noopener">13.6.5.3 ITERATE Syntax</a></p>
+<p><a href="https://dev.mysql.com/doc/refman/5.7/en/leave.html" target="_blank" rel="noopener">13.6.5.4 LEAVE Syntax</a></p>
+<p><a href="https://dev.mysql.com/doc/refman/5.7/en/loop.html" target="_blank" rel="noopener">13.6.5.5 LOOP Syntax</a></p>
+<p><a href="https://dev.mysql.com/doc/refman/5.7/en/repeat.html" target="_blank" rel="noopener">13.6.5.6 REPEAT Syntax</a></p>
+<p><a href="https://dev.mysql.com/doc/refman/5.7/en/return.html" target="_blank" rel="noopener">13.6.5.7 RETURN Syntax</a></p>
+<p><a href="https://dev.mysql.com/doc/refman/5.7/en/while.html" target="_blank" rel="noopener">13.6.5.8 WHILE Syntax</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年02月02日 23:25</p>
+        <p>原始链接： <a class="post-url" href="/数据库开发/201711/23-mysql-flow-control-statements.html" title="mysql 流程控制语句全接触">http://tekin.yunnan.ws/数据库开发/201711/23-mysql-flow-control-statements.html</a></p>
+        <footer>
+            <a href="http://tekin.yunnan.ws">
+                <img src="/images/logo.png" alt="TekinTian">
+                TekinTian
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/qr_wechatpay.png" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/qr_wechatpay.png">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/qr_alipay.png">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://tekin.yunnan.ws/数据库开发/201711/23-mysql-flow-control-statements.html&title=《mysql 流程控制语句全接触》 — TekinTian&pic=http://tekin.yunnan.wsimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://tekin.yunnan.ws/数据库开发/201711/23-mysql-flow-control-statements.html&title=《mysql 流程控制语句全接触》 — TekinTian&source=Tekin Tian's Github pages" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://tekin.yunnan.ws/数据库开发/201711/23-mysql-flow-control-statements.html" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《mysql 流程控制语句全接触》 — TekinTian&url=http://tekin.yunnan.ws/数据库开发/201711/23-mysql-flow-control-statements.html&via=http://tekin.yunnan.ws" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://tekin.yunnan.ws/数据库开发/201711/23-mysql-flow-control-statements.html" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://tekin.yunnan.ws/数据库开发/201711/23-mysql-flow-control-statements.html" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CASE-Syntax"><span class="post-toc-text">CASE Syntax</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#IF-Syntax"><span class="post-toc-text">IF Syntax</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#LOOP-Syntax"><span class="post-toc-text">LOOP Syntax</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#REPEAT-Syntax"><span class="post-toc-text">REPEAT Syntax</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#RETURN-Syntax"><span class="post-toc-text">RETURN Syntax</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#WHILE-Syntax"><span class="post-toc-text">WHILE Syntax</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#LEAVE-Syntax"><span class="post-toc-text">LEAVE Syntax</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ITERATE-Syntax"><span class="post-toc-text">ITERATE Syntax</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Statement-Label-Syntax"><span class="post-toc-text">Statement Label Syntax</span></a>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/git/201801/01-git-pub/git-doc.html" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          Git参考文档
+        
+      </span>
+    </a>
+  
+  
+    <a href="/数据库开发/201711/23-mysql-rand-convert-decimal.html" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">mysql 产生指定位数的随机浮点数</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://yunnan.ws/" target="_blank">云南网</a>
+        Theme <a href="//github.com/tekintian" target="_blank">Github</a>
+      &copy; 2018 TekinTian<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://tekin.yunnan.ws",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Docker技术/">Docker技术</a><a class="category-link" href="/categories/JAVA开发/">JAVA开发</a><a class="category-link" href="/categories/JAVA开发/Linux/">Linux</a><a class="category-link" href="/categories/JavaScript/">JavaScript</a><a class="category-link" href="/categories/JavaScript/数据库开发/">数据库开发</a><a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/PHP技术/">PHP技术</a><a class="category-link" href="/categories/Shell编程学习/">Shell编程学习</a><a class="category-link" href="/categories/git/">git</a><a class="category-link" href="/categories/skill/">skill</a><a class="category-link" href="/categories/其他/">其他</a><a class="category-link" href="/categories/数据库开发/">数据库开发</a><a class="category-link" href="/categories/编程开发/">编程开发</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/IP地址验证/" style="font-size: 10px;">IP地址验证</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/archive/" style="font-size: 10px;">archive</a> <a href="/tags/bat/" style="font-size: 10px;">bat</a> <a href="/tags/centos/" style="font-size: 10px;">centos</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/download/" style="font-size: 10px;">download</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/git命令/" style="font-size: 20px;">git命令</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/netstat，tasklist/" style="font-size: 10px;">netstat，tasklist</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a> <a href="/tags/tp5/" style="font-size: 10px;">tp5</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/windows命令/" style="font-size: 10px;">windows命令</a> <a href="/tags/参考文档/" style="font-size: 15px;">参考文档</a> <a href="/tags/命令/" style="font-size: 10px;">命令</a> <a href="/tags/客户端IP/" style="font-size: 10px;">客户端IP</a> <a href="/tags/文件命名/" style="font-size: 10px;">文件命名</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/IP地址验证/" style="font-size: 10px;">IP地址验证</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/archive/" style="font-size: 10px;">archive</a> <a href="/tags/bat/" style="font-size: 10px;">bat</a> <a href="/tags/centos/" style="font-size: 10px;">centos</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/download/" style="font-size: 10px;">download</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/git命令/" style="font-size: 20px;">git命令</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/netstat，tasklist/" style="font-size: 10px;">netstat，tasklist</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a> <a href="/tags/tp5/" style="font-size: 10px;">tp5</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/windows命令/" style="font-size: 10px;">windows命令</a> <a href="/tags/参考文档/" style="font-size: 15px;">参考文档</a> <a href="/tags/命令/" style="font-size: 10px;">命令</a> <a href="/tags/客户端IP/" style="font-size: 10px;">客户端IP</a> <a href="/tags/文件命名/" style="font-size: 10px;">文件命名</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
